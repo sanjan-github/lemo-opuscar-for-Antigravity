@@ -146,19 +146,29 @@ The agent references three comprehensive directing guides during production:
 When rendering completes, your video is packaged and ready to watch:
 
 - **📁 Output Location:**  
-  All output files live inside your film's dedicated project folder:  
-  `films/<your-film-name>/<your-film-name>.mp4`  
-  *(For example: `films/coffee-farm/coffee-farm.mp4`)*
+  - **Inside an Active Workspace / Project:**  
+    Saved in your workspace or repo's film folder:  
+    `films/<your-film-name>/<your-film-name>.mp4` (or `<workspace>/<your-film-name>/<your-film-name>.mp4`)  
+    *(For example: `films/coffee-farm/coffee-farm.mp4`)*
+  - **When NOT in a Project (Global Skill Mode / No Active Workspace):**  
+    If you invoke the skill without having a workspace or project folder open, Antigravity saves the entire film project safely in its persistent global scratch directory:  
+    `~/.gemini/antigravity/scratch/<your-film-name>/<your-film-name>.mp4`  
+    *(Windows path: `C:\Users\<YourUsername>\.gemini\antigravity\scratch\<your-film-name>\<your-film-name>.mp4`)*  
+    The agent will print this exact absolute path in the chat so you can open or copy it immediately.
 
 - **▶ How to Watch Immediately:**  
   Run this PowerShell command to open the film in your default media player:
   ```powershell
+  # If inside a workspace project:
   Start-Process "films/<your-film-name>/<your-film-name>.mp4"
+
+  # If run outside a project:
+  Start-Process "$HOME/.gemini/antigravity/scratch/<your-film-name>/<your-film-name>.mp4"
   ```
 
 - **🖼️ Reviewing Stills:**  
   Inspect rendered high-resolution preview stills located at:  
-  `films/<your-film-name>/stills/styleframe.jpg`
+  `films/<your-film-name>/stills/styleframe.jpg` (or `~/.gemini/antigravity/scratch/<your-film-name>/stills/styleframe.jpg`)
 
 - **🔁 Making Changes:**  
   Need adjustments? Just tell your agent in chat:  
