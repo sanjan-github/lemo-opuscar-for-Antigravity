@@ -1,0 +1,12 @@
+{
+  "name": "lemo-opuscar",
+  "description": "Make a film in one of the library's code-rendered styles: your agent directs, draws, scores and mixes it.",
+  "author": { "name": "Lemomo", "url": "https://github.com/lemomo-ai" },
+  "homepage": "https://github.com/sanjan-github/lemo-opuscar-for-Antigravity",
+  "repository": "https://github.com/sanjan-github/lemo-opuscar-for-Antigravity",
+  "suggestedPrompts": [
+    "Make a short film in an oil painting style about the seasons",
+    "Show me the available film styles in the Lemo-Opuscar library",
+    "Create an explainer animation about how rivers form"
+  ]
+}
