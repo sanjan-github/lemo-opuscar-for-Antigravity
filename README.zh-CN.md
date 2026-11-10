@@ -9,8 +9,11 @@
 
 <a href="https://trendshift.io/repositories/262645?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-262645" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/262645/daily?language=JavaScript" alt="lemomo-ai%2Flemo-opuscar | Trendshift" width="250" height="55"/></a>
 
-⚠️ **本插件为 Claude 专用。** 风格都是按 Claude Opus 5.5 调出来的，<br>
-其他模型适配度不高，请谨慎使用。
+> [!IMPORTANT]
+> ### 🌟 致敬与鸣谢原作者 LemoLab
+> **本项目为 [LemoLab 的 lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) 的专有 Antigravity 适配重构版本。**  
+> 原创技能、全部 66 种风格的设计、代码渲染管线与创意均属于原作者 **LemoLab**（[@lemomo-ai](https://github.com/lemomo-ai)）。我们绝不将该成果作为自己的原创发布。  
+> 本仓库的工作是将原项目完整重写并重新架构，以作为原生 **Google Antigravity 插件** 完美运行。
 
 🆕 **2026-10-29 · [7 种新风格](https://lemomo-ai.github.io/lemo-opuscar/)**：孟菲斯微缩景观（[@EianLu](https://x.com/EianLu) 提供）、地铁线路图、黑板粉笔、电路板等。[往下看 ↓](#风格)<br>
 🆕 **2026-10-22 · 新分类[「剪辑与纪实」](https://lemomo-ai.github.io/lemo-opuscar/#edit-documentary)**：8 种风格，用真实的档案、文件和数据剪成。[往下看 ↓](#剪辑与纪实)<br>
@@ -56,27 +59,22 @@
 
 两种用法，推荐装 skill，最省事。
 
-### 方式一：装成 skill（推荐）
+### 方式一：装成 Antigravity 插件（推荐）
 
-在终端里：
+在 PowerShell 中克隆到 Antigravity 插件目录：
 
-```sh
-claude plugin marketplace add lemomo-ai/lemo-opuscar
-claude plugin install lemo-opuscar@lemolab
+```powershell
+git clone https://github.com/sanjan-github/lemo-opuscar-for-Antigravity.git "$env:USERPROFILE\.gemini\config\plugins\lemo-opuscar"
 ```
 
-之后在任何目录都能用。
+之后在 Antigravity 中即可直接识别并调用该插件与技能。
 
-- 第一次使用时，它会把指南、工具和风格提示词下载到 `~/lemo-opuscar`，所有片子共用这一份。
-- 每支片子的工程，从源码到成片，都放在你发起时所在的文件夹里。
-- 其他 agent 可以把 [`plugin/skills/lemo-opuscar/`](plugin/skills/lemo-opuscar/) 复制到它们的 skills 目录。
+### 方式二：在 Antigravity 项目工程中直接使用
 
-### 方式二：clone 仓库
+克隆本仓库到本地工作区：
 
-```sh
-git clone https://github.com/lemomo-ai/lemo-opuscar.git
-cd lemo-opuscar
-claude
+```powershell
+git clone https://github.com/sanjan-github/lemo-opuscar-for-Antigravity.git
 ```
 
 片子做到仓库里的 `films/<名字>/`。
@@ -139,7 +137,7 @@ agent 会读三份指南，像一个小工作室一样开工。<br>
 
 固化以后，风格存在 `~/lemo-my-styles/<名字>/`，和库里的风格同一个结构：风格说明、改了什么、demo 片和它的源码，以后做片能接着用这些技法。之后像用库里的风格一样叫它的名字：“用我的**夜浮世绘**风格做一支 30 秒的片子，讲……”。挑风格时，你自己的风格排在最前面。
 
-库更新、重装 skill 都不会动它们。底子风格以后更新了，它会提一句，问你要不要把有用的修复同步过来。Claude 照着 [`MY-STYLES.md`](MY-STYLES.md) 一步步做。
+库更新、重装插件都不会动它们。底子风格以后更新了，它会提一句，问你要不要把有用的修复同步过来。Agent 照着 [`MY-STYLES.md`](MY-STYLES.md) 一步步做。
 
 ### 开始之前
 
@@ -149,18 +147,11 @@ agent 会读三份指南，像一个小工作室一样开工。<br>
 
 ### 更新和卸载
 
-更新，然后重启 Claude Code（`~/lemo-opuscar` 里的库会在下一次做片时自动更新）：
+在插件目录下直接拉取最新代码：
 
-```sh
-claude plugin marketplace update lemolab && claude plugin update lemo-opuscar@lemolab
-```
-
-更新后照常说要做什么片；想把风格改成自己的，看[上面](#改成你自己的风格)。
-
-卸载，然后删除 `~/lemo-opuscar`：
-
-```sh
-claude plugin uninstall lemo-opuscar@lemolab
+```powershell
+cd "$env:USERPROFILE\.gemini\config\plugins\lemo-opuscar"
+git pull
 ```
 
 你自己的风格存在 `~/lemo-my-styles/`，更新和卸载都不会删；不要了就自己删掉这个文件夹。

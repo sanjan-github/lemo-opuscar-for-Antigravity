@@ -37,7 +37,7 @@ body:
     id: env
     attributes:
       label: System and versions · 系统和版本
-      placeholder: macOS 15 / Windows 11 / Ubuntu 24.04; node 22; ffmpeg 7.1; Claude Code / Codex
+      placeholder: macOS 15 / Windows 11 / Ubuntu 24.04; node 22; ffmpeg 7.1; Antigravity IDE / CLI
     validations:
       required: true
   - type: input
