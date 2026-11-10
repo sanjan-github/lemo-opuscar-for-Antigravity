@@ -12,7 +12,7 @@ Pick a style or make one from scratch, bring your story, and let your Antigravit
 > [!IMPORTANT]
 > ### 🌟 Shoutout & Full Attribution to LemoLab
 > **The original project, creative styles, directing guides, and rendering engines belong entirely to [LemoLab](https://github.com/lemomo-ai) ([lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar)).**
-> We do **not** claim credit for the invention or creation of these film styles, procedural engines, or the original directing methodologies. All 66 film styles, audio physical modeling, and deterministic code-rendering techniques are the original work of **LemoLab**.
+> I do **not** claim credit for the invention or creation of these film styles, procedural engines, or the original directing methodologies. All 66 film styles, audio physical modeling, and deterministic code-rendering techniques are the original work of **LemoLab**.
 >
 > **What this repository is:**  
 > This repository is a specialized rewrite designed specifically to bring the Lemo-Opuscar filmmaking workflow into the **Google Antigravity** environment as a native **Antigravity Plugin**. It provides:
