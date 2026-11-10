@@ -12,10 +12,8 @@ The user gives a style and a topic, sometimes more (length, language, voice, mus
 
 - Length **30–60 s**; shorter and tight beats padded. Beyond two or three minutes multiplies time and token cost: tell the user.
 - 1920×1080 at 24 fps by default; an output frame rate set in the style's `STYLE.md` (30 or 60 fps, for example) wins, and is what you pass to `--fps` and `mux.sh`; other sizes (vertical 1080×1920, for example) with `--size WxH` on the render tools.
-- Voice and subtitles in the language the user writes in. Subtitles burned in and exported as `.srt`.
+- Voice and subtitles in English. Subtitles burned in and exported as `.srt`.
 - Loudness −14 LUFS.
-
-Say it in the questions when it matters: a good Chinese voice uses Microsoft's online service (edge-tts) and needs a connection; offline, Kokoro reads Chinese but sounds plain (TECHNIQUE.md §4).
 
 Requests that only change the plan:
 

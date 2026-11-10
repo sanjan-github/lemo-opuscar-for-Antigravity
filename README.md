@@ -4,9 +4,8 @@
 
 **A toolbox of film styles made in code: <!--n-->66<!--/n--> ready to use, and your own.**<br>
 Pick a style or make one from scratch, bring your story, and let your Antigravity agent direct.<br>
-<sub><!--n-->66<!--/n--> 种影片风格，每种都配一支完全用代码做出来的短片 · 🇨🇳 中文用户请看 <a href="README.zh-CN.md">简体中文说明</a></sub>
 
-<a href="https://lemomo-ai.github.io/lemo-opuscar/"><img alt="Watch the gallery" src="https://img.shields.io/badge/-%E2%96%B6%20Watch%20the%20gallery-E8553A?style=for-the-badge"></a> <a href="README.zh-CN.md"><img alt="简体中文" src="https://img.shields.io/badge/README-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-555?style=for-the-badge"></a> <a href="https://github.com/sanjan-github/lemo-opuscar-for-Antigravity/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sanjan-github/lemo-opuscar-for-Antigravity?style=for-the-badge&color=F5B700&label=stars"></a> <a href="#licence"><img alt="MIT · CC BY 4.0" src="https://img.shields.io/badge/licence-MIT%20%C2%B7%20CC%20BY%204.0-2EA44F?style=for-the-badge"></a>
+<a href="https://lemomo-ai.github.io/lemo-opuscar/"><img alt="Watch the gallery" src="https://img.shields.io/badge/-%E2%96%B6%20Watch%20the%20gallery-E8553A?style=for-the-badge"></a> <a href="https://github.com/sanjan-github/lemo-opuscar-for-Antigravity/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sanjan-github/lemo-opuscar-for-Antigravity?style=for-the-badge&color=F5B700&label=stars"></a> <a href="#licence"><img alt="MIT · CC BY 4.0" src="https://img.shields.io/badge/licence-MIT%20%C2%B7%20CC%20BY%204.0-2EA44F?style=for-the-badge"></a>
 
 </div>
 
@@ -100,7 +99,7 @@ Inspect prerequisites and install dependencies via PowerShell:
 
 > Make a 30-second **whiteboard explainer** about how vaccines train the immune system.
 
-Name the style in English or Chinese; the [style index](styles/README.md) lists them all.
+Name the style; the [style index](styles/README.md) lists them all.
 
 Not sure yet? Prompt your agent: *"Show me the available styles in Lemo-Opuscar"*. It will present the ways in: a film in a library style, [make a style your own](#make-a-style-your-own), or a film in a style you've saved.
 
@@ -164,7 +163,7 @@ Click a frame for its `STYLE.md`.
 <tr>
 <td width="33%" valign="top"><a href="styles/memphis-diorama/STYLE.md"><img src="docs/frames/memphis-diorama.jpg" alt="Memphis Diorama"></a><br><b>Memphis Diorama</b><br><i>Four Seasons in Pomelo Town</i><br><sub>One river bend, four seasons, one take; each turns when the big tree squats and springs back.</sub><br><sub>Contributed by <a href="https://x.com/EianLu">@EianLu</a></sub></td>
 <td width="33%" valign="top"><a href="styles/transit-map/STYLE.md"><img src="docs/frames/transit-map.jpg" alt="Transit Map"></a><br><b>Transit Map</b><br><i>6 Kilometres</i><br><sub>A printed metro map grows from one 6 km line in 1993 to 21 lines and 906 km.</sub></td>
-<td width="33%" valign="top"><a href="styles/chalkboard/STYLE.md"><img src="docs/frames/chalkboard.jpg" alt="Chalkboard"></a><br><b>Chalkboard</b><br><i>The Story of Chinese Characters</i><br><sub>Chalk writes a popular claim about two characters, wipes it, and traces 射 back three thousand years.</sub></td>
+<td width="33%" valign="top"><a href="styles/chalkboard/STYLE.md"><img src="docs/frames/chalkboard.jpg" alt="Chalkboard"></a><br><b>Chalkboard</b><br><i>The Story of Chinese Characters</i><br><sub>Chalk writes a popular claim about two characters, wipes it, and traces archery glyphs back three thousand years.</sub></td>
 </tr>
 <tr>
 <td width="33%" valign="top"><a href="styles/isometric-picture-book/STYLE.md"><img src="docs/frames/isometric-picture-book.jpg" alt="Isometric Picture Book"></a><br><b>Isometric Picture Book</b><br><i>Seventy-Two Seats</i><br><sub>Travellers board an isometric plane, and the order shows why one way is nearly twice as fast.</sub></td>

@@ -2,9 +2,9 @@
 
 A user makes a style of their own, in one of two ways: **change a library style**, or **start from a blank page**. You plan it with them, one question at a time or in free conversation, prove the look with a style frame and make a short demo film. When they confirm it, you keep it in their own folder in the same shape as a library style. From then on they name it like any library style when they ask for a film. It lives outside the library and never changes it.
 
-Use this guide when the user wants to change a style or make their own ("I want to change this style", "make my own version", "start from scratch", "我想改风格", "做成我自己的风格", "从空白开始"), or when they name a style that is in their own folder. Everything else in a film follows [`AGENTS.md`](AGENTS.md) as usual, with the exceptions this guide gives.
+Use this guide when the user wants to change a style or make their own ("I want to change this style", "make my own version", "start from scratch"), or when they name a style that is in their own folder. Everything else in a film follows [`AGENTS.md`](AGENTS.md) as usual, with the exceptions this guide gives.
 
-Talk to the user in their language. Write the files in English, like the library, with the style's name in both languages.
+Talk to the user in English. Write the files in English, like the library.
 
 ## Where it lives
 
@@ -42,7 +42,7 @@ Interview the user until every section of their `STYLE.md` is decided and they k
 - **Free conversation.** When they pick it, stop asking one by one. Post in the chat a checklist: what's decided, and each open item with your recommendation (when changing a library style, also its group from the table below). They answer in their own words, in any order, several at once, or ask you back. When they aren't sure about an item, give two or three concrete directions for it. Update the checklist each round; when everything is decided, or they say "you decide", go to the summary.
 - Every question has your recommendation and the reason, drawn from the base `STYLE.md` and what the user said, with concrete examples from this style, not generic words.
 - Don't ask what you can look up (the base `STYLE.md`, the library, their files).
-- **About ten questions at most**, the technique base included. When more sections are in play, ask related ones together (motion with sound, camera with native moves). If they say "you decide" ("你定", "都按推荐"), take your recommendations for the rest, list them in one message and go on.
+- **About ten questions at most**, the technique base included. When more sections are in play, ask related ones together (motion with sound, camera with native moves). If they say "you decide", take your recommendations for the rest, list them in one message and go on.
 
 **The order** (skip what they've already said):
 
@@ -70,10 +70,10 @@ Interview the user until every section of their `STYLE.md` is decided and they k
 
   | They say | Usually means |
   |---|---|
-  | more premium, 高级 | fewer colours, stronger contrast between light and dark, slower motion, more empty space, lighter type |
-  | younger, livelier, 活泼 | a brighter accent, cuts on the beat, bouncier easing, more percussion |
-  | calmer, 安静 | slower tempo, longer holds, fewer moving things, sparser instruments |
-  | like our brand, 像我们品牌 | the brand colour as the accent, not the ground; the brand font for titles; the logo at the open and the end |
+  | more premium | fewer colours, stronger contrast between light and dark, slower motion, more empty space, lighter type |
+  | younger, livelier | a brighter accent, cuts on the beat, bouncier easing, more percussion |
+  | calmer | slower tempo, longer holds, fewer moving things, sparser instruments |
+  | like our brand | the brand colour as the accent, not the ground; the brand font for titles; the logo at the open and the end |
 
 - **Brand.** Keep the base's light-and-dark structure so text stays readable, and bring the brand colour in as the accent first. A brand font must cover the film's language (Chinese glyphs for a Chinese film) and allow use in video. Logos and fonts come from the user.
 - **A reference.** Name two or three things in it that make it work, map each to a section, and say which ones would touch §1 essence.

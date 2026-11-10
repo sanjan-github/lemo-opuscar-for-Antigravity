@@ -37,11 +37,11 @@ This repository is a library of film styles. Each style has a `styles/<slug>/STY
 
 ## Finding the style
 
-Users name a style by its gallery name in English or Chinese ("Impasto Oil Painting", "油画厚涂") or by its folder (`impasto`). Look it up in [`styles/README.md`](styles/README.md). If nothing matches clearly, show the closest two or three and ask.
+Users name a style by its gallery name in English (e.g. "Impasto Oil Painting") or by its folder (`impasto`). Look it up in [`styles/README.md`](styles/README.md). If nothing matches clearly, show the closest two or three and ask.
 
 If the user hasn't picked a style:
 - Suggest two or three that fit their topic.
-- If they have their own styles, list those first, under "My styles" (in their language).
+- If they have their own styles, list those first, under "My styles".
 - Show them the full list below in the chat in English. Don't drop, merge or rename anything.
 - Link the gallery, where every style has its demo film: https://lemomo-ai.github.io/lemo-opuscar/
 - Then ask them to type the name. The list goes in your own message (a command's output isn't shown to them), and the question is plain text, not `ask_question`: its few options would hide the rest of the list.
@@ -49,17 +49,17 @@ If the user hasn't picked a style:
 <!-- style-list:start -->
 All 66 styles:
 
-- **剪辑与纪实 Edit & Documentary** (8): 字幕新闻 Caption News, 1920s 新闻影片 1920s Newsreel, 实时倒计时分屏 Live Countdown Split-screen, 延时交响 Time-lapse Symphony, 视觉调查 Visual Investigation, 构成主义蒙太奇 Constructivist Montage, 体育战术板 Sports Telestrator, 电视新闻包装 Broadcast News Package
-- **实证影像 Evidence Films** (8): 卫星简报 Satellite Briefing, 工程简报板 Engineering Briefing Board, 点云测绘 LiDAR Survey, 白模投影 Projection on White Model, 数据实物化 Data Physicalization, 产品拆解 Exploded Teardown, 显微叙事 Microscope Story, 档案灯台 Archive Light Table
-- **手绘与绘画 Hand-drawn & Painting** (8): 蜡笔儿童绘本 Crayon Picture Book, 水彩笔刷 Watercolor Brush, 中国水墨 Chinese Ink Wash, 油画厚涂 Impasto Oil Painting, 一笔画 One-line Drawing, 白板讲解 Whiteboard Explainer, 钢笔淡彩 Urban Sketch · Pen & Wash, 黑板粉笔 Chalkboard
-- **东方传统 East Asian Traditions** (4): 皮影戏 Shadow Puppetry, 浮世绘 Ukiyo-e, 红色窗花剪纸 Red Paper-cut, 纸雕灯影 Paper-cut Lightbox
-- **印刷与版画 Print & Printmaking** (6): Risograph 孔版印刷 Risograph Print, 复古半调案卷 Halftone Dossier, 木刻版画 Woodcut Print, 铜版画 Copperplate Engraving, 丝印旅行海报 Silkscreen Travel Poster, 印刷长镜头 Printed Long Take
-- **图形与排版 Graphic & Type** (7): 瑞士动态排版 Swiss Motion Graphics, 60s 间谍片头 60s Spy Title Sequence, 装饰艺术 Art Deco, 蓝图 / 工程制图 Blueprint, 彩色玻璃窗 Stained Glass, 象形运动图形 Pictogram Motion, ASCII / CRT 终端 ASCII / CRT Terminal
-- **信息与发布 Information & Keynote** (8): 数据叙事 Data Storytelling, 等距信息图 Isometric Infographic, 暗色科技发布 Dark Tech Keynote, 活体实机录屏 Living Screencast, 科幻全息界面 Sci-fi Hologram HUD, 地铁线路图 Transit Map, 等距绘本 Isometric Picture Book, 电路板 Circuit Board
-- **卡通与动画 Cartoon & Anime** (4): 1930s 橡皮管卡通 1930s Rubber Hose Cartoon, 80 年代赛璐璐动画 80s Cel Anime, 科幻情景喜剧卡通 Sci-Fi Sitcom Toon, 50s 扁平卡通 Mid-century Cartoon
-- **游戏 Games** (4): 16-bit 像素 RPG 16-bit Pixel RPG, HD-2D, 微游戏快闪 Microgame Frenzy, 综艺节奏扁平 Game Show Flat
-- **电影与时代 Cinema & Eras** (2): 1920s 默片 1920s Silent Film, 后室 / 新怪谈 Liminal Found Footage
-- **材质与 3D Materials & 3D** (7): 积木玩具 Brick Toy, 纸片立体书 Paper Pop-up Book, 移轴微缩 Tilt-Shift Miniature, 低多边形等距 Low-poly Isometric Island, 玻璃质感产品 Glass Product Render, 孟菲斯微缩景观 Memphis Diorama, 桌面穿梭 Desktop Flythrough
+- **Edit & Documentary** (8): Caption News, 1920s Newsreel, Live Countdown Split-screen, Time-lapse Symphony, Visual Investigation, Constructivist Montage, Sports Telestrator, Broadcast News Package
+- **Evidence Films** (8): Satellite Briefing, Engineering Briefing Board, LiDAR Survey, Projection on White Model, Data Physicalization, Exploded Teardown, Microscope Story, Archive Light Table
+- **Hand-drawn & Painting** (8): Crayon Picture Book, Watercolor Brush, Chinese Ink Wash, Impasto Oil Painting, One-line Drawing, Whiteboard Explainer, Urban Sketch · Pen & Wash, Chalkboard
+- **East Asian Traditions** (4): Shadow Puppetry, Ukiyo-e, Red Paper-cut, Paper-cut Lightbox
+- **Print & Printmaking** (6): Risograph Print, Halftone Dossier, Woodcut Print, Copperplate Engraving, Silkscreen Travel Poster, Printed Long Take
+- **Graphic & Type** (7): Swiss Motion Graphics, 60s Spy Title Sequence, Art Deco, Blueprint, Stained Glass, Pictogram Motion, ASCII / CRT Terminal
+- **Information & Keynote** (8): Data Storytelling, Isometric Infographic, Dark Tech Keynote, Living Screencast, Sci-fi Hologram HUD, Transit Map, Isometric Picture Book, Circuit Board
+- **Cartoon & Anime** (4): 1930s Rubber Hose Cartoon, 80s Cel Anime, Sci-Fi Sitcom Toon, Mid-century Cartoon
+- **Games** (4): 16-bit Pixel RPG, HD-2D, Microgame Frenzy, Game Show Flat
+- **Cinema & Eras** (2): 1920s Silent Film, Liminal Found Footage
+- **Materials & 3D** (7): Brick Toy, Paper Pop-up Book, Tilt-Shift Miniature, Low-poly Isometric Island, Glass Product Render, Memphis Diorama, Desktop Flythrough
 <!-- style-list:end -->
 
 ## Workflow

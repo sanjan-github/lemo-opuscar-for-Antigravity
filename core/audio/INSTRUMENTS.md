@@ -48,7 +48,7 @@ sf.write('cue.wav', mix, SR)
 | `render(events, dur=None, master=True)` | Score → stereo. Events are tuples `(t, inst, pitch, dur, vel, pan[, gain])` or dicts (may carry `release`/`attack`/`var`) |
 | `room(x, size=.5, mix=.2, predelay=.015, damp=.5)` | Convolution reverb with a decorrelated exponentially decaying noise IR; `size` 0–1 → RT60 0.4–3.4 s; returns (N,2) of the same length |
 | `credits(names)` | From the list of instruments you used, generates the end-credit CREDITS lines (the required CC BY wording + CC0 acknowledgements) |
-| `info(name=None)` / `instruments(fam=None)` | Prints an overview / lists names (`fam` takes `strings` / `woodwinds` / `brass` / `percussion` / `keyboards` / `plucked` / `folk`; the Chinese names 弦乐 / 木管 / 铜管 / 打击 / 键盘 / 拨弦 / 民族 are accepted too) |
+| `info(name=None)` / `instruments(fam=None)` | Prints an overview / lists names (`fam` takes `strings` / `woodwinds` / `brass` / `percussion` / `keyboards` / `plucked` / `folk`) |
 | `midi(p)` / `hz(p)` / `name(m)` / `seed(n)` | Note-name utilities; `seed` fixes the round-robin randomness (same call order → same result) |
 | `build_index(names=None, force=False)` | Rescans the samples and rebuilds `index.json` (only needed if samples were swapped or added; ~15 s; needs librosa: `requirements-dev.txt`) |
 
@@ -72,10 +72,10 @@ P.strum(preset, pitches, dur, vel=.8, spread=.025, up=False)   # strum / arpeggi
 
 | Preset | Description | Notes |
 |---|---|---|
-| `guqin` | guqin | Silk strings, long sustain (~7 s), low-frequency body resonance; supports stopped-note slides with `bend` and yin-nao (吟猱) vibrato with `vib`, **silk-string friction noise is added automatically while sliding**; `harmonic=True` = harmonics (pure, bell-like) |
-| `pipa` | pipa | Bright plectrum attack, decay ~2.5 s; `trem=12~16` = lunzhi (轮指, rolled-finger tremolo) |
+| `guqin` | guqin | Silk strings, long sustain (~7 s), low-frequency body resonance; supports stopped-note slides with `bend` and yin-nao vibrato with `vib`, **silk-string friction noise is added automatically while sliding**; `harmonic=True` = harmonics (pure, bell-like) |
+| `pipa` | pipa | Bright plectrum attack, decay ~2.5 s; `trem=12~16` = lunzhi (rolled-finger tremolo) |
 | `shamisen` | shamisen | Plectrum + skin slap + **sawari buzz from the string touching the bridge** (`buzz` 0–1, `thr` adjustable; measured spectral centroid of the sustain 1.5k→2.0k Hz) |
-| `koto` | koto (Japanese zither) | `bend` can do oshide (押手, pressing the string to raise the pitch) |
+| `koto` | koto (Japanese zither) | `bend` can do oshide (pressing the string to raise the pitch) |
 | `banjo` | banjo | Drum-head resonance, fast decay, stiff steel strings |
 | `acoustic_guitar` | steel-string folk guitar | Pair with `strum()` for strumming |
 | `nylon_guitar` | nylon-string guitar | Warm (sampled version: `guitar_nylon`) |
@@ -86,7 +86,7 @@ P.strum(preset, pitches, dur, vel=.8, spread=.025, up=False)   # strum / arpeggi
 
 Common keywords:
 - `bend=[(t, semitones), ...]` piecewise-linear pitch envelope (relative to `pitch`); `glide=(target pitch, seconds)` glides to a note; `vib=(Hz, depth in semitones, start s)` vibrato / yin-nao
-- `trem=Hz` lunzhi / yaozhi (轮指/摇指, tremolo: repeated plucks, velocity slightly randomised); `harmonic=True` harmonics
+- `trem=Hz` lunzhi / yaozhi (tremolo: repeated plucks, velocity slightly randomised); `harmonic=True` harmonics
 - Override physical parameters: `t60` (seconds for the fundamental to decay to -60 dB), `damp` (0–0.9, higher = darker), `pos` (pluck position 0–0.5, smaller = brighter), `bright`, `buzz`/`thr`, `bmix` (body proportion), `noise`, `release`
 
 ```python
@@ -258,7 +258,7 @@ Processing applied to the samples (all within what the licences allow): the VSCO
 | `jazz_bass` | double bass, jazz pizzicato (Sneakybass) | Karoryfer | CC0 1.0 | C1–C4 | 1 | natural decay |
 | `strumstick` | Strumstick, dulcimer-style folk plucked instrument (steel-string folk feel) | VCSL | CC0 1.0 | D3–A5 | 3 | natural decay |
 | `dan_tranh` | Vietnamese zither Đàn tranh (same family as the guzheng, can stand in for a guzheng) | VCSL | CC0 1.0 | B2–B5 | 3 | natural decay |
-| `dan_tranh_trem` | Vietnamese zither, yaozhi (摇指, tremolo) | VCSL | CC0 1.0 | B2–B5 | 1 | sustained, extendable |
+| `dan_tranh_trem` | Vietnamese zither, tremolo | VCSL | CC0 1.0 | B2–B5 | 1 | sustained, extendable |
 
 ### Folk
 

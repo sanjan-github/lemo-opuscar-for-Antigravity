@@ -57,7 +57,7 @@ def name(m):
 V, C, F, K, SAL = 'vsco2ce/', 'vcsl/', 'freepats/', 'karoryfer/', 'salamander/'
 VI, VM = C + 'Idiophones/Struck Idiophones/', C + 'Membranophones/Struck Membranophones/'
 REG = {
-    # Strings (弦乐)
+    # Strings
     'violins':        dict(src=V + 'Strings/Violin Section/susVib', kind='sus', rel=.35, fam='strings', desc='violin section, sustained (vibrato)'),
     'violins_trem':   dict(src=V + 'Strings/Violin Section/Trem', kind='sus', rel=.3, fam='strings', desc='violin section, tremolo'),
     'violins_pizz':   dict(src=V + 'Strings/Violin Section/Pizz', kind='dec', rel=.15, fam='strings', desc='violin section, pizzicato'),
@@ -72,7 +72,7 @@ REG = {
     'contrabass':     dict(src=V + 'Strings/Solo Contrabass/SusVib', kind='sus', rel=.4, fam='strings', desc='contrabass, sustained'),
     'contrabass_pizz': dict(src=V + 'Strings/Solo Contrabass/Pizz', kind='dec', rel=.2, fam='strings', desc='contrabass, classical pizzicato'),
     'harp':           dict(src=C + 'Chordophones/Composite Chordophones/Concert Harp', kind='dec', rel=1.2, fam='strings', desc='harp'),
-    # Woodwinds (木管)
+    # Woodwinds
     'flute':          dict(src=V + 'Woodwinds/Flute/susvib', kind='sus', rel=.25, fam='woodwinds', desc='flute, sustained'),
     'flute_stac':     dict(src=V + 'Woodwinds/Flute/stac', kind='dec', rel=.1, fam='woodwinds', desc='flute, staccato'),
     'piccolo':        dict(src=V + 'Woodwinds/Piccolo/Sus', kind='sus', rel=.2, fam='woodwinds', desc='piccolo'),
@@ -89,7 +89,7 @@ REG = {
     'tenor_sax_stac': dict(src=C + 'Aerophones/Reed Aerophones/Tenor Saxophone/Staccato', kind='dec', rel=.08, fam='woodwinds', desc='tenor sax, staccato'),
     'alto_sax':       dict(src=K + 'weresax/Samples/alto', kind='sus', rel=.2, pp='lower', fam='woodwinds', desc='alto sax (Weresax)'),
     'harmonica':      dict(src=(C + 'Aerophones/Free Aerophones/Harmonica-Hohner-Super64/Sustains', r'_Normal'), kind='sus', rel=.15, fam='woodwinds', desc='chromatic harmonica'),
-    # Brass (铜管)
+    # Brass
     'trumpet':        dict(src=V + 'Brass/Trumpet/sus', kind='sus', rel=.25, fam='brass', desc='trumpet, sustained'),
     'trumpet_stac':   dict(src=V + 'Brass/Trumpet/stac', kind='dec', rel=.1, fam='brass', desc='trumpet, staccato'),
     'trumpet_mute':   dict(src=V + 'Brass/Trumpet/straightM-sus', kind='sus', rel=.2, fam='brass', desc='trumpet, straight mute'),
@@ -99,7 +99,7 @@ REG = {
     'trombone_stac':  dict(src=V + 'Brass/Tenor Trombone/stac', kind='dec', rel=.12, fam='brass', desc='trombone, staccato'),
     'tuba':           dict(src=V + 'Brass/Tuba/sus', kind='sus', rel=.3, fam='brass', desc='tuba, sustained'),
     'tuba_stac':      dict(src=V + 'Brass/Tuba/stac', kind='dec', rel=.12, fam='brass', desc='tuba, staccato'),
-    # Pitched percussion (打击)
+    # Pitched percussion
     'timpani':        dict(src=V + 'Percussion/Timpani', kind='dec', rel=1.5, pp='detect', fam='percussion', desc='timpani (5 drums; pitch = measured (1,1) main mode)',
                            roots={'drum1': 41.47, 'drum2': 46.81, 'drum3': 49.57, 'drum4': 52.5, 'drum5': 54.63},
                            var={f'drum{i}': f'Timpani{i}_' for i in range(1, 6)}),
@@ -115,7 +115,7 @@ REG = {
     'mbira':          dict(src=C + 'Idiophones/Plucked Idiophones/Kalimba, Tanzania', kind='dec', rel=1.2, fam='percussion', desc='mbira / Tanzanian kalimba (grittier; tuned from measured pitch to equal temperament)'),
     'hang':           dict(src=F + 'hang', kind='dec', rel=3.0, pp='sfz', fam='percussion', desc='hang drum (D minor; sounds best on its own notes)'),
     'glass':          dict(src=F + 'glass', kind='dec', rel=2.0, pp='sfz', fam='percussion', desc='glass harp'),
-    # Keyboards (键盘)
+    # Keyboards
     'piano':          dict(src=SAL + 'samples', kind='dec', rel=.4, pp='sal', fam='keyboards', desc='Salamander grand piano (Yamaha C5, 5 velocity layers)', lic='salamander'),
     'upright':        dict(src=V + 'Keys/Upright Nr1', kind='dec', rel=.35, retune=False, fam='keyboards', desc='upright piano (warm, slightly worn)'),
     'honky_tonk':     dict(src=F + 'piano_fb', kind='dec', rel=.4, pp='sfz', fam='keyboards', desc='old player piano (saloon honky-tonk)'),
@@ -124,7 +124,7 @@ REG = {
     'organ_soft':     dict(src=(V + 'Keys/Organ/Quiet', r'Man3'), kind='sus', rel=.2, pp='organ', oct=0, fam='keyboards', desc='pipe organ, soft manual stops'),
     'organ_pedal':    dict(src=(V + 'Keys/Organ', r'Pedal'), kind='sus', rel=.3, pp='detect', fam='keyboards', desc='pipe organ, pedal bass (measured pitch)'),
     'accordion':      dict(src=F + 'accordion', kind='sus', rel=.13, pp='sfz', fam='keyboards', desc='button accordion'),
-    # Plucked (拨弦) / Folk (民族)
+    # Plucked / Folk
     'guitar_nylon':   dict(src=F + 'spanish_guitar', kind='dec', rel=.3, pp='sfz', fam='plucked', desc='nylon-string classical guitar'),
     'ukulele':        dict(src=F + 'ukulele', kind='dec', rel=.3, pp='sfz', fam='plucked', desc='ukulele'),
     'electric_guitar': dict(src=F + 'eguitar_clean', kind='dec', rel=.3, pp='sfz', fam='plucked', desc='clean electric guitar'),
@@ -136,7 +136,7 @@ REG = {
     'erhu':           dict(src=K + 'erhu/Samples/sus', kind='sus', rel=.25, pp='lower', fam='folk', desc='erhu, sustained'),
     'erhu_stac':      dict(src=K + 'erhu/Samples/stac', kind='dec', rel=.1, pp='lower', fam='folk', desc='erhu, short bow'),
     'bagpipe':        dict(src=F + 'bagpipe', kind='sus', rel=.4, pp='sfz', fam='folk', desc='bagpipe (chanter; G2/G3 are the drones)'),
-    # Unpitched percussion (打击)
+    # Unpitched percussion
     'bass_drum':      dict(src=(V + 'Percussion', r'^BDrumNewhit'), kind='hit', fam='percussion', desc='concert bass drum (7 velocity layers)'),
     'gran_cassa':     dict(src=VM + 'Bass Drum 2', kind='hit', fam='percussion', desc='bass drum 2 (with rolls / crescendos)',
                            var={'hit': r'_hit_', 'roll': r'_roll_(pp|mp|mf|ff|f)\.', 'roll_fast': r'_roll_fast_\w+(?<!_rel)\.', 'cresc': r'_cresc_', 'rub': r'_rub'}),
@@ -471,12 +471,11 @@ def load(nm):
 
 
 FAMILIES = ('strings', 'woodwinds', 'brass', 'percussion', 'keyboards', 'plucked', 'folk')
-FAM_ALIASES = {'弦乐': 'strings', '木管': 'woodwinds', '铜管': 'brass', '打击': 'percussion', '键盘': 'keyboards', '拨弦': 'plucked', '民族': 'folk'}   # the Chinese names still work
 
 
 def instruments(fam=None):
-    """Instrument names, all or one family: strings / woodwinds / brass / percussion / keyboards / plucked / folk (the Chinese names are accepted too)"""
-    if isinstance(fam, str): fam = FAM_ALIASES.get(fam, fam.lower())
+    """Instrument names, all or one family: strings / woodwinds / brass / percussion / keyboards / plucked / folk"""
+    if isinstance(fam, str): fam = fam.lower()
     if fam is not None and fam not in FAMILIES: raise KeyError(f'unknown family {fam!r}; families: {", ".join(FAMILIES)}')
     return [k for k, v in REG.items() if fam is None or v['fam'] == fam]
 
