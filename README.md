@@ -91,31 +91,79 @@ Inspect prerequisites and install dependencies via PowerShell:
 & "skills\lemo-opuscar\scripts\setup.ps1" deps music
 ```
 
-### Then just say what you want in Antigravity
+## 🚀 Beginner's Guide: From Prompt to Finished Video
 
-> Make a 45-second film in the **watercolor** style about the coffee farm my family runs. Warm female narrator.
+Never used a code-driven film pipeline before? Here is everything you need to know, from your very first prompt to watching your final `.mp4` video.
 
-> Make a 40-second **LiDAR Survey** film about the old quarry in the hills behind our town, from public laser-scan data.
+### Step 1: Install & Check Dependencies
+Make sure you have Node 20+, ffmpeg 7+, and Python 3.11+ installed. Run the setup script to install the core headless renderer:
 
-> Make a 30-second **whiteboard explainer** about how vaccines train the immune system.
+```powershell
+# Check current environment
+& "skills\lemo-opuscar\scripts\setup.ps1"
 
-Name the style; the [style index](styles/README.md) lists them all.
+# Install Core tier (Playwright Chromium + core Python virtualenv)
+& "skills\lemo-opuscar\scripts\setup.ps1" deps
 
-Not sure yet? Prompt your agent: *"Show me the available styles in Lemo-Opuscar"*. It will present the ways in: a film in a library style, [make a style your own](#make-a-style-your-own), or a film in a style you've saved.
+# Add Voice and Music synthesis tiers when needed
+& "skills\lemo-opuscar\scripts\setup.ps1" deps voice music
+```
 
-It asks you once, up front via `ask_question`:
+### Step 2: Ask for a Film in Antigravity
+Open Antigravity and prompt naturally in plain English. State your topic and optionally name any of the 66 styles from the [Style Index](styles/README.md):
 
-- anything it can't decide about your topic;
-- whether you have your own **voice, music or other material**;
-- whether you want to see a **storyboard** first. Say yes and it stops once to show you the key shots in the real style; otherwise it goes straight to the finished film.
+> **Example 1 (Named Style):**  
+> *"Make a 45-second film in the **watercolor** style about the coffee farm my family runs. Warm female narrator."*
 
-The agent reads three guides and works like a small studio:
+> **Example 2 (Topic First):**  
+> *"Create a 40-second **LiDAR Survey** film about the old stone quarry in the hills behind our town, based on open terrain data."*
 
-| File | What it gives the agent |
+> **Example 3 (Help Me Choose):**  
+> *"I want to make a 30-second explainer about how optical fiber transmits data under the ocean. Recommend 2 or 3 fitting styles from Lemo-Opuscar."*
+
+### Step 3: Complete the One-Time Brief
+The agent will prompt you with a single interactive question to lock in your vision:
+- **Key Details:** Essential names, figures, or products that must appear.
+- **Custom Material:** Whether you want to provide your own voice recording, logo, or photos (optional; if none, the agent produces everything automatically).
+- **Storyboard Review:** Choose whether you want to review key visual frames before final animation (default is no: it produces the full film immediately).
+
+### Step 4: Autonomous Production Flow
+Once the brief is set, the agent operates like an autonomous film studio:
+1. **Treatment:** Drafts a custom [`TREATMENT.md`](DIRECTOR.md) detailing the story arc, pacing, and candidate structures without copying demo scripts.
+2. **Narration & Speech:** Synthesizes voice lines and aligns word-by-word timestamps for subtitles and lip sync.
+3. **Score & Foley:** Composes acoustic instruments, rhythms, and foley sound effects aligned to scene cuts.
+4. **Deterministic Animation:** Writes procedural drawing code and renders the film frame-by-frame via headless browser.
+5. **Mastering & Final Render:** Balances audio, syncs subtitles, and muxes video and audio together.
+
+The agent references three comprehensive directing guides during production:
+| Guide | Role in Production |
 |---|---|
-| [`DIRECTOR.md`](DIRECTOR.md) | how to direct: story, sound, rhythm, camera, performance, self-checks |
-| [`TECHNIQUE.md`](TECHNIQUE.md) | how to build: frame-by-frame rendering, voice, music, mixing |
-| `styles/<style>/STYLE.md` | what the style looks and sounds like; the story is yours |
+| [`DIRECTOR.md`](DIRECTOR.md) | Story structure, timing, camera grammar, sound design, and self-checks |
+| [`TECHNIQUE.md`](TECHNIQUE.md) | Technical rendering, browser canvas setup, audio sampling, and ffmpeg muxing |
+| `styles/<style>/STYLE.md` | Specific visual grammar, color palette, and layout rules for the chosen style |
+
+### Step 5: Getting and Watching Your Video!
+When rendering completes, your video is packaged and ready to watch:
+
+- **📁 Output Location:**  
+  All output files live inside your film's dedicated project folder:  
+  `films/<your-film-name>/<your-film-name>.mp4`  
+  *(For example: `films/coffee-farm/coffee-farm.mp4`)*
+
+- **▶ How to Watch Immediately:**  
+  Run this PowerShell command to open the film in your default media player:
+  ```powershell
+  Start-Process "films/<your-film-name>/<your-film-name>.mp4"
+  ```
+
+- **🖼️ Reviewing Stills:**  
+  Inspect rendered high-resolution preview stills located at:  
+  `films/<your-film-name>/stills/styleframe.jpg`
+
+- **🔁 Making Changes:**  
+  Need adjustments? Just tell your agent in chat:  
+  *"Make the opening shot 2 seconds longer"* or *"Change the background to a deeper indigo wash"*.  
+  The agent updates the code and re-renders only the modified scenes.
 
 ### Make a style your own
 
