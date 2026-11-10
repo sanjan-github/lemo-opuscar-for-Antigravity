@@ -126,9 +126,9 @@ const spark = WC.shape([star], { light: WC.light(.5, -.6, .6), sp: 9, halo: 8,
 const tail = WC.cutAlong([[1030, 590], [1090, 680], [1110, 770]], { w: 24, kind: 'u', seg: [300, 400], reveal: { t0: .8, t1: 1.1, speed: 900 } });
 
 function frame(g, t) {
-  m.fillStyle = '#000'; m.fillRect(0, 0, 1920, 1080);                                       // the uncut block
-  c.clearRect(0, 0, 1920, 1080);
-  WC.drawStrokes(m, WC.rays(960, 500, { n: 36, r0: 300, r1: [420, 640], w: 10, seed: 2, reveal: { t0: .5, t1: 1.0 } }), { t });
+  m.fillStyle = '#000'; m.fillRect(0, 1920, 1080);                                       // the uncut block
+  c.clearRect(0, 1920, 1080);
+  WC.drawStrokes(m, WC.rays(500, { n: 36, r0: 300, r1: [420, 640], w: 10, seed: 2, reveal: { t0: .5, t1: 1.0 } }), { t });
   spark.draw(m, t);
   WC.drawStrokes(m, tail, { t });
   WC.plate(c, [star], t > .8 ? 1 : 0);                                                      // the one colour

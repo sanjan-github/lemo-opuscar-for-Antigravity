@@ -3,20 +3,20 @@ node_modules/
 .lemo-deps.lock/
 __pycache__/
 .DS_Store
-# 模型与大素材（运行说明里给下载地址）
+# Models and large assets (download URLs provided in run instructions)
 core/tts/*.onnx
 core/tts/*.bin
 core/assets/polyhaven/*.hdr
-# 渲染中间产物
+# Intermediate render artifacts
 styles/*/demo/out/
 styles/*/demo/voices/*.wav
 styles/*/demo/music/*.mp3
 styles/*/demo/music/*.wav
 styles/*/demo/music/*.npy
 styles/*/demo/mix.wav
-# 成片走 GitHub Releases
+# Final films distributed via GitHub Releases
 styles/*/*.mp4
-# 2026-09-26 收录已有作品后补充
+# Additional intermediate files
 styles/*/demo/out_*/
 styles/*/demo/chk/
 styles/*/demo/node_modules
@@ -25,29 +25,28 @@ styles/*/demo/tts/*.onnx
 styles/*/demo/tts/*.bin
 styles/*/demo/music.wav
 *.log
-# 喊词是输入素材（只能在 macOS 上近似重建），要提交
+# Audio shouts input files to track
 !styles/game-show/demo/voices/*.wav
 styles/*/demo/music/src/
 
-# ---- 2026-09-26 GitHub 发布前补充 ----
-# 内部工作文件（不公开）
+# Internal working files (not public)
 /promo/
 /batch/
 /TODO.md
 /STYLES.md
 styles/*/HANDOFF.md
-# 配乐分轨、混音、拟音：build.sh 会重新生成
+# Music stems, mixes, foley: build.sh regenerates them
 styles/*/demo/**/stems*/
 styles/*/demo/**/music_stems/
 styles/*/demo/**/mix*.wav
 styles/*/demo/audio/*.wav
 core/audio/*.wav
-# 大素材走 Releases 的 assets 包，用 sh tools/fetch.sh 下载（清单见 tools/assets.json）
+# Large assets distributed via Releases assets bundle (download with sh tools/fetch.sh)
 core/audio/instruments/
-# Demo fonts are not in git: they are free (mostly Google Fonts, OFL); each demo's CREDITS names them
+# Demo fonts are not in git: free (mostly Google Fonts, OFL); credited in each demo
 styles/*/demo/fonts/**/*.ttf
 styles/*/demo/fonts/**/*.otf
-# 发布暂存 / Pages 构建产物
+# Release staging / Pages build output
 /.release/
 /_site/
 
@@ -72,36 +71,33 @@ styles/*/demo/**/*.jpeg
 styles/*/demo/**/*.png
 styles/*/demo/**/*.webp
 styles/*/demo/**/*.svg
-# Stills: only the review frames docs point to are committed; everything else in stills/ is a debug frame.
-# Name review frames styleframe.jpg, frame_*.jpg, alt_*.jpg or engine*.jpg and they are tracked with no extra line here.
+# Stills: only review frames pointed to by docs are committed; others in stills/ are debug frames.
 styles/*/demo/stills/*
 !styles/*/demo/stills/styleframe.jpg
 !styles/*/demo/stills/frame_*.jpg
 !styles/*/demo/stills/alt_*.jpg
 !styles/*/demo/stills/engine*.jpg
-# Illustrative plates a demo's build needs (AI-generated, credited in CREDITS) are committed, not re-fetched
+# Illustrative plates a demo's build needs (credited in CREDITS) are committed
 !styles/news-package/demo/assets/plates/*.jpg
 
-# 用户自己的片子（agent 输出）
+# User films (agent output)
 /films/
 
-
-# Production logs are internal: they stay local
+# Production logs are internal: keep local
 styles/*/PRODUCTION_LOG*
 styles/*/demo/PRODUCTION_LOG*
 
-# 宣传物料（发帖用海报、预告片、教程片），只留本地，不上传 GitHub
+# Promotional materials: keep local
 /docs/social/
 
-
-# Source photos, imagery caches and fonts anywhere in a demo stay local (CREDITS names them; build scripts re-fetch)
+# Source photos, imagery caches and fonts anywhere in a demo stay local
 styles/*/demo/**/*.ttf
 styles/*/demo/**/*.otf
 styles/*/demo/**/*.tif
 styles/*/demo/**/*.tiff
 styles/*/demo/**/*.npz
 styles/*/demo/assets/raw/
-# Downloaded archive sources (footage, scans, PDFs) and edit caches stay local; each demo's build.sh re-fetches them from SOURCES.jsonl
+# Downloaded archive sources (footage, scans, PDFs) and edit caches stay local
 styles/*/demo/raw/
 styles/*/demo/work/
 styles/*/demo/**/*.webm
@@ -115,7 +111,7 @@ styles/*/demo/**/*.pdf
 **/PRODUCTION_LOG*
 **/HANDOFF*.md
 **/NOTES.md
-**/进度*.md
+**/PROGRESS*.md
 **/TODO*.md
 *.bak
 *.orig
@@ -125,16 +121,16 @@ styles/*/demo/**/*.pdf
 *_draft.*
 **/tmp/
 **/scratch/
-# Self-check reports the music scripts rewrite on every build
+# Self-check reports music scripts rewrite on every build
 styles/*/demo/music/check.txt
 styles/*/demo/music/check.json
 styles/*/demo/music/*report*.txt
 # Partial outputs and try-out helpers
 styles/*/demo/**/*_partial.json
 styles/*/demo/**/*_try.py
-# Superseded first-round review frames; only those a doc or CREDITS names are re-included
+# Superseded first-round review frames
 styles/*/demo/stills/*_v1*
 !styles/art-deco/demo/stills/kit.jpg
 
-# isometric-picture-book: the character list its font subset step writes
+# Character list generated during font subset steps
 styles/isometric-picture-book/demo/tools/chars.txt

@@ -125,7 +125,7 @@ All functions are in `demo/engine.js` and are deterministic (same seed, same mar
 Minimal example: a warm orange `#D97757` four-point sparkle with a short cursor tail.
 ```js
 import { sketchShape, sparkle, penStroke, drawPen, hex } from './engine.js';
-const star = sparkle(960, 540, 120, .24);                       // 4-point star polygon
+const star = sparkle(540, 120, .24);                       // 4-point star polygon
 sketchShape(ctx, star, hex('#D97757'), { ink: 3, wash: .7, offset: 3, seed: 7 });
 drawPen(ctx, penStroke([[1040, 610], [1180, 640], [1300, 646]], { w: 3, wob: 1.2, over: 6, seed: 8 }), 1);   // the tail
 ```

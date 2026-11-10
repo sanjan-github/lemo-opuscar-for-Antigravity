@@ -75,7 +75,7 @@ Pitfalls tied to this demo's props:
 - Don't build a skyscraper forest: the streets must be visible.
 - Route the dawn car on the camera-side lane, or it hides in a street canyon.
 - Put the neon sign on a building facing a wide avenue, or it is occluded.
-- An instance cap below the number of cars alive (1,400 vs 2,800) silently drops the hero car.
+- An instance cap below the number of cars alive (400 vs 2,800) silently drops the hero car.
 - Cars stop 2 m short of the ducks' crossing (the IDM jam gap): move the stop line closer and subtract the jam gap.
 - Gridlock can leave the story lane empty, because box-blocking starves the segment in front of the crossing: exempt the main avenue so the queue forms behind the hero.
 - Check the top-down → oblique dive for a 180° twist.

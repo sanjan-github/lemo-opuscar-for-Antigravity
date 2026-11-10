@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *The Hindenburg: Four Minutes, 32 Seconds* (兴登堡号：四分钟与三十二秒, 60.0 s) · `visual-investigation.mp4` · source in [`demo/`](demo/)
+Demo: *The Hindenburg: Four Minutes, 32 Seconds* · `visual-investigation.mp4` · source in [`demo/`](demo/)
 
 An unofficial film. Every picture, page, map and sound in it comes from real archives and public institutions (the U.S. National Archives' Universal Newsreels, the U.S. Navy and the Naval History and Heritage Command, the FBI file, the U.S. Department of Commerce accident report, the U.S. Geological Survey); none of them made or endorsed it. All facts and their sources are in [`demo/FACTS.md`](demo/FACTS.md); every inference is marked on screen.
 
@@ -14,9 +14,9 @@ On 6 May 1937 the airship *Hindenburg* burned at the Naval Air Station, Lakehurs
 - **Title package (2.4–6.3 s).** The newsreel's flight over New York, the title, a lower third (New Jersey · Lakehurst).
 - **The wait — minutes (6.3–12.3 s).** Four radiograms land at their times (16:42 delay, 16:52 we will wait, 17:22 land now, 18:08 earliest possible), each tied by a red leader to a pin on the wind chart below; the chart carries the thunderstorm and showers as one-word bands and a red playhead with its clock running from 15:40 to 18:14.
 - **Position (12.3–18.6 s).** A 1947 USGS map pushes in to the air station, then cuts to a plan around the mooring mast: ropes down at 18:21 on a 30° bearing, "≥ 700 ft"; the photographer's inferred view cone. A Navy photo of the ship on its mast (an earlier landing) and the approach footage, mast circled.
-- **Four minutes (18.6–23.8 s).** "4 分钟", 18:21 → 18:25. A ground witness saw the outer cover flutter near cell 5; a 16-cell side view draws itself and ripples there.
+- **Four minutes (18.6–23.8 s).** "4 ", 18:21 → 18:25. A ground witness saw the outer cover flutter near cell 5; a 16-cell side view draws itself and ripples there.
 - **Origin — seconds (23.8–31.8 s).** Five sources in one board: the FBI testimony line highlighted, the frozen frame with a ×2 loupe, the Navy photo (stern circled), the newsreel's own 1937 commentary ("a burst of flame near the big tail fins") as a waveform, the report's sentence; red links converge on cells 4–5; five ✓ badges.
-- **32 seconds (31.8–38.6 s).** A three-column sync grid (report / photos / newsreel) under one big stopwatch. The report column is there from T+0; the Navy photo cuts in at ≈T+2; the newsreel, aligned on the impact, only starts ≈7 s after the first flame, so its column lights up then; NH 57973 replaces the photo at ≈T+26; freeze on impact, "32 秒".
+- **32 seconds (31.8–38.6 s).** A three-column sync grid (reportphotosnewsreel) under one big stopwatch. The report column is there from T+0; the Navy photo cuts in at ≈T+2; the newsreel, aligned on the impact, only starts ≈7 s after the first flame, so its column lights up then; NH 57973 replaces the photo at ≈T+26; freeze on impact, "32 ".
 - **The inquiry — days (38.6–45.6 s).** An FBI teletype (8 May) announces the Commerce inquiry; two columns: *established* (origin, 32 s, leaking hydrogen ignited) and *unresolved* (how it leaked, the spark — "most probable" brush discharge, sabotage — no evidence).
 - **People (45.6–52.4 s).** The 1937 newsreel says "almost half its 99 passengers and crew"; a fact-check card corrects it from the report (97 aboard, 35 died, plus one ground crew); 97 + 1 dots, 36 turn to red rings.
 - **Evidence map (52.4–55.6 s).** Plan, broken-axis mini timeline, side view and five thumbnails, every link converging on cells 4–5. The poster.
@@ -53,7 +53,7 @@ Exactly the style palette: `#0B0C0E` ground, `#141619` panels, greyscale sources
 
 ## End card
 
-Left-aligned on the ground, held 4.4 s: "兴登堡号：四分钟与三十二秒", "THE HINDENBURG: FOUR MINUTES, 32 SECONDS", a thin rule, "视觉调查 · Visual Investigation", "LemoLab × Claude Opus 5.5", then the source lines (newsreel and sound; photos; documents; map; "unofficial film; photo times, camera positions and the film alignment are our inferences"). Four evidence thumbnails on the right. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+Left-aligned on the ground, held 4.4 s: "：s", "THE HINDENBURG: FOUR MINUTES, 32 SECONDS", a thin rule, " · Visual Investigation", "LemoLab × Claude Opus 5.5", then the source lines (newsreel and sound; photos; documents; map; "unofficial film; photo times, camera positions and the film alignment are our inferences"). Four evidence thumbnails on the right. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build notes
 

@@ -2,14 +2,14 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *AI进化节拍 · Rhythm of AI 1997 → 2026* (148.8 s, 1920×1080, 30 fps) · `game-show.mp4` · source in [`demo/`](demo/) · engine: plain SVG DOM with a pure `render(t)`, screenshotted by Playwright + Chrome Headless Shell; original score synthesized in numpy from the picture's own `events.json`.
+Demo: *AI · Rhythm of AI 1997 → 2026* (148.8 s, 1920×1080, 30 fps) · `game-show.mp4` · source in [`demo/`](demo/) · engine: plain SVG DOM with a pure `render(t)`, screenshotted by Playwright + Chrome Headless Shell; original score synthesized in numpy from the picture's own `events.json`.
 
 
 **Language note.** All on-screen text in the demo is **Chinese** (level names, year banners, labels, the report card, the credit card). The only audio words are short **English shouts** ("Game over.", "Hey!", "Question!"). There is **no narration**. To make an English version, see "Switching the text to English" below.
 
 ## Story & structure
 
-The history of AI from 1997 to 2026 staged as a **game show made of rhythm levels**. The film opens on a title set where the whole cast drops in on the beat and counts "One! Two! Three! Four!". Then comes a run of **levels**. Each level is **one bar of title card** (GAME N + name + years, flying in on a brass jingle) followed by **eight bars of play**: a pattern is set up in the first half, answered or escalated in the second, and the last beat (bar 7, beat 3) is a **slam + "Perfect!"** judgement. A **remix** level near the end piles every recent event onto one set, with a month timeline across the top and shrunken thumbnails of each finished bit parked along the bottom. The ending hatches a new character from an egg, types out a **report card** ("AI 进化史 · 成绩单") with an Encore! star, and closes on a **credit card**.
+The history of AI from 1997 to 2026 staged as a **game show made of rhythm levels**. The film opens on a title set where the whole cast drops in on the beat and counts "One! Two! Three! Four!". Then comes a run of **levels**. Each level is **one bar of title card** (GAME N + name + years, flying in on a brass jingle) followed by **eight bars of play**: a pattern is set up in the first half, answered or escalated in the second, and the last beat (bar 7, beat 3) is a **slam + "Perfect!"** judgement. A **remix** level near the end piles every recent event onto one set, with a month timeline across the top and shrunken thumbnails of each finished bit parked along the bottom. The ending hatches a new character from an egg, types out a **report card** with an Encore! star, and closes on a **credit card**.
 
 This is an unofficial fan piece about the history of AI. The companies and products named on screen (among them OpenAI, Google, Anthropic, Meta, DeepSeek, xAI, Mistral, IBM, Alibaba's Qwen, Moonshot's Kimi and Midjourney) did not make or endorse it. Every factual claim on screen and in the shouts is listed with its source in `demo/FACTS.md` (checked 2026-11-07); a film about real products needs the same.
 
@@ -19,7 +19,7 @@ How the demo spent the native moves:
 |---|---|
 | **Levels with years** | Chess and Go (1997–2016), quiz show (2011), attention factory (2017–2020), AI art studio (2021–2024), chat chorus (2022–2023), thinking + price war (2024–2025), agent pipeline (2025), then a 2026 remix. |
 | **Call-and-response** | Human move / machine move (chess), question / buzzer (quiz), lead "Hey!" / crowd "Hey!" (chorus), task drops / stamp DONE (agents). Go stones on eighth notes after chess on quarter notes. |
-| **Judgement words** | "Perfect!", "第 37 手！", "翻倍！", price tags getting hammered, "9.9 ✓" thought bubbles. |
+| **Judgement words** | "Perfect!", " 37 ！", "！", price tags getting hammered, "9.9 ✓" thought bubbles. |
 | **Stats as game UI** | Podium dollar scores, a users counter racing to 1,000,000, parameter counts, price tags ($60 → $2.19), a bar chart that grows by beat. |
 | **Remix / thumbnails** | One set, a month ribbon, each item gets 2 bars centre stage and then shrinks (×0.27) into a slot at the bottom. In the finale all thumbnails bounce together under a giant year. |
 | **Egg → report card → credit** | A "next level" tease (NEXT egg hatches a "???" baby bot), then a typewriter recap of three lines, then the credit card. |
@@ -34,7 +34,7 @@ No camera travel anywhere in the demo: a frontal, symmetrical proscenium through
 
 | Section | Bars | Camera / cut | Note |
 |---|---|---|---|
-| Cold open + title | 0–3 | locked wide, punches on each count | "AI 进化节拍" 200 px, white with a 26 px ink stroke, glyphs popping 0.06 s apart; subtitle "RHYTHM OF AI · 1997 → 2026" in Fredoka; the cast drops in behind it one per half-beat, each with a pitched pip |
+| Cold open + title | 0–3 | locked wide, punches on each count | "AI " 200 px, white with a 26 px ink stroke, glyphs popping 0.06 s apart; subtitle "RHYTHM OF AI · 1997 → 2026" in Fredoka; the cast drops in behind it one per half-beat, each with a pitched pip |
 | Levels 1–7 | 4–66 | hard cut + 0.08 s white flash on each card bar; punches 0.008 (ticks), 0.02 (hits), 0.03–0.05 (slams) | card bar, then 8 bars of play, slam + "Perfect!" on bar 7 beat 3 |
 | REMIX card + remix | 67–83 | locked wide, thumbnails shrink into bottom slots | month ribbon across the top |
 | Ending | 84–92 | hard cuts on bar lines; the only fade: last 0.8 s to navy | egg → "Hi!" → report card (typewriter, one character per 1/8 beat, key click per 2 characters) → credit card |
@@ -78,22 +78,22 @@ Motion numbers: `hopY(t, h)` h 8–30 px; `hitSq` 30 rad/s for 0.35 s; downbeat 
 
 ## End card
 
-The demo's last card carries **"LemoLab × Claude Opus 5.5"** (× is U+00D7). It is the first line of the credit card that pops in at bar 90 (144.0 s): a cream 1440×360 card (r 40, 8 px ink outline, −1.5° tilt, back-ease pop over 0.3 s) with three centred lines: `LemoLab × Claude Opus 5.5` in Fredoka 700 66 px ink (y −80), `本片由 Claude Opus 5.5 全程代码生成` in Noto Sans SC 900 60 px (y 30), `下一关：正在训练中……` 50 px in `K.claude` (y 118). It holds 4 s and fades to navy with the film. Code: the `credit` block in the ending scene of `main_b.js`. This sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card (take the `credit` block out when reusing the code).
+The demo's last card carries **"LemoLab × Claude Opus 5.5"** (× is U+00D7). It is the first line of the credit card that pops in at bar 90 (144.0 s): a cream 1440×360 card (r 40, 8 px ink outline, −1.5° tilt, back-ease pop over 0.3 s) with three centred lines: `LemoLab × Claude Opus 5.5` in Fredoka 700 66 px ink (y −80), ` Claude Opus 5.5 ` in Noto Sans SC 900 60 px (y 30), `：……` 50 px in `K.claude` (y 118). It holds 4 s and fades to navy with the film. Code: the `credit` block in the ending scene of `main_b.js`. This sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card (take the `credit` block out when reusing the code).
 
 ## Rights & facts
 
 - **Facts are sourced in `demo/FACTS.md`**: every claim on screen and in the shouts, with the source's own words and a verdict (checked 2026-11-07). Where the record is thin, the film says less: the chess shout is "Game over." (Game 6 of 1997 ended in resignation, not mate); the 9.11 desks are generic bots (no record says which models answered 9.11); the price tags are labelled as output prices per 1M tokens; the 2026 bar chart is Gemini 3.1 Pro's ARC-AGI-2 score from Google DeepMind's own model page; the WAIC disc is the fair's own "300+ world premieres".
 - **Facts date fast.** The 2026 remix (Sonnet 5 as default, WAIC 2026, DeepSeek V4-Pro, GPT-6 Astra, Gemini versions) states them as current news. Re-check every figure and name before reusing any of it.
 - **Real brands:** the contestants stand for real AI products (GPT, Claude, Gemini, DeepSeek, Kimi, Grok, Midjourney…): names only on name tags, original mascots, loose colour nods; never official logos, wordmarks or product UI (DeepSeek is a blue bean with a magnifier, not the company's whale). Real people (Kasparov, Lee Sedol, the KEN / BRAD podiums) appear only as generic cartoon stand-ins in factual banners; the quiz machine is a generic screen-faced bot, not IBM's Watson avatar. Ken Jennings's real 2011 line "I for one welcome our new computer overlords" (itself a *Simpsons* quote) is on his sign, in Chinese.
-- **Genre, not a game.** The film borrows the grammar of rhythm-action party games (call-and-response cues, "Perfect!" judgements, a remix level) and names no game: the G7 task note says "做一个节拍游戏风格的视频", and the report card's grade is "Encore!".
+- **Genre, not a game.** The film borrows the grammar of rhythm-action party games (call-and-response cues, "Perfect!" judgements, a remix level) and names no game: the G7 task note says, and the report card's grade is "Encore!".
 
 ## Switching the text to English
 
 All strings are literals in `main_b.js` (and three in `main_v1.js`):
 1. Level cards: `card(SECT.gN, 'GAME N', '<name>', '<years>', …)`; the name auto-shrinks to 720 px.
 2. Year banners: `banner(g, '<year>', '<name>', '<subtitle>', col)`; widths auto-measure.
-3. Remix: `item(i, m0, m1, '<label>', …)`, `plate(p, '<text>')`, the month ribbon `` `${m}月` `` and the finale label `'2026 · 未完待续'`, `'还没唱完 →'`.
-4. Props: quiz `QA` pairs, Ken's sign, the "9.11 和 9.9" chalkboard, the task note, the users counter label `'用户'`, report card title + `lines`, the credit text, the title `chars()` strings. In `main_v1.js`: the robot chest label `'注意力'` (`robotT`) and the sentence tokens in G3.
+3. Remix: `item(i, m0, m1, '<label>', …)`, `plate(p, '<text>')`, the month ribbon `` `${m}` `` and the finale label `'2026 · '`, `' →'`.
+4. Props: quiz `QA` pairs, Ken's sign, the "9.11 9.9" chalkboard, the task note, the users counter label `''`, report card title + `lines`, the credit text, the title `chars()` strings. In `main_v1.js`: the robot chest label `''` (`robotT`) and the sentence tokens in G3.
 5. Prefer `F.round` (Fredoka) for Latin headings and keep `F.sans` for body; `init()` preloads fonts from the page's own text, so no font list changes are needed. English runs ~1.6× wider than Chinese: check banners and plates with stills.
 6. Re-run `make_srt.py` if shouts change; the shouts are already English.
 
@@ -170,22 +170,22 @@ All commands from `styles/game-show/demo/` (the scripts also `chdir` there thems
 | music.py | `PLAN[bar] = mode`, `span(a, b, mode)`, `jingle(at(bar))` | bar-by-bar arrangement |
 | | event loop `if s == '<name>': addv(sound, t, gain, pan)` | map a picture event to a sound |
 
-**Minimal new level** (inside `buildAll()` in `main_b.js`; add `g8: 67` to `SECT` and shift later sections, add bar 67 to `CUTS`, `jingle(at(67))` + a `span(68, 75, 'funk')` in `music.py`, and raise `END_BAR`):
+**Minimal new level** (inside `buildAll()` in `main_b.js`; add `g8: 67` to `SECT` and shift later sections, add bar 67 to `CUTS`, `jingle(at(67))` + a `span(75, 'funk')` in `music.py`, and raise `END_BAR`):
 
 ```js
 { const b0 = SECT.g8 + 1, T = (bar, bt = 0) => at(b0 + bar, bt);
-  card(SECT.g8, 'GAME 8', '开源接力', '2026', K.orange, '#FF9E5E',
+ card(SECT.g8, 'GAME 8', '', '2026', K.orange, '#FF9E5E',
        (p) => { const w = el('g', { transform: 'scale(2)' }, p); pawn(w, K.white); });
   scene(T(0), T(8), (g, s) => {
     bg(g, '#FFB870'); stripes(g, '#FFA85A', 50, -20);
     el('rect', { x: 0, y: 880, width: 1920, height: 200, fill: '#E08A4A' }, g);
     const w = el('g', {}, g); const c = CAST.claude(w);
-    const calls = [T(0, 0), T(0, 1), T(1, 0), T(1, 1)], answers = [T(0, 2), T(0, 3), T(1, 2), T(1, 3)];
+    const calls = [T(0), T(1), T(0), T(1)], answers = [T(2), T(3), T(2), T(3)];
     calls.forEach(t0 => { ev(t0, 'v:hey'); punch(t0, 0.015); });
     answers.forEach(t0 => { ev(t0, 'pop', { f: 900 }); s.fx.push(burst(g, 960, 420, t0, K.yellow, 0.8)); });
-    const b1 = banner(g, '2026', '开源接力', '一拍一棒，接住就赢', K.orange);
-    s.fx.push(judge(g, 'Perfect!', 960, 300, T(7, 3), K.pink, 0.8));
-    ev(T(7, 3), 'slam'); punch(T(7, 3), 0.05);
+ const b1 = banner;
+    s.fx.push(judge(g, 'Perfect!', 960, 300, T(3), K.pink, 0.8));
+    ev(T(3), 'slam'); punch(T(3), 0.05);
     return (t) => {
       tf(w, 960, 880 + hopY(t, 20), 1);
       poseAny(c, { hey: heyAt(answers, t) ? 1 : 0, open: heyAt(calls, t), sq: hitSq(t, nearestIn(answers, t) ?? -9) });

@@ -1,4 +1,4 @@
-# Desktop Flythrough 桌面穿梭 — Style Prompt
+# Desktop Flythrough — Style Prompt
 
 > App screens and tools lie on a sunlit desk as printed paper cards; small pixel characters, popped up into voxel toys, carry the work from card to card, while one unbroken camera flies after them, whips between stops and finally pulls back over the whole desk.
 > References (grammar only): one-take desktop tours in software launch films (windows laid flat as places, a small helper as the guide); macro toy photography (low warm sun, long soft shadows); pixel-art sprites (the cast's look). Never copy their characters, layouts, icons or music.

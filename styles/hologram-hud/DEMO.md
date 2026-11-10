@@ -30,7 +30,7 @@ Why this route, for this product: the hook's orbit craning down made the rising 
 
 Framing numbers: fov 0.6. Big cards at x ≥ 1240, the rail at x 110–470, subtitles fixed at the bottom centre (baseline y 962), the loupe above y 580. In the wide loupe shot the target sits at x 0.49 → 0.475 of the frame.
 
-Motion numbers: the target box starts at 1.9× the rest-pose bounding box, at 30 % alpha, snaps in 0.22 s; tag `TGT 0N · LOCK`. Explodes: the battery cover slides *along the down tube* while the cells stay and turn hot; the motor splits axially (cap / rotor / stator / cap) while rotor and stator counter-rotate; the brake caliper halves part on either side of the rotor, pistons separating *less* than the body so they appear to extend. Open over 1 beat (part 1: 2 beats), close over 0.5 s. Rolling value: 0.5 s (part 1: 1 s). Chip dock: card fades 0.35 s, chip slides x 140 → 110; rail step `min(112, 410 / (n − 1))` px, so 5 chips fit. Whip: 0.5 s cubic in-out, starting 0.45 s before the next lock; 5 sub-frames over 1/48 s.
+Motion numbers: the target box starts at 1.9× the rest-pose bounding box, at 30 % alpha, snaps in 0.22 s; tag `TGT 0N · LOCK`. Explodes: the battery cover slides *along the down tube* while the cells stay and turn hot; the motor splits axially (cap / rotor / stator / cap) while rotor and stator counter-rotate; the brake caliper halves part on either side of the rotor, pistons separating *less* than the body so they appear to extend. Open over 1 beat (part 1: 2 beats), close over 0.5 s. Rolling value: 0.5 s (part 1: 1 s). Chip dock: card fades 0.35 s, chip slides x 140 → 110; rail step `min(410 / (n − 1))` px, so 5 chips fit. Whip: 0.5 s cubic in-out, starting 0.45 s before the next lock; 5 sub-frames over 1/48 s.
 
 ## Score structure
 
@@ -49,9 +49,9 @@ Motion numbers: the target box starts at 1.9× the rest-pose bounding box, at 30
 - Wireframe: `lighter` strokes 1.3 px in 7 alpha levels; glow ¼-res blur 3 px ×0.85 and ⅛-res blur 4 px ×0.7; colour `hsla(hue, 100%, 50–80%, a)`; hot edges `hsla(hue, 70%, 92%)`, the 7 cm under the scan front.
 - Solid: Fresnel `0.3 + 0.7·(1 − facing)^1.6` (facing = projected area / edge product), interlace 2 px full / 2 px at 38 % scrolling 1 px per frame; line width ×1.5 at ignition easing to ×1.12; light wave ±7 cm at ignition and on the chord change. Beam gradient 10 % → 0, 26 rays, 70 dust motes.
 - Colour: `hue` 188 (cyan), `accent` 38 (amber); the alternate content uses 204 / 18 (blue / orange).
-- Type: Rajdhani 300 for big numbers and the product name (26 px tracking), 500/600 labels (2–3 px tracking); Share Tech Mono 20–22 px. Plates `rgba(1,8,12,.72)`, border 28 %, 10 px corner ticks (`plate()` in hud.js).
+- Type: Rajdhani 300 for big numbers and the product name (26 px tracking), 500/600 labels (2–3 px tracking); Share Tech Mono 20–22 px. Plates `rgba(8,12,.72)`, border 28 %, 10 px corner ticks (`plate()` in hud.js).
 - HUD: 46 px corner brackets 44 px from the edge; rulers tick every 24 px (every 5th long). Top-left: product // SPEC SCAN. Status: SCANNING 042% → SCAN COMPLETE · 3 SYSTEMS → TARGET 2/3 · MOTOR → HOLO SOLID · 360° → SPEC SHEET · READY.
-- Subtitles: plate `rgba(1,8,12,.62)`, two diagonal cyan brackets, four voiceprint bars, Rajdhani Medium 38 px, wrap 1180 px; in 0.1 s before the voice, out 0.12 s before the next line.
+- Subtitles: plate `rgba(8,12,.62)`, two diagonal cyan brackets, four voiceprint bars, Rajdhani Medium 38 px, wrap 1180 px; in 0.1 s before the voice, out 0.12 s before the next line.
 - The e-bike model: tube frame, wheels with tyre (3 rings + cross ribs), rim, spokes and hub; battery in the down tube; hub motor; disc brake with caliper. The caliper needs an arc-shaped body hugging the rotor edge, round piston faces, pads following the rotor curve and vent holes on the rotor.
 
 ## End card
@@ -150,8 +150,8 @@ const P = []; for (let i = 0; i < 8; i++) { const a = Math.PI/2 + i*Math.PI/4, r
 const star = modelFromPath(P, { depth: .12, id: 'star' });
 const tail = modelFromPath([[.62,.1],[.7,.1],[.7,.55],[.62,.55]], { depth: .06, id: 'caret' });
 const m = { parts: [...star.parts, ...tail.parts] }; m.byId = Object.fromEntries(m.parts.map(p => [p.id, p])); normalizeModel(m, 1.6);
-const T = U.theme(188, 38), cam = { target:[0,.55,0], yaw:.6, pitch:.18, dist:2.6, fov:.6, cx:960, cy:540 };
-const info = new Holo(1920,1080).draw(ctx, m, cam, { hue: T.hue, scan: { y: .8 }, keep: { star: '#D97757' } });
+const T = U.theme(38), cam = { target:[0,.55,0], yaw:.6, pitch:.18, dist:2.6, fov:.6, cx:960, cy:540 };
+const info = new Holo(1080).draw(ctx, m, cam, { hue: T.hue, scan: { y: .8 }, keep: { star: '#D97757' } });
 U.targetBox(ctx, T, info.bbox.star, 1, { tag: 'TGT 01 · LOCK' });
 ```
 

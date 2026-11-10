@@ -1,49 +1,68 @@
 [
  {
   "id": "v01",
-  "text": "四川深山里发出来的电，仅仅七毫秒后，就到了两千公里外的江苏。",
-  "asr": "四川深山里发出来的电，仅仅7毫秒后，就到了2000公里外的江苏。"
+  "text": "Power made deep in the mountains of Sichuan reaches Jiangsu, 2,000 km away, in just 7 milliseconds.",
+  "say": "Power in Sichuan reaches Jiangsu, two thousand kilometres away, in seven milliseconds.",
+  "rate": "+25%",
+  "asr": "Power in Sichuan reaches Jiangsu, 2,000 km away in 7ms."
  },
  {
   "id": "v02",
-  "text": "平时我们家里用的电，电流是来回摆动着走的，叫做交流电。"
+  "text": "The electricity in our homes swings back and forth as it flows. It's called alternating current, AC.",
+  "say": "The electricity in our homes, swings back and forth. It's called alternating current.",
+  "rate": "+25%",
+  "asr": "The electricity in our homes swings back and forth. It's called alternating current."
  },
  {
   "id": "v03",
-  "text": "如果直接送去太远的地方，在路上就会白白损耗掉很多。"
+  "text": "Sent that far as it is, a lot of it would simply be lost on the way."
  },
  {
   "id": "v04",
-  "text": "所以，电得先进一趟换流站，变成只朝一个方向跑的直流电。"
+  "text": "So first it goes through a converter station and becomes direct current, DC, flowing one way only.",
+  "say": "It goes through a converter station and becomes direct current, flowing one way only.",
+  "rate": "+25%",
+  "asr": "It goes through a converter station and becomes direct current, flowing one way only."
  },
  {
   "id": "v05",
-  "text": "然后再顺着这根两千多公里长的电线，一路狂奔到江苏。",
-  "asr": "然后再顺着这根2000多公里长的电线，一路狂奔到江苏。"
+  "text": "Then it races along this line, more than 2,000 km long, all the way to Jiangsu.",
+  "say": "Then it races along this line, more than two thousand kilometres, to Jiangsu.",
+  "rate": "+25%",
+  "asr": "Then it races along this line, more than 2,000 kilometers, to Jiangsu."
  },
  {
   "id": "v06",
-  "text": "全程只要七毫秒，连眨一下眼睛的时间都不到。",
-  "asr": "全程只要7毫秒，连眨一下眼睛的时间都不到。"
+  "text": "The whole trip takes 7 milliseconds, less than the blink of an eye.",
+  "say": "The whole trip takes seven milliseconds, less than the blink of an eye.",
+  "rate": "+20%"
  },
  {
   "id": "v07",
-  "text": "到了终点站，它会被重新变回交流电，再把电压一级一级降下来，最终送进你家墙上的插座里。"
+  "text": "At the end it's turned back into AC, stepped down level by level, and sent to the socket in your wall.",
+  "say": "At the end it's turned back into alternating current, stepped down level by level, and sent to the socket in your wall.",
+  "asr": "At the end it's turned back into alternating current, stepped down level by level, and sent to the socket in your wall."
  },
  {
   "id": "v08",
-  "text": "而当你插上手机充电器时，充电头里其实也藏着一个叫整流桥的小零件，正在把交流电重新变回直流电。"
+  "text": "Plug in your phone charger, and inside it a tiny part called a bridge rectifier turns the AC back into DC.",
+  "say": "Plug in your phone charger, and inside it a tiny part called a bridge rectifier turns the A C back into D C."
  },
  {
   "id": "v09",
-  "text": "说出来你可能不信，它和换流站里那个几层楼高的大家伙，用的是同一个电路原理。"
+  "text": "Believe it or not, it works on the same circuit principle as the giant, storeys tall, in the converter station.",
+  "rate": "+18%",
+  "asr": "Believe it or not, it works on the same circuit principle as the giant, stories tall, in the converter station."
  },
  {
   "id": "v10",
-  "text": "只不过，换流站那边的功率，是这个小充电头的整整四亿倍。"
+  "text": "Only the station's power is a full 400 million times that of this little charger.",
+  "say": "Only the station's power is a full four hundred million times that of this little charger.",
+  "rate": "+18%"
  },
  {
   "id": "v11",
-  "text": "你手机里的每一格电，都是跨越千山万水，这么跑过来的。"
+  "text": "Every bar of charge on your phone came this far, across mountains and rivers.",
+  "rate": "+12%"
  }
 ]

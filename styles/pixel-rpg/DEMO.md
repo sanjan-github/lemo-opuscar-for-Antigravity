@@ -99,7 +99,7 @@ Adapting any topic: find the **game system** hidden in it. A product launch is a
 - **Negative modulo**: `Math.floor(t*12) % 4` is negative when a phase offset makes `t` negative, and it indexes `undefined`. Use `((n % m) + m) % m`.
 - **Homophones**: whisper hears "inn" as "in". Accept it through the `asr` field; the subtitle disambiguates.
 - The dialog box covers the bottom 25%. Put the floor line at y 128 so standing characters stay above it.
-- For a match cut on a protected color, compute both screen positions. The demo's scarf is at (197, 104) in both eras.
+- For a match cut on a protected color, compute both screen positions. The demo's scarf is at (104) in both eras.
 
 ## Build notes
 

@@ -2,9 +2,9 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *Freeze Frame* (定格, 54.4 s) · `telestrator.mp4` · source in [`demo/`](demo/)
+Demo: *Freeze Frame* (54.4 s) · `telestrator.mp4` · source in [`demo/`](demo/)
 
-Istanbul, 25 February 2019: Beşiktaş lead Fenerbahçe 3–0 at half-time; Fenerbahçe score three in twelve minutes and draw 3–3. A fictional analysis show, *定格 FREEZE FRAME*, takes the comeback apart goal by goal, each goal with its own technique and the score bar flipping 3–0 → 3–1 → 3–2 → 3–3: the 55th-minute goal frozen mid-play on the pass from the right; the 61st-minute header frozen in two camera angles side by side, then stamped by the VAR check; the 67th-minute equaliser — the decisive one — watched live, rewound and frozen three times (the half-cleared ball, nobody stepping out, a strike 0.84 s after receiving, from outside the box), then seen from the reverse replay. Finally the strike frame flattens into a top-down board where all three shooting positions land: two from close range, one from 27 metres. A data card repeats the counted numbers; the hero's minute and name close it.
+Istanbul, 25 February 2019: Beşiktaş lead Fenerbahçe 3–0 at half-time; Fenerbahçe score three in twelve minutes and draw 3–3. A fictional analysis show, * FREEZE FRAME*, takes the comeback apart goal by goal, each goal with its own technique and the score bar flipping 3–0 → 3–1 → 3–2 → 3–3: the 55th-minute goal frozen mid-play on the pass from the right; the 61st-minute header frozen in two camera angles side by side, then stamped by the VAR check; the 67th-minute equaliser — the decisive one — watched live, rewound and frozen three times (the half-cleared ball, nobody stepping out, a strike 0.84 s after receiving, from outside the box), then seen from the reverse replay. Finally the strike frame flattens into a top-down board where all three shooting positions land: two from close range, one from 27 metres. A data card repeats the counted numbers; the hero's minute and name close it.
 
 This is an unofficial fan analysis made from real broadcast footage released under CC BY by the broadcaster itself (beIN SPORTS Türkiye, on its verified YouTube channel; one clip via Wikimedia Commons), a CC BY photo and a CC0 photo. The show is fictional; beIN SPORTS, the clubs and the league did not make or endorse it. Every fact is quoted in [`demo/FACTS.md`](demo/FACTS.md); the licence check is in [`demo/SOURCES.md`](demo/SOURCES.md).
 
@@ -23,7 +23,7 @@ Times in seconds; segment boundaries in `demo/timeline.json`. Clip `a` = the Com
 | # | Time | Picture | Format / move | Note |
 |---|---|---|---|---|
 | 1 | 0.0–1.6 | show board | sting: chalk half-pitch drawn, yellow marker slash at 0.12, title stamped 0.44 (1.6 → 1 overshoot) | strong action by 0.5 s |
-| 2 | 1.6–5.2 | stadium photo, darkened | match-record card: date / venue, 3 – 0 – then the away score jumps 1, 2, 3 on each goal dot (2.4, 2.6, 2.8); marker bracket under 55′–67′; label "下半场 三球" | |
+| 2 | 1.6–5.2 | stadium photo, darkened | match-record card: datevenue, 3 – 0 – then the away score jumps 1, 2, 3 on each goal dot (2.4, 2.6, 2.8); marker bracket under 55′–67′; label " " | |
 | 3 | 5.2–6.8 | `b` F066–F106, 1× | live; ring on No. 17 from F084 | bug LIVE, score 3–0 55′ |
 | 4 | 6.8–9.0 | `b` F106 frozen | **freeze-in-play**: ring under No. 17, dashed ball path to the finishing point (that point measured in F119 and mapped back into F106 with that frame's homography), red patch in front of goal, Zajc ringed with his run | voice: "Fifty-five…" |
 | 5 | 9.0–10.6 | `b` F106–F146, 1× | play on: ring on Zajc, ball comet; score flips 3–1 at F125 (9.76) | |
@@ -32,9 +32,9 @@ Times in seconds; segment boundaries in `demo/timeline.json`. Clip `a` = the Com
 | 8 | 14.6–17.8 | `c` main F046→F090, slow | score flips 3–2 on F057 (15.4); **VAR stamp** 15.55 | voice: "VAR checks…" |
 | 9 | 17.8–22.4 | `a` F001–F116, 1× | live with commentary transcript; score flips 3–3 on F078 (20.92) | |
 | 10 | 22.4–23.0 | `a` reversed | rewind | |
-| 11 | 23.0–25.0 | `a` F001 | freeze ①: ball circled, dashed arrow, "解围没解远"; No. 3 arriving from off-frame | |
+| 11 | 23.0–25.0 | `a` F001 | freeze ①: ball circled, dashed arrow,; No. 3 arriving from off-frame | |
 | 12 | 25.0–26.6 | `a` F001→F035, 0.85× | ring picks up No. 3, running trail | |
-| 13 | 26.6–28.4 | `a` F035 | freeze ②: red space, two defenders ringed cyan with link lines, "无人上抢" | |
+| 13 | 26.6–28.4 | `a` F035 | freeze ②: red space, two defenders ringed cyan with link lines, | |
 | 14 | 28.4–29.6 | `a` F035→F056, 0.7× | stopwatch counts frames | |
 | 15 | 29.6–31.6 | `a` F056 | freeze ③: box line traced, No. 26's block arrow, dashed shot line, stopwatch held at 0.84 s | |
 | 16 | 31.6–33.2 | `a` F056→F084, 0.6× | ball comet, ring bursts at the net | |
@@ -60,11 +60,11 @@ Times in seconds; segment boundaries in `demo/timeline.json`. Clip `a` = the Com
 
 - Yellow `#FFD400` (the team we follow, the ball), cyan `#3FD8FF` (opponents), red `#FF3B30` (space), chalk `#F4F1E8`, board `#0C1411`.
 - Type: Noto Sans SC 500 / 700 / 900, Barlow Condensed 600 / 800 Italic, IBM Plex Mono 500 (OFL subsets in `demo/fonts/`).
-- Show packaging "定格 FREEZE FRAME" (fictional): sting, corner bug in three modes, score bar, yellow slanted wipe.
+- Show packaging " FREEZE FRAME" (fictional): sting, corner bug in three modes, score bar, yellow slanted wipe.
 
 ## End card
 
-From 49.6 s, held to 54.1 then cut to black with the picture: "定格" (150 px), "Freeze Frame" (yellow), a thin rule, "SPORTS TELESTRATOR · 体育战术板", "LemoLab × Claude Opus 5.5", then five lines of credits: the broadcaster's CC BY video and its Commons cut with title and licence, the changes made, the CC BY photo, the CC BY drum kit, and the CC0 sources with the voice. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+From 49.6 s, held to 54.1 then cut to black with the picture: (150 px), "Freeze Frame" (yellow), a thin rule, "SPORTS TELESTRATOR · ", "LemoLab × Claude Opus 5.5", then five lines of credits: the broadcaster's CC BY video and its Commons cut with title and licence, the changes made, the CC BY photo, the CC BY drum kit, and the CC0 sources with the voice. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build notes
 
@@ -83,6 +83,6 @@ demo/
   FACTS.md, SOURCES.md, SOURCES.jsonl, CREDITS
 ```
 
-`sh demo/build.sh` (library set up with `setup.sh deps voice music`, sample packs freepats / vsco2ce / vcsl, and `uv`): sources → frames → homographies → fonts → voice + speech check → cues → reading check → render (1,632 frames, 30 fps) → mix → .srt → master (−14 LUFS, grain 2) → poster and styleframe (13.6 s, the dual-angle freeze) → final checks. `?dbg=1` paints the tracked points; `?nosub=1` hides subtitles.
+`sh demo/build.sh` (library set up with `setup.sh deps voice music`, sample packs freepats / vsco2ce / vcsl, and `uv`): sources → frames → homographies → fonts → voice + speech check → cues → reading check → render (632 frames, 30 fps) → mix → .srt → master (−14 LUFS, grain 2) → poster and styleframe (13.6 s, the dual-angle freeze) → final checks. `?dbg=1` paints the tracked points; `?nosub=1` hides subtitles.
 
 Demo-specific choices and pitfalls: the first two goals come from the broadcaster's full summary, which is the source of the Commons clip (its file page cites the video), so all footage is one CC BY release; the Commons page has no licence-review stamp, so check the licence on the video page itself (verified channel, CC BY field), see `demo/SOURCES.md`. Sources disagree on the first goal's assist (Valbuena vs Dirar), so the film names neither and shows "No. 17 from the right"; the official goal list (55′ / 61′ / 67′) wins over match reports that say 62′ and 66′. A "far corner" claim in one report contradicts the footage, so the third goal's corner is not mentioned. Clip each split-screen window to its slice in source coordinates: unclipped, the sliding windows show the broadcaster's URL for a few frames. Land the VAR stamp after the ball crosses the line (after F057), and make the segment long enough for that. Lengthen record card, shot map, data card and end card (don't slow them) until every row they carry passes the reading check.

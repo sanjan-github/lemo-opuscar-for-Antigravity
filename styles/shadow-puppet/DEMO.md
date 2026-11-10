@@ -46,7 +46,7 @@ Voice: a storyteller, Kokoro `am_michael`, speed 0.86–0.88, 5–6 short lines,
 
 ## Palette & props
 
-- **Rendering constants**: lamp lobe σ ≈ 700 px + hotspot σ ≈ 120 px; flicker ≈ ±6 % value noise at 7 Hz plus a small 23 Hz sine; light colour `(1, .77, .46)`; exposure `1.75 / √(lamps lit)` (ten lamps ≈ 3× one lamp); cloth weave at ~2.6 rad/px; bloom from a 3-level pyramid, threshold 0.72, tint `(1,.82,.6)`; warm vignette toward `(.7,.47,.25)`; saturation ×1.1; hide texture tileable 512²; film grain 2 in ffmpeg.
+- **Rendering constants**: lamp lobe σ ≈ 700 px + hotspot σ ≈ 120 px; flicker ≈ ±6 % value noise at 7 Hz plus a small 23 Hz sine; light colour `(.77, .46)`; exposure `1.75 / √(lamps lit)` (ten lamps ≈ 3× one lamp); cloth weave at ~2.6 rad/px; bloom from a 3-level pyramid, threshold 0.72, tint `(.82,.6)`; warm vignette toward `(.7,.47,.25)`; saturation ×1.1; hide texture tileable 512²; film grain 2 in ffmpeg.
 - **Dyes**: vermilion `#b8211a`, flame `#d9541c`, ochre `#dc9d1e`, gold `#c98a26`, malachite `#236e3a`, jade `#2f8a5c`, indigo `#22647e`, raw hide `#e2bd80`, ink `#1a100a` (outlines, hair, boots).
 - **Hou Yi** (11 pieces): head+helmet, chest, skirt, two upper arms, two forearms, two hands, two legs, plus quiver, bow, pheasant plumes. Head ~1.2× natural, helmet about a quarter of the figure. Armour = rows of thick crescent holes ("open fish-scale"), trousers = diamond lattice, belt = coin holes, four-lobed cloud collar with cloud-scroll cuts, sleeves in a different colour from the torso. Court boots: tall black shaft with cut cloud scrolls, upturned toe, thick white sole carved as one piece (grooves + a row of oval holes). Open-cut face.
 - **The bow** is drawn procedurally: limbs bend with draw, the string goes to the nocking hand, and **the nock sits on the aim line**: grip = shoulder + u·118, nock = grip − u·(40 + 72·pull). Arrow shaft dark `#4a2612`, 3 px.
@@ -55,7 +55,7 @@ Voice: a storyteller, Kokoro `am_michael`, speed 0.86–0.88, 5–6 short lines,
 - **Stage**: red-and-black lacquer frame, carved lintel with gold cloud curls, pillars; blurred children's heads along the bottom in the opening and end-card wides.
 - **Backstage**: lamps as dish + cords, one lit, the other nine just snuffed and trailing smoke.
 - **Motion numbers**: tremor ≈ 3 px / 0.018 rad, ×1.8 under tension; pendulums pre-simulated at 120 Hz; arrivals scale 2.6 → 1, blur 34 → 0 over 0.55 s; exits scale ×1.9, blur +30 px, fade over ~0.9 s; lamp flare overshoot to 1.5×, snuff over 0.35 s; freeze pose on the big gong held ~1 s.
-- **Subtitle placard**: dark brown gradient at 0.93 alpha, thin gold inner line, a small vermilion seal with 说 ("tell", Ma Shan Zheng) on the left, Cormorant Garamond 600, 46 px, cream `#f3e2bf`, centred 58 px above the bottom; slides up 18 px in 0.22 s; shown from line start until speech + 0.8 s (≥ 1.8 s), cut 0.3 s before the next.
+- **Subtitle placard**: dark brown gradient at 0.93 alpha, thin gold inner line, a small vermilion seal with "tell", Ma Shan Zheng on the left, Cormorant Garamond 600, 46 px, cream `#f3e2bf`, centred 58 px above the bottom; slides up 18 px in 0.22 s; shown from line start until speech + 0.8 s (≥ 1.8 s), cut 0.3 s before the next.
 - **Title plaque**: "HOU YI / SHOOTS THE SUNS / a shadow puppet tale" cut out of dark hide, red border with a meander band, green cloud-scroll corner roundels, a red seal with carved characters, carried up on two rods and lifted off the cloth to exit.
 
 ## End card

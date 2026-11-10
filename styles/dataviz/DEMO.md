@@ -112,7 +112,7 @@ import * as E from './engine.js';
 const g = canvas.getContext('2d'), cam = { x: 0, y: 0, zoom: 1, roll: 0 };
 E.drawPaper(g, cam); E.applyCam(g, cam);
 E.dotTrail(g, Array.from({ length: 9 }, (_, i) => [-300 + i * 26, 170 - i * 14]), { color: '#D97757', r0: 9, r1: 2 });
-E.inkShape(g, E.sparklePath(0, 0, 150), { fill: '#D97757' });            // accent bypasses the ramp
+E.inkShape(g, E.sparklePath(0, 150), { fill: '#D97757' });            // accent bypasses the ramp
 E.leader(g, [110, -200], [40, -110], { color: E.P.blue });
 E.handText(g, 'the spark, in pencil', 120, -210, { size: 34, color: E.P.blue });
 const tip = E.w2s(cam, 150, 0);

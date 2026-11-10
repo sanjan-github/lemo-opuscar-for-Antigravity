@@ -126,8 +126,8 @@ import { FilmPost, damage } from './engine/film.js';
 setFrame(t);
 const W = 1440, H = 1080, mk = () => Object.assign(document.createElement('canvas'), { width: W, height: H });
 const frame = mk(), f = frame.getContext('2d'), mask = mk(), m = mask.getContext('2d');
-f.fillStyle = grey(.9); f.fillRect(0, 0, W, H);
-const sp = sparkPts(720, 460, 220, 260);                 // a four-point light with a short tail
+f.fillStyle = grey(.9); f.fillRect(0, W, H);
+const sp = sparkPts(460, 220, 260);                 // a four-point light with a short tail
 drawShape(f, sp.star, { v: .6, shade: 12 });            // tonal version (gets inked + hatched)
 drawShape(f, { pts: sp.tail, closed: false }, { line: 10 });
 drawShape(m, sp.star, { color: '#D97757' });            // the one colour

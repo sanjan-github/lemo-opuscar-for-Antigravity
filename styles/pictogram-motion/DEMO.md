@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *Left Behind* 《被落下的伞》 (50.0 s, 1920×1080, 24 fps) · `pictogram-motion.mp4` · source in [`demo/`](demo/)
+Demo: *Left Behind*  (50.0 s, 1920×1080, 24 fps) · `pictogram-motion.mp4` · source in [`demo/`](demo/)
 
 A yellow umbrella is left on a city bus on a rainy morning. All day in the sun nobody needs it; at the end of the line it joins 312 other lost umbrellas on the depot's shelf. At rush hour the storm comes back, the depot opens every shelf, and 313 umbrellas go back out into the rain. The hero is an object, not a person: the cast is an umbrella, a bus, doors, stop signs, a clock, clouds, sun, moon, lightning, a lost-property sign and footprints, all built from the same round-capped geometry as the grid pattern. English narration (Kokoro `bf_emma`) with Chinese and English subtitles. Line 4, the street names, the depot and the number 313 are fiction.
 
@@ -24,18 +24,18 @@ Film time; 120 BPM, beat 0.5 s, bar 2 s. Every shot starts on a beat or an eight
 | 2 | 2.5–4.0 | the same furled umbrella, now inside a bus window; it turns over and hooks onto the rail on 3.0; the bus brakes at stop 4 · ELM ST, bell on 3.5 | shape match cut, then pull back 4.1× → 1× along the grid | |
 | 3 | 3.88–4.62 | rain → sun at the same moment: navy tiles flip to teal, a sun appears, `07:42` → `07:51` | 11×6 tile flip | weather as a chapter change |
 | 4 | 4.5–6.5 | doors open; dry bare-foot prints walk out on 5.0, 5.5, 6.0; doors close on 6.0; the umbrella stays | locked wide, slight push | people only as traces |
-| 5 | 6.5–10.5 | iris from the umbrella into the title card: umbrella on its rail over a seat on the stage disc (assembled from sliding bands); `LEFT / BEHIND`, 被落下的伞, tag `LOST ITEM · UMBRELLA, YELLOW` on 7.0; a drip on 9.0 and 10.0 | iris → locked | type as architecture |
-| 6 | 10.5–13.5 | ALL DAY 一整天: the bus rides, stop signs 03–08 whip past one per beat | rows transition; lateral track, one-screen whip on 11.0–13.0, row parallax | long take down a track |
+| 5 | 6.5–10.5 | iris from the umbrella into the title card: umbrella on its rail over a seat on the stage disc (assembled from sliding bands); `LEFTBEHIND`,, tag `LOST ITEM · UMBRELLA, YELLOW` on 7.0; a drip on 9.0 and 10.0 | iris → locked | type as architecture |
+| 6 | 10.5–13.5 | ALL DAY: the bus rides, stop signs 03–08 whip past one per beat | rows transition; lateral track, one-screen whip on 11.0–13.0, row parallax | long take down a track |
 | 7 | 13.5–16.5 | three one-second cards 10:00 / 14:00 / 18:00 in teal, sky, coral: the stage disc is a clock, the sun walks its rim, the umbrella hangs dry beside it | falling columns between cards | pace ladder |
 | 8 | 16.5–18.5 | stop 12 · DEPOT; the sun sinks behind the road, the moon rises | push in; then the frame slides up a screen (18.05–18.5) | |
-| 9 | 18.5–21.5 | LOST & FOUND 失物招领 chapter band; our sign (umbrella + question mark) slams; the umbrella gets a tag `No. 313`; rows jump a quarter cell on 19.5–20.5 | locked | chapter card |
+| 9 | 18.5–21.5 | LOST & FOUND chapter band; our sign (umbrella + question mark) slams; the umbrella gets a tag `No. 313`; rows jump a quarter cell on 19.5–20.5 | locked | chapter card |
 | 10 | 21.5–25.0 | quarter-discs open onto our umbrella in its cubby; pull back 4.2× → 0.62× to a shelf of 320 cubbies (313 umbrellas, a few gloves, keys, hats, a scarf); a panel counts 1 → 313, landing on 24.0 | quarter transition; long pull back | icon wall, count-up slam |
 | 11 | 25.0–28.0 | push back in and drift along the shelf; DAY 02 … DAY 09, a sun per day; 26–28 only a clock ticks | slow drift | the breath; silence before the turn |
-| 12 | 28.0–31.0 | thunder: the shelf splits along a zigzag; STORM 暴雨 on ink; lightning on 28.0 and 29.5; rows lurch half a cell on the beats | lightning split | |
-| 13 | 31.0–34.0 | split screen: left, feet waiting at ELM ST in the rain (等车的人); right, the dry shelf (伞是干的, `313 DRY`) | halves drop and rise along x = 960 | split along a grid line, held 2.5 s |
-| 14 | 34.0–36.5 | the depot shutter; the sign turns CLOSED 休息 → TAKE ONE 拿一把 on 34.5; the shutter rolls up a row per eighth (35.0–36.25); half a beat of silence | tile flip; locked | |
+| 12 | 28.0–31.0 | thunder: the shelf splits along a zigzag; STORM on ink; lightning on 28.0 and 29.5; rows lurch half a cell on the beats | lightning split | |
+| 13 | 31.0–34.0 | split screen: left, feet waiting at ELM ST in the rain; right, the dry shelf (`313 DRY`) | halves drop and rise along x = 960 | split along a grid line, held 2.5 s |
+| 14 | 34.0–36.5 | the depot shutter; the sign turns CLOSED → TAKE ONE on 34.5; the shutter rolls up a row per eighth (35.0–36.25); half a beat of silence | tile flip; locked | |
 | 15 | 36.5–40.5 | BLOOM: all 313 open in a ripple from ours (≈0.2 s); the colours sweep to yellow row by row; rows shift half a cell on 39.0, 39.5, 40.0 and the wall becomes the pattern | slow pull back 1.1× → 0.8× | **the wall becomes the pattern** |
-| 16 | 40.5–44.0 | EVERY STOP 每一站: Line 4 as a route; a stream of umbrellas runs from the depot and three open at each stop, one stop per eighth; the 12 HUD ticks light in step | quarter transition; pull back from the depot end | |
+| 16 | 40.5–44.0 | EVERY STOP: Line 4 as a route; a stream of umbrellas runs from the depot and three open at each stop, one stop per eighth; the 12 HUD ticks light in step | quarter transition; pull back from the depot end | |
 | 17 | 44.0–46.5 | the next morning, 07:42, the first shot again: rain, the yellow umbrella open, puddles everywhere except under it, dry footprints | rows transition; slow push | ending that echoes |
 | 18 | 46.5–50.0 | end card | rows transition; pattern rows stop one by one | |
 
@@ -84,7 +84,7 @@ Type: Inter Tight 900 titles (150–270 px, −0.02 em), Noto Sans SC 900 second
 
 ## End card
 
-Navy pattern whose rows stop one by one, the yellow umbrella opening on its stage disc, and the type sliding up from 46.5 s, fully in place from about 47.5 s to 50.0 s: LEFT BEHIND / 被落下的伞, a hairline, PICTOGRAM MOTION 象形运动图形, and "LemoLab × Claude Opus 5.5". The last narration line runs under it at the bottom until 49.05 s. The sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+Navy pattern whose rows stop one by one, the yellow umbrella opening on its stage disc, and the type sliding up from 46.5 s, fully in place from about 47.5 s to 50.0 s: LEFT BEHIND, a hairline, PICTOGRAM MOTION, and "LemoLab × Claude Opus 5.5". The last narration line runs under it at the bottom until 49.05 s. The sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build
 
@@ -128,11 +128,11 @@ G.kite = (ctx, x, y, s, col, line) => {
 // film.js: a card that uses it, entered with the shared text block
 function kiteCard(ctx, t) {
   const P = PAL.sky, lt = t - 50;
-  ctx.fillStyle = P.t[2]; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = P.t[2]; ctx.fillRect(0, W, H);
   G.drawPattern(ctx, G.pattern('sky', 7, { spread: 0.42, set: 'sun' }), rowDrift(lt, 1));
   stageDisc(ctx, 1290, 520, 360, P.t[4], lt);
   G.kite(ctx, 1290, 420 + Math.sin(lt * Math.PI) * 20, 140, G.UMB, P.fg);   // tugs on the beat
-  textBlock(ctx, lt, 130, 540, { title: 'WIND', px: 230, zh: '起风了', zpx: 70, fg: P.fg });
+ textBlock;
 }
 ```
 Then add `{ t0, kind: 'kite' }` to `SHOTS`, a case in `drawShot`, a transition in `TRANS` and its sound in `EV`.

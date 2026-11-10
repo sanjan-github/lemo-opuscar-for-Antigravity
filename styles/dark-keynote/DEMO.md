@@ -63,20 +63,20 @@ Every shot change is a UI expand / collapse; no fades, no blank frames.
 
 ## Palette & props
 
-**Stage**: base `#0A0B0F`, radial lift to `#151822` at the upper centre, one large cool glow `#3B4CCA` at 8 % in the upper right, vignette 50–55 % at the corners. Hairline grid `rgba(255,255,255,.032)` every 48 px with every 4th line at `.06`. Grain: none (`mux.sh` grain 0).
+**Stage**: base `#0A0B0F`, radial lift to `#151822` at the upper centre, one large cool glow `#3B4CCA` at 8 % in the upper right, vignette 50–55 % at the corners. Hairline grid `rgba(255,255,.032)` every 48 px with every 4th line at `.06`. Grain: none (`mux.sh` grain 0).
 
 | Role | Value |
 |---|---|
 | Window surface / raised / raised-2 | `#12151C` / `#1A1E28` / `#222734` |
-| Border / inner top highlight | `rgba(255,255,255,.08)` / `rgba(255,255,255,.07)` (1 px) |
+| Border / inner top highlight | `rgba(255,255,.08)` / `rgba(255,255,.07)` (1 px) |
 | Text / secondary / label | `#E8EAF0` / `#8A90A0` / `#5C6272` |
-| **Brand accent (the one colour)** | lime `#B7F34A`, glow `rgba(183,243,74,.35)` — the cursor, the "Tidy up" pill, the checkmarks, "0.8" |
+| **Brand accent (the one colour)** | lime `#B7F34A`, glow `rgba(243,74,.35)` — the cursor, the "Tidy up" pill, the checkmarks, "0.8" |
 | Noise red (problem section only) | `#FF5A5F` badges. After the press, no red ever appears again |
 | Three flow colours (collapse trails) | files `#C9D3E6`, photos `#F2A65A`, notifications `#7E95FF` |
 
 **Props**: the Tidy brand mark (squircle + cursor) and wordmark; windows (radius 14, 40 px title bar); notification cards with "now"; folded-corner file icons with mono filenames (`final_FINAL_2.pdf`, `Untitled 38.txt`); procedural landscape photo thumbnails; inbox rows with unread dots; a tab strip that keeps splitting (148 tabs); a 999+ badge; a red storage bar; uniform snap tiles (60–64 px, radius 20 %). Product shots rotate up to 24°.
 
-**Captions as used**: toast `rgba(12,14,19,.72)` pill (`.88` during the mess), 1 px `rgba(255,255,255,.09)` border, Inter 500 40 px `#E8EAF0`, 8 px accent dot, 12 px rise + fade in 0.16 s. The title and final line are typed by the cursor in frame (only in the .srt). The product window is lifted 25 px while captions are up.
+**Captions as used**: toast `rgba(14,19,.72)` pill (`.88` during the mess), 1 px `rgba(255,255,.09)` border, Inter 500 40 px `#E8EAF0`, 8 px accent dot, 12 px rise + fade in 0.16 s. The title and final line are typed by the cursor in frame (only in the .srt). The product window is lifted 25 px while captions are up.
 
 ## End card
 
@@ -144,9 +144,9 @@ E.setAccent('#D97757');                       // the one colour
 E.bg(g); E.grid(g, { ox: 960, oy: 540 });
 const pts = []; for (let i = 0; i <= 40; i++) { const u = i / 40; pts.push([360 + u * 1100, 640 - Math.sin(u * Math.PI) * 260]); }
 E.trail(g, pts, { width: 8 });                // the cursor's path as a fading light trail
-E.litShape(g, E.sparklePath(1480, 380, 90, 0.2), { accent: true, glowR: 40, bbox: [1390, 290, 180, 180] });
+E.litShape(g, E.sparklePath(380, 90, 0.2), { accent: true, glowR: 40, bbox: [1390, 290, 180, 180] });
 E.caret(g, 1560, 380, 120);                   // a cursor riding the spark
-const card = new Path2D(); card.roundRect(300, 200, 420, 160, 28);
+const card = new Path2D(); card.roundRect(200, 420, 160, 28);
 E.litShape(g, card, { sweep: 0.5, bbox: [300, 200, 420, 160] });   // any shape as a lit dark UI surface
 E.vignette(g);
 ```

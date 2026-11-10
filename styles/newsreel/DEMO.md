@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *Knock-Knee Alert* (膝盖警报, 54.6 s) · `newsreel.mp4` · source in [`demo/`](demo/)
+Demo: *Knock-Knee Alert* (54.6 s) · `newsreel.mp4` · source in [`demo/`](demo/)
 
 March 1926: a Texas newspaper warns that the Charleston will make Americans knock-kneed and pigeon-toed. The newsreel traces the dance from a 1923 Broadway show across the map, lets a Hollywood star teach it in nine steps, then brings on the opposition: Henry Ford, whose orchestra plays the dances of his youth and whose 1926 dance book says the jazzy new dances "are losing vogue everywhere". Old-time against Charleston in a split screen; the verdict comes from Ford's own workers' picnic, where a 1925 record of "Charleston" takes over the soundtrack and the kids are doing the dance. Knock-kneed? Who cares.
 
@@ -26,7 +26,7 @@ Times in seconds; the grid is 200 BPM (beat 0.3 s, bar 1.2 s).
 | 4 | 8.4–13.2 | US map | diagonal wipe in; Broadway star; dotted arcs to Hollywood (10.2) and Austin (10.55); odometer 1923 → 1926; push to Hollywood | Natural Earth outline · map spread |
 | 5 | 13.2–15.9 | 5 + 4 grid | flip in; nine stills dealt one per beat | *Photoplay*, Oct 1925 · grid deal |
 | 6 | 15.9–18.0 | full frame | dive into step 1, then steps on the beat | flip-book |
-| 7 | 18.0–21.0 | item card "ENTER MR. FORD · 福特登场" | venetian blinds in; frame draws, title lands, slow push | title card |
+| 7 | 18.0–21.0 | item card "ENTER MR. FORD · " | venetian blinds in; frame draws, title lands, slow push | title card |
 | 8 | 21.0–24.0 | orchestra → violinist → man dancing to the band | iris open; hard cuts on bars | NARA FC-2275 (1926), FC-2307 (1925) |
 | 9 | 24.0–27.0 | "Good Morning" (1926) | title page slams, turns; push to p. 30; two underlines (25.87, 26.9) | document underline |
 | 10 | 27.0–28.2 | field of dancers in a circle | slow push | NARA FC-2292 (1927) |
@@ -36,7 +36,7 @@ Times in seconds; the grid is 200 BPM (beat 0.3 s, bar 1.2 s).
 | 14 | 39.5–41.9 | four-way grid | cells pop in one per beat | same |
 | 15 | 41.9–44.4 | the kids doing the Charleston | clock wipe | same (NARA: "kids doing the 'Charleston'") |
 | 16 | 44.4–46.8 | freeze on the kids' knees | jolt; two grease-pencil rings; iris closes | grease-pencil freeze · band stop |
-| 17 | 46.8–50.4 | ident reprise "THAT'S THE NEWS! · 本期完" | iris opens; brass "da–DA!" | |
+| 17 | 46.8–50.4 | ident reprise "THAT'S THE NEWS! · " | iris opens; brass "da–DA!" | |
 | 18 | 50.4–54.6 | end card | fade through black; held 4.2 s | |
 
 Place cards (top left): AUSTIN · MARCH 5, 1926; PHOTOPLAY · OCT. 1925; FORD FILMS 1925–26; GOOD MORNING · 1926; FORD WORKERS' PICNIC · 1924; and the record's label under the spinning 78 at top right ("CHARLESTON" · 1925 RECORD). Every caption passes `readcheck.mjs`.
@@ -49,7 +49,7 @@ Place cards (top left): AUSTIN · MARCH 5, 1926; PHOTOPLAY · OCT. 1925; FORD FI
 
 ## End card
 
-50.4–54.6 s, inside a thin double frame: "膝盖警报 Knock-Knee Alert" on one line; a thin rule; "1920s 新闻影片 · 1920s NEWSREEL"; "LemoLab × Claude Opus 5.5"; four lines of source credits (NARA Ford collection, the 1925 record and its UCSB transfer, the three print sources, Natural Earth; "All archive material public domain · An unofficial film"). The "LemoLab × Claude Opus 5.5" line belongs to this library demo only; a user's film carries no LemoLab credit and no copy of this card.
+50.4–54.6 s, inside a thin double frame: " Knock-Knee Alert" on one line; a thin rule; "1920s · 1920s NEWSREEL"; "LemoLab × Claude Opus 5.5"; four lines of source credits (NARA Ford collection, the 1925 record and its UCSB transfer, the three print sources, Natural Earth; "All archive material public domain · An unofficial film"). The "LemoLab × Claude Opus 5.5" line belongs to this library demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build notes
 
@@ -66,7 +66,7 @@ demo/
   voice/lines.json      the ten lines (en, zh)             SOURCES.jsonl / SOURCES.md, CREDITS, FACTS.md
 ```
 
-1. `sh demo/build.sh` (library set up with `setup.sh deps voice music`): fetches sources and fonts (~500 MB, first run only) → timeline → prep → voice (kept unless `VOICE=1`) + speech check → reading check + subtitle check → events → render (1,310 frames) → mix → subtitles → mux (−14 LUFS, grain 7) → speech check on the film → poster/style frame (rendered without subtitles, `?nosub=1`) → `newsreel-small.mp4`.
+1. `sh demo/build.sh` (library set up with `setup.sh deps voice music`): fetches sources and fonts (~500 MB, first run only) → timeline → prep → voice (kept unless `VOICE=1`) + speech check → reading check + subtitle check → events → render (310 frames) → mix → subtitles → mux (−14 LUFS, grain 7) → speech check on the film → poster/style frame (rendered without subtitles, `?nosub=1`) → `newsreel-small.mp4`.
 2. Change the story by editing `tools/timeline.py` (bars, clips, cards) and `voice/lines.json`; every scene reads its times from `timeline.json`.
 
 Pitfalls tied to this demo: photographs whose rights read only "no known restrictions" (e.g. Library of Congress National Photo Company, Missouri Historical Society) are not used. The NARA description of the 1924 picnic lists "old time dances" as well as "kids doing the 'Charleston'": the old-time couples are not Charleston evidence; only the pavilion couples, the tap dancers and the kids are used as such. The record's beat runs 0.12 s ahead of the grid once its final chord is placed on the freeze, so the cuts inside the record follow the record. Kokoro reads "Bessie" as "Bestie", so the line says "Hollywood star Bessie Love"; Whisper hears "knock-kneed" as "knock-need" through the period treatment (homophone, allowed in the final check). The four-way grid and freeze use 2.3×-upscaled 1924 film, which is soft; the freeze stays wide instead of pushing in.

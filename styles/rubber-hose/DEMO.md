@@ -57,7 +57,7 @@ Voice: an old radio announcer calling the action like a horse race (Kokoro `bm_l
 
 ## Titles & subtitles
 
-- Subtitles: "the announcer's title card": plate `rgba(12,11,10,.92)`, white double-rule border, dot-and-ring corner ornaments and a tiny 1930s ribbon-microphone icon; IM Fell English SC 36 px, paper white; bottom at y ≈ 986 by default, top when the action is low. Each card ≥ speech + 0.6 s.
+- Subtitles: "the announcer's title card": plate `rgba(11,10,.92)`, white double-rule border, dot-and-ring corner ornaments and a tiny 1930s ribbon-microphone icon; IM Fell English SC 36 px, paper white; bottom at y ≈ 986 by default, top when the action is low. Each card ≥ speech + 0.6 s.
 - Title: Shrikhand, white face, 14 % ink outline, ink drop shadow down-right, letters hopping in a travelling wave on the beat over a rotating sunburst; sub-line in Limelight caps.
 
 ## End card

@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *The Little Sprite's Adventure* (*Pip's Paper Adventure*, 小精灵冒险记) (133.0 s, 1920×1080, 60 fps) · `paper-popup.mp4` · source in [`demo/`](demo/) · engine: three.js r170 (WebGL2) rendered frame by frame in headless Chrome, Canvas2D for all paper art, Python for score editing and mixing
+Demo: *The Little Sprite's Adventure* (133.0 s, 1920×1080, 60 fps) · `paper-popup.mp4` · source in [`demo/`](demo/) · engine: three.js r170 (WebGL2) rendered frame by frame in headless Chrome, Canvas2D for all paper art, Python for score editing and mixing
 
 
 ## Story & structure
@@ -74,7 +74,7 @@ Depth of field (`post.js`): CoC in pixels, max 14, 64-tap golden-angle spiral ga
 | Home valley | grass `#86c763`→`#9fd57a`, hills `#b5e39a` `#a9dd8c` `#8fd06e` (shade `#6fb553`), path `#ecd49a`, sky `#7cc6ef`→`#c9ecf7` |
 | Forest | ground `#4f8f46`→`#62a653`, back pines `#8cc9a0`, front pines `#3f9a5c`, sky `#a8e0cf` with light shafts |
 | Sea | waves light→dark `#9ad8f5` `#79c3ee` `#58ade3` `#3f95d6` `#2f7fc4`, sky day `#4fb3ea`, night `#131d44`→`#4a5a94` |
-| Last page | cream paper `#f5eedc`, graphite pencil lines `rgba(70,72,82,.45)`, IM Fell English "The End" |
+| Last page | cream paper `#f5eedc`, graphite pencil lines `rgba(72,82,.45)`, IM Fell English "The End" |
 | Hero Pip | skin `#ffe2bd` (shade `#f3c393`), leaf cap `#62c24c`/`#3e9a34`, tunic `#3fa1de`/`#2a78b3`, boots `#8a5530`, wings `#d4f3ff` |
 | Accents | mushroom-house red `#e8413a`, sun `#ffd766`, sign/banner gold `#ffcf3f`, ribbon red `#d8423a` |
 | Book | cloth `#1f5566`, gold foil `#e0b456` (metalness map), page edges `#efe6d2` with fine lines |
@@ -95,7 +95,7 @@ Depth of field (`post.js`): CoC in pixels, max 14, 64-tap golden-angle spiral ga
 
 `drawEnd`, from 123.4 s, over the live desk shot: title in Lilita One 96 px gold (y 170), Chinese title (y 262), italic "The End?" popping in (y 350), then from 127.6 s the sign-off and the asset credits (22 px, y 960/998/1036; the Chinese row uses `'"ZCOOL KuaiLe", Fredoka'`) fade in together; fade to black over the last 1.5 s.
 
-The sign-off **"LemoLab × Claude Opus 5.5"** (× = U+00D7) belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card. In the demo it sits centred under "The End?" at y 430: Fredoka 600 36 px, cream `#fffaf0` fill with a 7 px `rgba(30,20,14,.75)` outline (it lies over the cream backdrop page, so the outline is what makes it read), fading in with the asset credits at 127.6 s, never covering the characters.
+The sign-off **"LemoLab × Claude Opus 5.5"** (× = U+00D7) belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card. In the demo it sits centred under "The End?" at y 430: Fredoka 600 36 px, cream `#fffaf0` fill with a 7 px `rgba(20,14,.75)` outline (it lies over the cream backdrop page, so the outline is what makes it read), fading in with the asset credits at 127.6 s, never covering the characters.
 
 ## Pitfalls tied to this demo
 
@@ -189,21 +189,21 @@ import { cv, paperFill } from './paper.js';
 import { seg, back, eio, track } from './lib.js';
 
 const renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true });
-renderer.setSize(1920, 1080); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.setSize(1080); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.NeutralToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.getElementById('stage').appendChild(renderer.domElement);
-const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(30, 16 / 9, .004, 30);
+const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(16 / 9, .004, 30);
 const post = makePost(renderer, scene, cam, 1920, 1080);
 // (load the HDRI + desk exactly as main.js lines 34–43)
 
 const book = makeBook(coverCanvases((x, px, py, w, h) => { /* draw the cover medallion */ }));
 scene.add(book.root);
-const ground = cv(2048, 1396); paperFill(ground.getContext('2d'), 2048, 1396, '#9fd57a', 2);
+const ground = cv(1396); paperFill(ground.getContext('2d'), 2048, 1396, '#9fd57a', 2);
 book.groundMat.map = texOf(ground);
 
 // a pop-up hill: lies flat (rotation.x = −π/2 · (1−k)) and springs up around its bottom edge
 const hill = new THREE.Group(); hill.add(cutMesh(A.hill(.24, .075, '#b5e39a', '#93cc78', 11)));
-hill.position.set(0, 0, .04); book.stage.add(hill);
+hill.position.set(0, .04); book.stage.add(hill);
 
 const pip = makePip(); book.stage.add(pip.root, pip.shadow);
 const camKeys = track([[0, [.0, .27, .78, 0, .1, .1]], [4, [0, .06, .38, 0, .04, .13]]]);

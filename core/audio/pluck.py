@@ -1,9 +1,9 @@
 """Physically modelled plucked strings (extended Karplus-Strong digital waveguide) + modal synthesis (kalimba / music box). Returns mono float32 @ SR.
 
     from core.audio import pluck as P
-    x = P.pluck('guqin', 'D3', 4, vel=.7, bend=[(0.6, 0), (1.2, 2)], vib=(5, .25, 1.4))   # guqin: stopped note sliding up a second + yin-nao (吟猱, guqin finger vibrato)
+    x = P.pluck('guqin', 'D3', 4, vel=.7, bend=[(0.6, 0), (1.2, 2)], vib=(5, .25, 1.4))   # guqin: stopped note sliding up a second + yin-nao (guqin finger vibrato)
     y = P.pluck('guqin', 'A4', 3, harmonic=True)                                           # harmonic
-    z = P.pluck('pipa', 'E4', 1.5, trem=14)                                                # pipa lunzhi (轮指, rolling finger tremolo)
+    z = P.pluck('pipa', 'E4', 1.5, trem=14)                                                # pipa lunzhi (rolling finger tremolo)
     w = P.pluck('shamisen', 'C4', 1.2)                                                    # shamisen (with sawari buzz)
 
 Model: fractional delay (3rd-order Lagrange, time-varying → slides / vibrato) + one-pole loss filter (frequency-dependent decay)
@@ -149,7 +149,7 @@ def _string(pr, m, dur, vel, harmonic=False, bend=None, vib=None, glide=None, tr
     N0 = SR / f0
     exc = np.zeros(n)
     hits = [0.0]
-    if trem:  # lunzhi/yaozhi (轮指/摇指, tremolo picking): re-pluck at trem Hz, velocity slightly random
+    if trem:  # lunzhi/yaozhi (tremolo picking): re-pluck at trem Hz, velocity slightly random
         hits = list(np.arange(0, dur, 1 / trem))
     for i, th in enumerate(hits):
         v = vel * (1 if i == 0 else .75 + .2 * _rng.random())

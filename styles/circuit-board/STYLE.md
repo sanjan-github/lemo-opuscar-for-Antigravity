@@ -99,7 +99,7 @@ When the film explains something, a voice tells it and the board shows it at the
 - **Text in the blur or under the frame edge.** Depth of field and the vignette eat the top and bottom bands: keep labels out of them, or turn the blur down in reading shots.
 - **Too-fast holes.** A plunge into a hole under 0.6 s reads only as "darkness". Hold on the hole first, then plunge; come out of another hole the opposite way.
 - **Precision.** Zooming a single coordinate system over many orders of magnitude breaks the canvas transform. Nest boards (each with moderate units) and convert cameras between levels in double precision.
-- **Hanzi in a stroke font.** Automatic skeletons of fonts lose dots and strokes; route each character by hand and proof traditional/simplified forms (鹤 not 鶴, 换 not 換). A glyph that only works at small size (one component missing, two strokes merged) reads as another character on a title: proof it large (§10).
+- **Custom glyphs in a stroke font.** Automatic skeletons of fonts lose dots and strokes; route each character by hand and proof letterforms cleanly. A glyph that only works at small size reads poorly on a title: proof it large (§10).
 - **The board edge by accident.** When the camera's view comes near the board outline, `Board` switches to drawing the desk and clips to the board, so a close shot near the edge suddenly shows black desk. Keep the view well inside the outline (the check uses the frame's half-diagonal plus 4% of the board width), or make the board larger than the shot needs; show the edge only when the whole board is the subject.
 
 ## 10. Engine
@@ -134,8 +134,8 @@ Reference code in `demo/src/`. Copy what you use into the project's `src/` (neve
 
 **New hanzi** (`hanzi.js`): one entry per character, an array of strokes, each stroke a flat list `[x, y, x, y, …]` in a 12 × 12 box (y down), runs at 0/45/90° only. `font.js` chamfers right-angle corners and plots strokes in the order listed, so list them in writing order. A dot is a stroke about one unit long; a hook is a final short 45° run. Keep the same stroke width as the Latin: never vary width per glyph. One way to work:
 1. Make a proof page in the project folder: for each character, a 12 × 12 grid, the character from an open-licence font (e.g. Noto Sans SC) faintly underneath as a structure reference, your routed glyph on top via `drawText` at a cap of a few hundred pixels; a second row without the reference; and once at the size it is used in the film. Render it with `core/render/still.mjs`.
-2. Read the components and their proportions off the reference and route them by hand (not an automatic skeleton, which drops dots and merges strokes). Reuse shared components from glyphs you already have, so radicals match across the film (e.g. 氵, 扌, 亻 in the demo's `hanzi.js`).
-3. Look at the proof image: every component of the reference present, nothing reads as a neighbouring character (声 vs 青, 手 vs 毛), simplified forms. Fix and re-render until it reads without the reference. If a character still won't read, choose another word.
+2. Read the components and their proportions off the reference and route them by hand (not an automatic skeleton, which drops dots and merges strokes). Reuse shared components from glyphs you already have, so components match across the film.
+3. Look at the proof image: every component of the reference present, nothing reads as a neighbouring character or malformed glyph. Fix and re-render until it reads without the reference. If a character still won't read, choose another word.
 
 ## 11. Variation space
 

@@ -35,7 +35,7 @@ Not **Isometric Infographic**: that style builds a model on a floating board ove
 ## 4. Type & subtitles
 
 - Chinese: a serif (Noto Serif SC, 700 for keywords, 500 for particles); Latin and numerals: a book serif (Newsreader). Open-licence fonts only, subset to the characters used.
-- **Floor type**: big ≈ 1.5 m on the ground, small ≈ 0.8 m; read along the up-right axis (coordinates in §10). One phrase per beat; one line where the frame is tight. One accent character or number per phrase, never a single thin stroke (一 in the accent reads as a line, not a character). Characters land ≈ 0.14 s apart: fade and scale 1.22 → 1, pale ghost → ink. A painted title or a pair of numbers may scale up to ×1.6.
+- **Floor type**: big ≈ 1.5 m on the ground, small ≈ 0.8 m; read along the up-right axis (coordinates in §10). One phrase per beat; one line where the frame is tight. One accent character or number per phrase, never a single thin stroke (a single dash reads as a line, not text). Characters land ≈ 0.14 s apart: fade and scale 1.22 → 1, pale ghost → ink. A painted title or a pair of numbers may scale up to ×1.6.
 - Type sits on clear ground: nothing stands on it, nothing raised stands in front of it (see §9), at least 5 % from every frame edge, and clear of the subtitle bar.
 - Signs in the world (gate signs, group signs, screens) face the camera side of the room at the iso angle, never a flat card facing the lens.
 - Reading time: every piece of world text stays fully in frame ≥ CJK/4.5 + Latin/15 + 1.5 s.
@@ -114,7 +114,7 @@ Soft upright piano and vibraphone; a vibraphone note per landing character (keyw
 
 **Motion check:** in the copy of `motion_check.mjs`, point the `page.mjs` import at the library's `core/render/page.mjs` (from `films/<name>/tools/` that is `../../../core/render/page.mjs`; outside a clone, an absolute path), then `node <project>/tools/motion_check.mjs <project> --fps 30` from the library root.
 
-Minimal example, not in the demo: a lift lobby with two painted lanes, `floorType()` with 先下后上 on the floor, people billboards stepping out of a box car before the waiting line steps in.
+Minimal example, not in the demo: a lift lobby with two painted lanes, `floorType()` with directional arrows on the floor, people billboards stepping out of a box car before the waiting line steps in.
 
 ## 11. Variation space
 

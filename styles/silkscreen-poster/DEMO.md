@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *The Long Way Home 绕远路回家* (50 s) · `silkscreen-poster.mp4` · subtitles `silkscreen-poster.srt` · source in [`demo/`](demo/)
+Demo: *The Long Way Home * (50 s) · `silkscreen-poster.mp4` · subtitles `silkscreen-poster.srt` · source in [`demo/`](demo/)
 
 ## Story & structure
 
@@ -30,7 +30,7 @@ The signature moves, each pushed further than the time before:
 |---|---|---|---|---|
 | 1 | 0–3.33 | close-up inside the print, stepping back one level per pull (log zoom) | sun alone, then gold sky with paper rings, then stepped rose bands | the hook: colour arrives in the first second |
 | 2 | 3.33–5.56 | to the full frame; the screen lifts at 4.44 (the frame's bottom bar sweeps up through the picture) | woods, three blue roofs, marble terraces (paper), cypresses; red drums and gold finial last | a picture built from layers |
-| 3 | 5.56–10 | slow push toward the stub | BEIJING 北京 in the sky; DAY 1 · FROM HOME 0 KM · TEMPLE OF HEAVEN BUILT 1420 | the words and the narration land together |
+| 3 | 5.56–10 | slow push toward the stub | BEIJING in the sky; DAY 1 · FROM HOME 0 KM · TEMPLE OF HEAVEN BUILT 1420 | the words and the narration land together |
 | 4 | 10–14.17 | a cypress silhouette crosses the screen (full cover for about one frame), then Istanbul prints on sixteenth notes | Hagia Sophia across the water, a ferry; 7,060 KM · BUILT 537 | faster by subdividing the beat, same tempo |
 | 5 | 14.17–17.78 | diagonal sweep prints Paris behind the blade; crane up the tower on a 1920×1620 print | Eiffel Tower, mansard roofs; layers loosen with parallax; 8,220 KM · BUILT 1889 | a city change is a colour change |
 | 6 | 17.78–21.94 | split-fountain sweep (six inks in one bead); lateral truck over a 2600-wide print | La Boca houses, the Obelisco as bare paper; 19,270 KM · BUILT 1936 | the far side, everything loose |
@@ -38,7 +38,7 @@ The signature moves, each pushed further than the time before:
 | 8 | 27.78–33.33 | clamp jolt; night inks swept on while still close; pull out; long truck over a 5200-wide night sea | moon, stars as bare paper; counters running | the way home in one breath |
 | 9 | 33.33–36.67 | sweep to the Temple of Heaven at dusk; layers float with paper gaps | counters land: 0 KM · 39,630 KM | back where it began |
 | 10 | 36.67–42.22 | snap to register on the downbeat; slow push | "Beijing again. Zero kilometres." | the only perfect register |
-| 11 | 42.22–50 | night re-ink sweep; the end card prints at 46.2 (panel) and 46.6 (type) | gold hall, moon; THE LONG WAY HOME 绕远路回家 | the ending echoes the opening |
+| 11 | 42.22–50 | night re-ink sweep; the end card prints at 46.2 (panel) and 46.6 (type) | gold hall, moon; THE LONG WAY HOME | the ending echoes the opening |
 
 Transitions are made in the medium: a squeegee pull, the screen lifting and coming down, a foreground silhouette, a diagonal sweep that prints the next poster, the clamp. No fades, no bare cuts.
 
@@ -78,7 +78,7 @@ Landmarks are stylised silhouettes, built from paths in `engine/scenes.js`, not 
 
 ## End card
 
-At 46.2 s a wider ticket (560×600) is pulled over the right side of the night print, then its type: THE LONG WAY HOME / 绕远路回家, SILKSCREEN TRAVEL POSTER / 丝印旅行海报 and `LemoLab × Claude Opus 5.5`. It holds to the end (3 s). The sign-off belongs to this library's demo only; a user's film carries no LemoLab credit.
+At 46.2 s a wider ticket (560×600) is pulled over the right side of the night print, then its type: THE LONG WAY HOME, SILKSCREEN TRAVEL POSTER and `LemoLab × Claude Opus 5.5`. It holds to the end (3 s). The sign-off belongs to this library's demo only; a user's film carries no LemoLab credit.
 
 ## Build
 
@@ -119,10 +119,10 @@ import { makeTextures, paperSheet, ink, wipeRegion, wipeFront, squeegee, inkFini
 const T = makeTextures('#F2E8D2');
 paperSheet(ctx, T, 0, 0, 800, 600);
 const spark = polyPath([[400,180],[430,270],[520,300],[430,330],[400,420],[370,330],[280,300],[370,270]]);
-const tail = rectPath(540, 285, 160, 30);
+const tail = rectPath(285, 160, 30);
 const p = 0.7;                                                    // 70 % of the pull done
 const clip = wipeRegion([0, 0, 800, 600], 'right', p, 3);
-ink(ctx, { path: rectPath(0, 0, 800, 600), knock: circlePath(400, 300, 150) }, { color: '#1C2A33', clip, sheen: 1 });   // sky with a knocked-out halo
+ink(ctx, { path: rectPath(0, 800, 600), knock: circlePath(300, 150) }, { color: '#1C2A33', clip, sheen: 1 });   // sky with a knocked-out halo
 ink(ctx, { path: spark }, { color: '#D97757', reg: [2, -1], clip, sheen: 1, trap: 1 });
 ink(ctx, { path: tail }, { color: '#D97757', reg: [2, -1], clip, sheen: 1 });
 const x = wipeFront([0, 0, 800, 600], 'right', p);

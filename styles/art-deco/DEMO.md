@@ -128,7 +128,7 @@ import * as B from './engine/bulbs.js';
 
 // a warm-orange four-point light with a short cursor tail, drawn the Art Deco way
 D.sunburst(g, 960, 540, { rays: 72, r1: 1400, mode: 'wedges' });
-D.drawShape(g, D.starPts(960, 540, 120, .22), { color: '#D97757', halo: 1, trail: { ang: Math.PI, len: 420, n: 4 } });
+D.drawShape(g, D.starPts(540, 120, .22), { color: '#D97757', halo: 1, trail: { ang: Math.PI, len: 420, n: 4 } });
 
 // a bulb sign that lights letter by letter, in the same orange
 const sign = B.buildSign('LEMO', { size: 260, spacing: 20 });

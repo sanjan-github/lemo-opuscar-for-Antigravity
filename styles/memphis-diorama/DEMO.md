@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *Four Seasons in Pomelo Town* (柚子城的四季, 45 s) · `memphis-diorama.mp4` · source in [`demo/`](demo/)
+Demo: *Four Seasons in Pomelo Town* (45 s) · `memphis-diorama.mp4` · source in [`demo/`](demo/)
 
 ## Story & structure
 
@@ -60,7 +60,7 @@ One continuous piece, F major, 96 BPM, a bar = 2.5 s, downbeat of bar 0 at 1.8 s
 
 ## End card
 
-No separate card: the film's own three lines under the frame carry it. At 39.3 s, over the lit dusk village, line 1 keeps the title and lines 2 and 3 change (the usual fade) to `Eian × LemoLab × Claude Opus 5.5`, drawn in the title's ink at weight 600 so it is not missed (`strong2` in `drawText`), and 孟菲斯微缩景观 · MEMPHIS DIORAMA in the data line; they hold until the frame draws back in at 44 s and fade out with it. Eian made this style and its demo. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+No separate card: the film's own three lines under the frame carry it. At 39.3 s, over the lit dusk village, line 1 keeps the title and lines 2 and 3 change (the usual fade) to `Eian × LemoLab × Claude Opus 5.5`, drawn in the title's ink at weight 600 so it is not missed (`strong2` in `drawText`), and · MEMPHIS DIORAMA in the data line; they hold until the frame draws back in at 44 s and fade out with it. Eian made this style and its demo. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build notes
 
@@ -80,7 +80,7 @@ Fonts (if missing) → picture at 60 fps with `core/render/video.mjs` (≈ 2.5 m
 
 **Fonts.** `python -I demo/tools/fonts.py <dir>` reads `<dir>/main.js` and takes the Chinese characters only from the text that starts at `const TEXT = [` and runs to the end of the `const TITLE` line; Latin always gets all of printable ASCII. A `main.js` without both markers stops with `ValueError: substring not found`, and a Chinese character written anywhere else (a callout, a sign texture) is not in the subset and falls back to a system font. So in your own film either keep every on-screen string inside `const TEXT = [ … ]` followed by a one-line `const TITLE = '…'` (it may be `''`), or change the `src = …` line of your copy to collect your strings. It downloads the subsets from the Google Fonts CSS2 API (`fonts.googleapis.com`, `&text=`) and the OFL texts from `raw.githubusercontent.com/google/fonts`, so it needs the network; it writes `fonts/*.woff2`, `fonts/fonts.css` and `fonts/OFL-*.txt`. `build.sh` runs it only when a `.woff2` is missing; run it again after any change to the words.
 
-**Bottom type in the demo.** The demo passes `text: [TITLE, …]` to `dio.render`, and when lines 2 and 3 change it covers them with a paper-coloured band (`fillRect(0, 948, 1920, 60)` in `main.js`) that fades. That band fits only this layout (lines 2 and 3 change, line 1 stays); for a film of your own, use `''` for unused lines and draw the cross-fade yourself (STYLE.md §10, "The bottom type").
+**Bottom type in the demo.** The demo passes `text: [TITLE, …]` to `dio.render`, and when lines 2 and 3 change it covers them with a paper-coloured band (`fillRect(948, 1920, 60)` in `main.js`) that fades. That band fits only this layout (lines 2 and 3 change, line 1 stays); for a film of your own, use `''` for unused lines and draw the cross-fade yourself (STYLE.md §10, "The bottom type").
 
 **Seasonal materials.** `S([spring, summer, autumn, winter], { patCols: […] })` in `main.js` makes a `flat()` material that remembers four colours. Each frame, `place(t)` sets `uCol` to the current season and `uCol2` to the next one, and `setSeason(x, z, r)` gives the wave's centre and radius: pixels inside the ring draw `uCol2`. For actions, `at(n, p)` returns how far season *n* has reached position *p* (0 → 1), so anything can grow, fold or fall as the ring passes it.
 
@@ -91,14 +91,14 @@ import * as THREE from 'three';
 import { Diorama, flat, mesh, box, setSeason, setHalftone } from './memphis.js';
 const dio = new Diorama(document.getElementById('gl'), document.getElementById('c').getContext('2d'));
 setHalftone(1);
-mesh(new THREE.PlaneGeometry(80, 80).rotateX(-Math.PI / 2), flat('#FFE6BD', { pat: 1, patCol: '#FFD39A', patScale: 1.2 }), 0, 0, 0, dio.scene);
-mesh(box(3, 2.4, 2.4), flat('#5CC8FF', { pat: 4, patCol: '#FFFFFF', patScale: 0.4 }), 0, 0, 0, dio.scene);
+mesh(new THREE.PlaneGeometry(80).rotateX(-Math.PI / 2), flat('#FFE6BD', { pat: 1, patCol: '#FFD39A', patScale: 1.2 }), 0, 0, 0, dio.scene);
+mesh(box(2.4, 2.4), flat('#5CC8FF', { pat: 4, patCol: '#FFFFFF', patScale: 0.4 }), 0, 0, 0, dio.scene);
 const roof = flat('#FF5A5F', { col2: '#FFFFFF' });
 mesh(new THREE.ConeGeometry(2.4, 1.4, 4).rotateY(Math.PI / 4), roof, 0, 3.1, 0, dio.scene);
 window.render = (t) => {
   setSeason(-30, 0, 12 * t);                                   // a wave from the sea, 12 m/s
-  dio.cam.position.set(18, 14, 18); dio.cam.lookAt(0, 1, 0); dio.fitShadow(new THREE.Vector3(0, 0, 0), 20);
-  dio.render(t, Math.round(t * 60), { text: ['海边小屋  Beach Hut', '', ''] });
+  dio.cam.position.set(14, 18); dio.cam.lookAt(1, 0); dio.fitShadow(new THREE.Vector3(0, 0), 20);
+ dio.render(t, Math.round(t * 60), { text: [' Beach Hut', '', ''] });
 };
 ```
 
@@ -128,11 +128,11 @@ Anything that should act as the ring reaches it (a shutter rolling up, a bird ta
 
 ```js
 const near = new THREE.Group(); dio.scene.add(near);                             // front wall, roof lid, a slab of ground…
-mesh(box(12, 6, 0.4), flat('#FF9C6B', { pat: 4, patCol: '#FFB98F', patScale: 0.5 }), 0, 0, 4, near);
+mesh(box(6, 0.4), flat('#FF9C6B', { pat: 4, patCol: '#FFB98F', patScale: 0.5 }), 0, 0, 4, near);
 const cut = flat('#E07A55', { pat: 5, patCol: '#25214A', patScale: 0.35 });     // section faces: one step darker, hatched
-mesh(box(12, 0.02, 0.4), cut, 0, 0, 4.21, near);                                 // e.g. the wall's cut top, seen once the lid is gone
+mesh(box(0.02, 0.4), cut, 0, 0, 4.21, near);                                 // e.g. the wall's cut top, seen once the lid is gone
 // in render(t): a = ease(…) 0→1 to open, back to 0 to close
-//   lid:  y up first, then z back   (lid.position.set(0, 3 * ease(a * 2), -12 * ease(a * 2 - 1)))
+//   lid:  y up first, then z back   (lid.position.set(3 * ease(a * 2), -12 * ease(a * 2 - 1)))
 //   wall: straight down below the ground (near.position.y = -6.5 * a); near.visible = a < 0.99;
 ```
 

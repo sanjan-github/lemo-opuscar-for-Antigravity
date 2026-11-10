@@ -34,7 +34,7 @@ The demo has 6 shots, one set per 1–2 shots, 7 narrated lines + 1 dialogue lin
 | Climax (lamp room, 49.5–58) | Medium on the hero at the lens; after ignition, a rising pull-back to a wide of the tower (fov 30 → 40, aperture 150 → 320), focus switches from hero to lens. |
 | Resolution (harbour end + title, 58–76.5) | Mirror of the opening but wider and higher (`[-22,26,44] → [-27,33,55]`, fov 42), focus 70, aperture 380, tilt band at 36 %. |
 
-Rules: always look *down* on the world (never eye level); every camera path is a `track()` of 2–7 keys (monotone cubic, no overshoot); focus distance is recomputed each frame from camera to the hero (`post.dof.focus = cam.position.distanceTo(hero + (0,.7,0))`); in the tilt cut the sharp band follows the hero's projected screen height (`tiltCenter`, clamped .2–.8).
+Rules: always look *down* on the world (never eye level); every camera path is a `track()` of 2–7 keys (monotone cubic, no overshoot); focus distance is recomputed each frame from camera to the hero (`post.dof.focus = cam.position.distanceTo(hero + (.7,0))`); in the tilt cut the sharp band follows the hero's projected screen height (`tiltCenter`, clamped .2–.8).
 
 ## Score structure
 
@@ -71,7 +71,7 @@ Motion as built:
 ## End card
 
 - **Narration subtitles**: Cormorant Garamond italic 500, 50 px, `#f6f0e2`, centred at y = H − 88, on a soft horizontal dark band (gradient, max .38 alpha), drop shadow 10 px. Fade in .35 s before the voice, out 0.45–0.8 s after it ends. One line per voice clip.
-- **Dialogue box** (for a character who speaks on screen, instead of a subtitle): 1180×210 px, bottom-centred, navy gradient `rgba(14,18,34,.86) → rgba(6,8,18,.9)`, 2 px gold border `rgba(214,190,130,.9)` + inner 1 px line, gold diamond corners; name plate (Cormorant 600 34 px) overlapping the top-left edge; body Cormorant 500 44 px, **typed out over 92 % of the voice duration**; blinking gold ▼ caret when done; slides up 14 px on entry. A soft chime marks it.
+- **Dialogue box** (for a character who speaks on screen, instead of a subtitle): 1180×210 px, bottom-centred, navy gradient `rgba(18,34,.86) → rgba(8,18,.9)`, 2 px gold border `rgba(190,130,.9)` + inner 1 px line, gold diamond corners; name plate (Cormorant 600 34 px) overlapping the top-left edge; body Cormorant 500 44 px, **typed out over 92 % of the voice duration**; blinking gold ▼ caret when done; slides up 14 px on entry. A soft chime marks it.
 - **Chapter card** (0–5.5 s): radial navy background `#11172a → #020308`, `CHAPTER  I` (Cinzel 500 34 px, 10 px tracking, `#d8c28e`) over a gold ornament line with diamond, then the chapter name in Cormorant italic 78 px with a warm glow; one pixel ember drifts across.
 - **Title** (67.4–76.4 s): screen dimmed 50 %, `THE LAMPBEARER` in Cinzel 700 118 px, 14 px tracking, vertical gold gradient `#fff3cf → #e2c27c → #a8803e` with glow; ornament; tagline in Cormorant italic 50 px; music/voice credit at the bottom (24 px, 75 % alpha).
 - **End credit line (this library's demo only)**: our demo ends with **"LemoLab × Claude Opus 5.5"**. It is part of the title card (`ui.js` `title()`, on by default): Cinzel 500 30 px, `#d8c28e` at 85 % alpha, 4 px tracking, centred at y = 668, fading in 70.6–71.6 s, between the tagline and the music credit, which it does not replace. `?nocredit=1` hides it. This sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card — when you adapt `ui.js`, delete the credit line.
@@ -159,7 +159,7 @@ Pitfalls, with the demo's props and numbers:
 ## Engine reference
 
 ### Page contract (`main.js`)
-`window.render(t)` picks the shot (`shotAt(t)`), maps it to a set (`SET_OF`), points the DOF pass at that set's scene, resets post defaults (bloom .55/.85, exposure 1.15, warm .1, sat 1.05, vignette .62), calls `set.update(t, shot, camera, post, renderer)`, applies tilt-shift if `?tilt`, renders the composer, then draws the overlay (`drawOverlay(t, shot)`). One `PerspectiveCamera(32, 16/9, .3, 2000)` is shared by all sets; each set sets fov/position/lookAt every frame.
+`window.render(t)` picks the shot (`shotAt(t)`), maps it to a set (`SET_OF`), points the DOF pass at that set's scene, resets post defaults (bloom .55/.85, exposure 1.15, warm .1, sat 1.05, vignette .62), calls `set.update(t, shot, camera, post, renderer)`, applies tilt-shift if `?tilt`, renders the composer, then draws the overlay (`drawOverlay(t, shot)`). One `PerspectiveCamera(16/9, .3, 2000)` is shared by all sets; each set sets fov/position/lookAt every frame.
 
 ### Modules and key functions
 | Module | Function | What / key params |
@@ -198,15 +198,15 @@ import { track, seg, ss } from '/core/lib.js';
 export function buildAlley() {
   const scene = new THREE.Scene(); scene.fog = new THREE.FogExp2('#16223a', .03);
   const SK = sky(); scene.add(SK.mesh);
-  const moon = new THREE.DirectionalLight('#8fa8e0', 1.1); moon.position.set(-20, 30, -20); moon.castShadow = true; moon.shadow.mapSize.set(2048, 2048);
+  const moon = new THREE.DirectionalLight('#8fa8e0', 1.1); moon.position.set(-20, 30, -20); moon.castShadow = true; moon.shadow.mapSize.set(2048);
   scene.add(moon, new THREE.HemisphereLight('#3a4c7a', '#0a0a12', .9));
-  scene.add(mesh(new THREE.BoxGeometry(30, .4, 12).translate(0, -.2, 0), mat(cobbles(96, 96))));
+  scene.add(mesh(new THREE.BoxGeometry(.4, 12).translate(-.2, 0), mat(cobbles(96))));
   scene.add(house({ x: -4, z: -5, w: 6, d: 5, h: 4.5, door: 1.2 }), house({ x: 4, z: -5, w: 5, d: 5, h: 5, wall: 'wall3', roof: 'roof2' }));
   const hero = makeChar('wren'); scene.add(hero.root);
   const lamp = new THREE.PointLight('#ffb050', 3, 10, 2); lamp.castShadow = true; lamp.shadow.bias = -.004; scene.add(lamp);
   const halo = glow('#ffc070', 1.1, 1.2); scene.add(halo);
   const fill = new THREE.PointLight('#9fb2e8', 1.5, 7, 2); scene.add(fill);                 // cool front fill: never skip
-  const dust = particles(80, (i, t, o) => { o.x = (i * 7.3 % 20) - 10 + t * .1; o.y = (i * 3.1 % 4); o.z = (i * 5.7 % 6) - 3; o.a = .3; o.s = .05; o.r = .7; o.g = .8; o.b = 1; }, { soft: 1 });
+  const dust = particles((i, t, o) => { o.x = (i * 7.3 % 20) - 10 + t * .1; o.y = (i * 3.1 % 4); o.z = (i * 5.7 % 6) - 3; o.a = .3; o.s = .05; o.r = .7; o.g = .8; o.b = 1; }, { soft: 1 });
   scene.add(dust);
   const camP = track([[0, [-2, 5.5, 10]], [8, [2, 5, 9]]]), camL = track([[0, [-1, .8, 0]], [8, [2, .8, 0]]]);
 

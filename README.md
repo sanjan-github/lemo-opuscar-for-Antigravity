@@ -163,7 +163,7 @@ Click a frame for its `STYLE.md`.
 <tr>
 <td width="33%" valign="top"><a href="styles/memphis-diorama/STYLE.md"><img src="docs/frames/memphis-diorama.jpg" alt="Memphis Diorama"></a><br><b>Memphis Diorama</b><br><i>Four Seasons in Pomelo Town</i><br><sub>One river bend, four seasons, one take; each turns when the big tree squats and springs back.</sub><br><sub>Contributed by <a href="https://x.com/EianLu">@EianLu</a></sub></td>
 <td width="33%" valign="top"><a href="styles/transit-map/STYLE.md"><img src="docs/frames/transit-map.jpg" alt="Transit Map"></a><br><b>Transit Map</b><br><i>6 Kilometres</i><br><sub>A printed metro map grows from one 6 km line in 1993 to 21 lines and 906 km.</sub></td>
-<td width="33%" valign="top"><a href="styles/chalkboard/STYLE.md"><img src="docs/frames/chalkboard.jpg" alt="Chalkboard"></a><br><b>Chalkboard</b><br><i>The Story of Chinese Characters</i><br><sub>Chalk writes a popular claim about two characters, wipes it, and traces archery glyphs back three thousand years.</sub></td>
+<td width="33%" valign="top"><a href="styles/chalkboard/STYLE.md"><img src="docs/frames/chalkboard.jpg" alt="Chalkboard"></a><br><b>Chalkboard</b><br><i>The Story of Chinese Characters</i><br><sub>Chalk writes a popular claim about two characters, wipes it, and traces the archery glyph back three thousand years.</sub></td>
 </tr>
 <tr>
 <td width="33%" valign="top"><a href="styles/isometric-picture-book/STYLE.md"><img src="docs/frames/isometric-picture-book.jpg" alt="Isometric Picture Book"></a><br><b>Isometric Picture Book</b><br><i>Seventy-Two Seats</i><br><sub>Travellers board an isometric plane, and the order shows why one way is nearly twice as fast.</sub></td>
@@ -285,7 +285,7 @@ Click a frame for its `STYLE.md`.
 <td width="33%" valign="top"><a href="styles/dark-keynote/STYLE.md"><img src="docs/frames/dark-keynote.jpg" alt="Dark Tech Keynote"></a><br><b>Dark Tech Keynote</b><br><i>Room to Think</i><br><sub>Launch film for Tidy, a fictional app: one buried cursor snaps hundreds of windows back into place.</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="styles/living-screencast/STYLE.md"><img src="docs/frames/living-screencast.jpg" alt="Living Screencast"></a><br><b>Living Screencast</b><br><i>Clawd Moves In</i><br><sub>A friendly character hops across application cards, acting out plan mode and real-time self-checks in one take.</sub></td>
+<td width="33%" valign="top"><a href="styles/living-screencast/STYLE.md"><img src="docs/frames/living-screencast.jpg" alt="Living Screencast"></a><br><b>Living Screencast</b><br><i>Clawd Moves In</i><br><sub>Clawd hops out of the terminal into the Claude app and acts out plan mode and self-checks in one take.</sub></td>
 <td width="33%" valign="top"><a href="styles/hologram-hud/STYLE.md"><img src="docs/frames/hologram-hud.jpg" alt="Sci-fi Hologram HUD"></a><br><b>Sci-fi Hologram HUD</b><br><i>Volt · Spec Scan</i><br><sub>An e-bike is scanned into a hologram; target boxes lock onto the battery, motor and brakes.</sub></td>
 </tr>
 </table>

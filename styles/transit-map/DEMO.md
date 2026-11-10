@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *6 Kilometres* 《6 公里》 (47.0 s) · `transit-map.mp4` · source in [`demo/`](demo/)
+Demo: *6 Kilometres*  (47.0 s) · `transit-map.mp4` · source in [`demo/`](demo/)
 
 In 1993 the Shanghai Metro was one 6 km section of Line 1 with five stations. On a printed schematic the network grows year by year to 21 lines and 906 km; halfway through, London and Shanghai are drawn as two lines on one time axis. No narration and so no subtitles: everything the viewer reads is printed on the sheet or on the counter, a Chinese line above an English line. **Unofficial fan film, not affiliated with the operator.** Line colours and station names are public facts; no operator logo or branded bullet appears, and the schematic is our own drawing. Every number and its source is in [`demo/FACTS.md`](demo/FACTS.md).
 
@@ -23,16 +23,16 @@ Film time in seconds; zoom in px per grid step (G). The picture is written in st
 | # | Time | Shot | Camera | Native move / note |
 |---|---|---|---|---|
 | 1 | 0.0–1.4 | running tunnel, lamps streaking, oncoming headlights grow and light the lining; white-out from 1.1 | forward rush | screen-space tunnel |
-| 2 | 1.4–6.2 | match cut: the white collapses into the red dot of Jinjiang Park; the tip draws five stops (Xinlonghua under its 1993 name), counter 0 → 6.0; printed callout "1993.5.28 · 1 号线首段 · 6 公里 · 5 站"; a train shuttles | keeps the first stop and the tip both in frame, tilt 30° → 7°, zoom 260 → 130, aperture 16 → 6 | **signature 1**: headlight → dot; hold 4.3–6.2 |
+| 2 | 1.4–6.2 | match cut: the white collapses into the red dot of Jinjiang Park; the tip draws five stops (Xinlonghua under its 1993 name), counter 0 → 6.0; printed callout "1993.5.28 · 1 · 6 · 5 "; a train shuttles | keeps the first stop and the tip both in frame, tilt 30° → 7°, zoom 260 → 130, aperture 16 → 6 | **signature 1**: headlight → dot; hold 4.3–6.2 |
 | 3 | 6.2–9.0 | 1995: Line 1 to the railway station; the counter lands 1995 / 16.1 and holds | slow pull-back to the north-east, zoom 86 | |
 | 4 | 9.0–13.0 | 1999: Line 2 from Zhongshan Park; a capsule falls and lands on People's Square at 10.48 with shock rings; 10.75–12.05 the line runs dashed under the Huangpu | rides the tip at tilt 24°, zoom 150, aim 1.6 G ahead; drops to tilt 61° (zoom 185, aperture 26) over the river, rises at Lujiazui | **signature 2**: the interchange falls |
 | 5 | 13.0–14.3 | 2000: Line 3 along the west | rise and pull back | |
 | 6 | 14.3–21.7 | 2002–2010: lines burst out with bullets and years; only hub names; counter lands 420.0 at 19.9 | continuous pull-back, zoom 78 → 52, tilt 12° → 0° | levels of detail |
 | 7 | 21.7–24.95 | glide down the sheet to the time-line panel; London draws 1863 → 2026, Shanghai 1993 → 2010 → 2026 in a blink | slides over the paper, tilt up to 26°, eases in | |
-| 8 | 24.95–30.5 | the panel alone on paper: both lines, both start values (6 km), 402 / 420 / 906 km and the axis; 27.5 brackets "163 年 → 402 公里", 27.9 "17 年 → 420 公里" stamped in red | locked top view: 2.55 s before the verdict, 3 s after | **signature 3**: time lines |
+| 8 | 24.95–30.5 | the panel alone on paper: both lines, both start values (6 km), 402420906 km and the axis; 27.5 brackets "163 → 402 ", 27.9 "17 → 420 " stamped in red | locked top view: 2.55 s before the verdict, 3 s after | **signature 3**: time lines |
 | 9 | 30.5–32.4 | 2011–2024 lines complete; counter lands 906.0 | rises off the panel across the tilted sheet (tilt 30°, zoom 42); the table shows | |
-| 10 | 32.4–37.1 | every line runs trains; only ten hub names; a cream enamel People's Square name plate on its post stands in the lower-right corner, out of focus; ridership drums land 1339.7 万 at 35.4 | low sweep, tilt 57° → 62°, heading 26° → −14°, zoom 102, aperture 24 | the plate by the lens |
-| 11 | 37.1–44.0 | the network fades under a paper veil, the first section stays red; "you are here"; "一切从 6 公里开始 / It all started with 6 km" and the unofficial note | rise to top view, push 62 → 142; hold 42.1–44.0 | you are here |
+| 10 | 32.4–37.1 | every line runs trains; only ten hub names; a cream enamel People's Square name plate on its post stands in the lower-right corner, out of focus; ridership drums land 1339.7 at 35.4 | low sweep, tilt 57° → 62°, heading 26° → −14°, zoom 102, aperture 24 | the plate by the lens |
+| 11 | 37.1–44.0 | the network fades under a paper veil, the first section stays red; "you are here"; " 6It all started with 6 km" and the unofficial note | rise to top view, push 62 → 142; hold 42.1–44.0 | you are here |
 | 12 | 44.0–47.0 | end card | hard cut to the sheet's corner | |
 
 ## Score structure
@@ -56,13 +56,13 @@ Mix (`audio.py`): music × 0.9 under the effects; 38 Hz high-pass and a −5 dB 
 
 - Paper #F2EEE5 on a near-black table; ink #1B1C1E; river #BCD6EA with #8FB5D6 edges; first-section red #E3002B; London navy #24346E.
 - Line colours as commonly published (1 #E3002B, 2 #82BF25, 3 #FCD600, 4 #461D84, 5 #944D9A, 6 #D40068, 7 #ED6F00, 8 #0094D8, 9 #87CAED, 10 #C6AFD4, 11 #871C2B, 12 #007A60, 13 #E999C0, 14 #626020, 15 #BCA886, 16 #98D1C0, 17 #BC796F, 18 #C4984F, Pujiang #B5B5B6, Maglev #008B9A, airport link #3D688A). The Maglev is the one thin line (a second rail mode).
-- Props: the schematic (about 150 named stations, 21 lines, generated minor stops), the Huangpu and Suzhou Creek, the north-west cartouche "上海地铁 / Shanghai Metro", the first-section callout, the Expo star, the time-line panel in the sheet's lower margin, the enamel counter (year, route length, daily record), the People's Square name plate, the end-card frame.
+- Props: the schematic (about 150 named stations, 21 lines, generated minor stops), the Huangpu and Suzhou Creek, the north-west cartouche "Shanghai Metro", the first-section callout, the Expo star, the time-line panel in the sheet's lower margin, the enamel counter (year, route length, daily record), the People's Square name plate, the end-card frame.
 
 ## End card
 
-In the sheet's lower-right corner, inked at the end: a red line runs to a terminus ring; 6 公里 / 6 Kilometres; 地铁线路图 / Transit Map; LemoLab × Claude Opus 5.5; 非官方致敬片，与运营方无关 / Unofficial fan film, not affiliated with the operator. 3.0 s. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+In the sheet's lower-right corner, inked at the end: a red line runs to a terminus ring; 66 Kilometres;Transit Map; LemoLab × Claude Opus 5.5; ，Unofficial fan film, not affiliated with the operator. 3.0 s. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
-Two places where this demo is narrower than STYLE.md §4: its title 《6 公里》 is printed only on this end card (the north-west cartouche names the network, 上海地铁 / Shanghai Metro), and its last shot is this corner of the sheet after the veiled network. A new film prints its title on the map at the start and closes on the whole network, with its end title printed in a margin of that view. The demo's data and its sources are the model for `FACTS.md` (STYLE.md §11): every on-screen figure with its quoted source, plus the figures checked and not used.
+Two places where this demo is narrower than STYLE.md §4: its title  is printed only on this end card (the north-west cartouche names the network,Shanghai Metro), and its last shot is this corner of the sheet after the veiled network. A new film prints its title on the map at the start and closes on the whole network, with its end title printed in a margin of that view. The demo's data and its sources are the model for `FACTS.md` (STYLE.md §11): every on-screen figure with its quoted source, plus the figures checked and not used.
 
 ## Build notes
 
@@ -84,9 +84,9 @@ demo/
 ```
 
 - Build: `sh styles/transit-map/demo/build.sh` from the library root. It downloads Inter and Noto Sans SC when missing (OFL, github.com/google/fonts) and the vcsl, freepats and vsco2ce sample packs (`sh tools/fetch.sh instruments <lib>`), subsets the CJK font, exports `events.json`, writes `mix.wav`, renders at 30 fps with three workers, masters with `core/render/mux.sh` (grain 1), runs `readcheck.mjs` and takes the poster and `demo/stills/styleframe.jpg` at 36.2 s. The picture renders in well under a minute on an Apple-silicon Mac; the whole build takes a few minutes.
-- Hooks this film defines in `timeline.js` (the full list is in STYLE.md §10): `LABEL_PREF` (eight stations), `nameAt` (新龙华 before 1999), `labelOnly` (names per shot), `drops` + `dropRing` (People's Square, rings in the Line 1 and Line 2 colours), `roundelPos` / `roundelAlpha` (bullet places, and bullets that leave when their chapter is over), `veil` / `stationDim` / `highlight` (the ending), `riverLabels`, `furniture` (cartouche, time-line axis, end card), `annotations` (callout, Expo star, time lines, "you are here"), `trains` (the 1993 shuttle and every line now), `overlay` (tunnel, match flash, plate, counter), `tunnelOnly`, `cues`, `init`. Everything Shanghai-specific is in `net.js` and `timeline.js`; the demo uses no bus, ferry or walking-link lines.
+- Hooks this film defines in `timeline.js` (the full list is in STYLE.md §10): `LABEL_PREF` (eight stations), `nameAt`, `labelOnly` (names per shot), `drops` + `dropRing` (People's Square, rings in the Line 1 and Line 2 colours), `roundelPos` `roundelAlpha` (bullet places, and bullets that leave when their chapter is over), `veil` `stationDim` `highlight` (the ending), `riverLabels`, `furniture` (cartouche, time-line axis, end card), `annotations` (callout, Expo star, time lines, "you are here"), `trains` (the 1993 shuttle and every line now), `overlay` (tunnel, match flash, plate, counter), `tunnelOnly`, `cues`, `init`. Everything Shanghai-specific is in `net.js` and `timeline.js`; the demo uses no bus, ferry or walking-link lines.
 - `WARP` maps film time to story time, so one beat can be slowed and one hold lengthened without rewriting the picture. A film written directly in film time needs no `WARP` (leave it out).
 - Reading time: `window.TEXTS(t)` reports every line meant to be read (callout, station names, counter rows, the time-line panel, caption, end card) with its screen box; `readcheck.mjs` passes on all 76 pieces. Map labels show by shot (an allow-list in `timeline.js`, `labelOnly`) so no name flashes past too briefly.
 - Order when editing: `net.js` / `timeline.js` → `tools/subset.py` when text changes → `node core/render/events.mjs styles/transit-map/demo` → `.venv/bin/python styles/transit-map/demo/audio.py` → render. `sh styles/transit-map/demo/tools/sheet.sh` makes a 0.5 s contact sheet in `demo/out/`.
 - 1080p frames take 30–250 ms (most 35–60 ms); the inked region is redrawn every frame at up to 4096². Needs WebGL2 with `EXT_color_buffer_float` (the depth-of-field pass reads a half-float buffer).
-- Demo-specific pitfalls: the 1993 station 新龙华 was renamed 上海南站 (1999), so the label switches at 1999; Line 4 is a loop whose start and end are the same station (phases name the last occurrence explicitly); Lines 3 and 4 share the western corridor and are drawn as offset parallels; the counter must never show an unsourced year-end total, hence the spinning drums between landings.
+- Demo-specific pitfalls: the 1993 station was renamed 1999, so the label switches at 1999; Line 4 is a loop whose start and end are the same station (phases name the last occurrence explicitly); Lines 3 and 4 share the western corridor and are drawn as offset parallels; the counter must never show an unsourced year-end total, hence the spinning drums between landings.

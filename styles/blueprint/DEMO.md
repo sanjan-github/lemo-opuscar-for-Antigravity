@@ -84,7 +84,7 @@ Demo motion numbers: exploded parts leave one every ~0.055 of the progress on ei
   - **Screen width = sheet width × zoom^0.65.** Close-ups do not turn into sausages and wides do not vanish.
   - Dashes: centre line `[34,7,6,7]`, hidden `[11,7]`, phantom (cutting plane) `[30,6,5,6,5,6]`, all scaled with zoom so the pattern stays on the paper.
 - **Occlusion**: every solid is filled with "paper" (black in the ink buffer) before its outline is stroked, painter's order. Extrusion in oblique uses a sweep: stroke the outline at N depth steps at 2× width, then fill the same N steps with paper. What survives is a clean silhouette of half width. Front face and visible vertex connectors are drawn on top.
-- **Composite**: the ink canvas is greyscale (white = exposed line). The fx canvas has R = shadow darkening, G = wetness, B = stamp ink, and is added with `lighter`. The overlay canvas holds subtitles. Shadows darken lines too, which is how a lifted object proves it has left the paper. To keep an object from being darkened by its own shadow, multiply its area by `rgb(0,255,255)` on the fx canvas.
+- **Composite**: the ink canvas is greyscale (white = exposed line). The fx canvas has R = shadow darkening, G = wetness, B = stamp ink, and is added with `lighter`. The overlay canvas holds subtitles. Shadows darken lines too, which is how a lifted object proves it has left the paper. To keep an object from being darkened by its own shadow, multiply its area by `rgb(255,255)` on the fx canvas.
 - **Hatching** (fine-line shading) for sections, soil and the counterweight, at 45°, spacing 8–14 units.
 - **The magic object** (climax only): union of circles (15 scallops plus 4 inner lobes).
   - Flat state: an outward-scalloped revision cloud.
@@ -99,7 +99,7 @@ Demo motion numbers: exploded parts leave one every ~0.055 of the progress on ei
 
 ## Titles & subtitles
 
-- **Subtitles are drawing notes**: a light box (rgba(12,28,62,.58), 1.2 px outer and 0.8 px inner white rule, ~110–150 px tall), a "NOTE / n" cell in B612 Bold, the text in Architects Daughter 38 px written on in 0.35 s, and a small leader tick at the lower-left corner.
+- **Subtitles are drawing notes**: a light box (rgba(28,62,.58), 1.2 px outer and 0.8 px inner white rule, ~110–150 px tall), a "NOTE / n" cell in B612 Bold, the text in Architects Daughter 38 px written on in 0.35 s, and a small leader tick at the lower-left corner.
   - **Position per shot, in empty sky**, never fixed to the bottom. The bottom of the frame is where the ground line, base and title block live.
   - Wrap at ~880 px.
 - Every subtitle is also lettered into the sheet's **GENERAL NOTES** column (under the fixed notes "ALL DIMENSIONS IN MILLIMETRES." and "DO NOT SCALE DRAWING."), so the final wide shows the whole voiceover as drawing notes.
@@ -134,11 +134,11 @@ styles/blueprint/demo/
 - **The machine near the sheet edge**: wide shots show the desk. Put the main figure at least `960/zoom` from any sheet edge you will frame in a wide, or make the sheet bigger (for this demo 3200×2000 is too small: use 3200×2200 and keep the machine toward the right).
 - **Explosions that go up hit the header.** Explode mostly upward and sideways, and flatten the boom during the explode so the net extends sideways.
 - **Subtitles on the ink canvas** vanish off-sheet and cannot occlude lines. Use a separate overlay texture composited last (premultiplied alpha).
-- **The magic object darkened by its own shadow.** Multiply its area on the fx canvas with `rgb(0,255,255)` to zero the shadow channel only.
+- **The magic object darkened by its own shadow.** Multiply its area on the fx canvas with `rgb(255,255)` to zero the shadow channel only.
 - **Per-lobe shading makes "grapes" or bubble wrap.** Use one gradient across the union, crescents from a union-minus-shifted-union mask, and arcs only on the upper inner lobes.
 - **Overlapping additive circle fills make bubbles.** Fill a union as one path with `fill('nonzero')`.
 - **Scallop arcs drawn the wrong way round look like a starburst.** Choose the arc direction that contains the lobe's outward angle.
-- **A half-puffed cloud looks like a donut.** Grow the inner lobes early (`r × min(1, pf × 2.2)`).
+- **A half-puffed cloud looks like a donut.** Grow the inner lobes early (`r × min(pf × 2.2)`).
 - **The payoff must be big.** A small clump in the lower third undersells the emotional return. Give the payoff object ~1/3 of frame height, centred, drawn stroke by stroke (stem → leaves → one petal per beat), with visible stains around it. Keep subtitles off it.
 - **A caught object shows through the net.** Don't paint the net over it wholesale: fill the bag below the front rim with the object's body, then draw mesh and front rim on top, and skip the back rim.
 - `sfx.thump()` is 0.35 s long: pad before adding to longer buffers.

@@ -86,7 +86,7 @@ The form is a trio-sonata texture: the grammar of engraving, then colour. Times 
 
 ## Palette & props
 
-**The sheet**: 1920×1080 world units, laid paper `#f1e8d2`, world-space paper texture (fibres, laid lines, sparse foxing `#9a6a34`). Plate mark (the pressed, bevelled rectangle) at (70, 44)–(1850, 1036): plate tone `#e8ddc2` at 55 % inside; bevel dark on the top/left walls, light on bottom/right (light from the upper left). Ruled border: 2.4 px rule + 0.8 px hairline 9 px inside, (100, 72)–(1820, 1008).
+**The sheet**: 1920×1080 world units, laid paper `#f1e8d2`, world-space paper texture (fibres, laid lines, sparse foxing `#9a6a34`). Plate mark (the pressed, bevelled rectangle) at (44)–(1036): plate tone `#e8ddc2` at 55 % inside; bevel dark on the top/left walls, light on bottom/right (light from the upper left). Ruled border: 2.4 px rule + 0.8 px hairline 9 px inside, (72)–(1008).
 
 **Ink**: `#1c1510`. World line widths at 1× zoom: outlines 1.8–2.4 (swelling ×0.45–1.35), first hatching 0.18–2.0, cross-hatching ×0.78, third family ×0.6, hair and stipple 0.6–0.9. Hatch spacing on a 600-px figure: 3.1–3.7 px (first), ×1.1 (cross), ×1.25 (third). Hatch thresholds on a 0–1 tone: first family from 0.14, crossing from 0.46–0.5, third from 0.74–0.78.
 
@@ -94,13 +94,13 @@ The form is a trio-sonata texture: the grammar of engraving, then colour. Times 
 
 **Lettering**: Bodoni Moda (title 50 px, tracking 0.16; labels 17 px, tracking 0.14), italics for Latin (20–24 px), Pinyon Script for notes (29 px). Subtitles: Pinyon Script 38 px, `#2b1e14`, on a deckled paper slip (`#f4eddb`, soft shadow) at the bottom centre, max width 860, up to two lines; on 0.1 s before the line, off 0.6 s after it; never over the call to action.
 
-**Roundels**: radius 120, double rule (2 px + 0.75 px, 4 px inside), ruled ground of horizontal lines every 11 local units; content drawn for a 500-unit radius and scaled in. Slots in order: upper left (300, 300), lower left (300, 700), lower right (1620, 700), upper right (1620, 300). An unused slot shows the specimen at **natural size** (plate ≈ 20 cm wide, so a 13 mm bee is 0.19× the main figure).
+**Roundels**: radius 120, double rule (2 px + 0.75 px, 4 px inside), ruled ground of horizontal lines every 11 local units; content drawn for a 500-unit radius and scaled in. Slots in order: upper left (300), lower left (700), lower right (700), upper right (300). An unused slot shows the specimen at **natural size** (plate ≈ 20 cm wide, so a 13 mm bee is 0.19× the main figure).
 
 **Leaders**: 0.95 px, from a dot on the part to the roundel's rim, routed around wings and body with ≥ 34 px clearance (one waypoint), a small italic figure number near the root.
 
 **Hand colouring**: abdomen amber `#d9962a`, thorax ochre `#a8743e`, head `#8a6242`, eyes `#6e4a3c`, wings pale blue-grey `#a9c3cf` (alpha 0.5), legs `#7a5a3c`, pollen `#eaa21a` (alpha 0.95). Multiply over paper; 3.5 px spill, 2/1.5 px misregister, tide-line at the wet edge, low-frequency density lift (0.55), 1–2 backruns in large regions, granulation.
 
-**The copper (opening only)**: base `#5e2a12 → #94502c → #4e220e`, a swirl of polishing hairlines (overlay), a soft studio window reflected across the plate (four panes, blurred 14 px, over a 90 px room glow), dark room toward the frame edges. Grooves: dark trough `#240c05`, a bright burr `rgba(255,226,186)` offset toward the light, a warm glint on the far wall. Burin: lit face `#d9e0e6`, shadow face `#262b30`, sharp ridge highlight, brass ferrule, mushroom-shaped wooden handle with grain; turned 0.22 rad (≤ 15°); swarf a thin, narrowing copper ribbon curling irregularly (turns open out as it grows, an occasional twist).
+**The copper (opening only)**: base `#5e2a12 → #94502c → #4e220e`, a swirl of polishing hairlines (overlay), a soft studio window reflected across the plate (four panes, blurred 14 px, over a 90 px room glow), dark room toward the frame edges. Grooves: dark trough `#240c05`, a bright burr `rgba(226,186)` offset toward the light, a warm glint on the far wall. Burin: lit face `#d9e0e6`, shadow face `#262b30`, sharp ridge highlight, brass ferrule, mushroom-shaped wooden handle with grain; turned 0.22 rad (≤ 15°); swarf a thin, narrowing copper ribbon curling irregularly (turns open out as it grows, an occasional twist).
 
 **Subjects**: the honeybee (`subjects/bee.js`) with three drawn magnifications — compound eye, hamuli (wing hooks), corbicula (pollen basket) — in `subjects/details.js`; a second built-in subject, the great scallop (`subjects/scallop.js`), used by `content_alt.json`.
 
@@ -172,8 +172,8 @@ import { B, engraveShape, Wash, drawSheet, engraveText } from './engine/index.js
 // 1. any shape + a light direction → an engraved figure (contour lines follow the form), cut in order
 const { ink, shape: spark } = engraveShape(
   'M0 -120 C12 -40 40 -12 120 0 C40 12 12 40 0 120 C-12 40 -40 12 -120 0 C-40 -12 -12 -40 0 -120 Z',  // a four-pointed spark
-  { at: B.xf(860, 560, 1.9), light: [-0.6, -0.7], spacing: 4.2, style: 'contour' });               // or style: 'hatch'
-engraveShape('M0 0 H150 V26 H0 Z', { at: B.xf(1140, 740, 1), ink, g: 't' });                        // its cursor tail, same ink
+  { at: B.xf(560, 1.9), light: [-0.6, -0.7], spacing: 4.2, style: 'contour' });               // or style: 'hatch'
+engraveShape('M0 0 H150 V26 H0 Z', { at: B.xf(740, 1), ink, g: 't' });                        // its cursor tail, same ink
 ink.schedule(['ol', 'tol'], 0, 1.1, { conc: 2 }); ink.schedule(['h1', 'th1'], 0.8, 2.2, { conc: 40 });
 ink.schedule(['h2', 'th2'], 1.6, 2.7, { conc: 40 }); ink.schedule(['h3', 'th3'], 2.2, 3.0, { conc: 40 }); ink.build();
 

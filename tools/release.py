@@ -168,7 +168,7 @@ DIR_NAME = re.compile(r'([\w.-]+)$')
 WILD_TOKEN = re.compile(r'''(?<![^\s'"`(),;:=|])[^\s'"`(),;:=|]*?\.(?:jpe?g|png|webp|gif|m?js|cjs|py|json|txt|svg|wav|mp3|srt|css|html)\b''', re.I)
 PLACEHOLDER = re.compile(r'\$\{[^}]*\}|\{[^}]*\}|<[^>]*>|%0?\d*d|\[[^\]]*\]|\*+|\?')    # alt_*, alt_<n>, alt_{n}, alt_${n}, alt_%03d, alt_[0-9]
 # internal process wording that belongs in local notes, not in the library (add words here)
-PROCESS_WORDS = ('PRODUCTION_LOG', '返修', '定稿版', '定稿片', '审片', '用户说', '用户选', r'v[0-9] 的意见', '(?i:reviewer note)',
+PROCESS_WORDS = ('PRODUCTION_LOG', 'revision', 'final_version', 'reviewer_note', '(?i:reviewer note)',
                  'LemoOpuscarTrial', r'lemomo\.studio')
 PROCESS = re.compile('|'.join(PROCESS_WORDS))
 PROCESS_EXEMPT = re.compile(r'(?:^|/)\.gitignore$|^MAINTAINING\.md$|^tools/release\.py$')   # files that state the rules

@@ -14,7 +14,7 @@ Each style has its own folder, `~/lemo-my-styles/<slug>/`, shaped like a library
 
 | File | What it holds |
 |---|---|
-| `style.json` | `slug`, `en`, `cn`, `based_on` (the base slug; from a blank page, the technique base), `borrows` (slugs moves were taken from, may be empty), `size` (only when the default isn't 1920×1080, e.g. `"1080x1440"`), `library_version` (`git -C "$LIB" rev-parse --short HEAD`, or the plugin version when `$LIB` isn't a git clone), `created`, `line`, `line_cn` |
+| `style.json` | `slug`, `en`, `based_on` (the base slug; from a blank page, the technique base), `borrows` (slugs moves were taken from, may be empty), `size` (only when the default isn't 1920×1080, e.g. `"1080x1440"`), `library_version` (`git -C "$LIB" rev-parse --short HEAD`, or the plugin version when `$LIB` isn't a git clone), `created`, `line` |
 | `STYLE.md` | the style's invariants only, in the sections of a library `STYLE.md` (11 in most; a changed style keeps its base's): no story, beat table, durations or end card |
 | `CHANGES.md` | one row per decision: section, base, now, why. From a blank page, "base" is the technique base's value, or "—" for something new. This is what the user approves and what you check the demo film against |
 | `DEMO.md` | how the demo film was made, like a library `DEMO.md`: it opens with "One example among many. Don't reuse its story, arc, shots, props or timings.", then the story, shots, palette, score, build notes and which file draws what. It stands in for the film's `TREATMENT.md`, which isn't kept |

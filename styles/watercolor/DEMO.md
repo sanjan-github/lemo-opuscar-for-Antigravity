@@ -168,7 +168,7 @@ One-time asset scripts (already run): `node $D/extract_aus.mjs` (coastline; read
 | `monotone([[t,v],…])` | Monotone cubic keyframe track (camera paths). |
 | `ss eio eo ei seg clamp lerp vnoise fbm hash mixc rgba` | Easing, ranges, noise, colour helpers. |
 
-**Plants — `plants.js`**: every generator takes a scale `sc` (and optional args), works in local coordinates with the root at (0,0) and y up = negative, and returns `{ S: strokes, … }` (`gum` also returns `woody`, `leaves`, `shoots`, `fork`; `mulga` returns `stems`; `ash`/`rfTree` return `top`).
+**Plants — `plants.js`**: every generator takes a scale `sc` (and optional args), works in local coordinates with the root at (0) and y up = negative, and returns `{ S: strokes, … }` (`gum` also returns `woody`, `leaves`, `shoots`, `fork`; `mulga` returns `stems`; `ash`/`rfTree` return `top`).
 
 **World — `scene.js`**: `add(layer, worldX, generator, scale, {dy, span, sway, args, extra})` places a plant into `PL[layer]` and caches its sprite; `build()` fills zones by walking world x with `zoneJit`; `buildStrips()` pre-paints hill/ground washes with `washPoly(c, pts, fill, alpha, passes, jitter)`; `drawLandscape(t)` draws sky → far strip/plants → mist → mid → ground → horizon → main plants (with hooks for hero events) → animals → fire → foreground → rain. Annotations: `hand(txt, x, y, p, {size, w, align, col})`, `leader(x0,y0,x1,y1,p,bend)`, `note(t, t0, t1, anchorX, anchorY, labelX, labelY, txt, o)`; `scr(plant, dx, dy, t)` converts a plant-local point to screen space for labels.
 
@@ -178,21 +178,21 @@ One-time asset scripts (already run): `node $D/extract_aus.mjs` (coastline; read
 const cv = document.getElementById('c'), ctx = cv.getContext('2d');
 window.DUR = 6; let PAPER_IMG, tree, horizon;
 function render(t) {
-  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.drawImage(PAPER_IMG, 0, 0);
+  ctx.setTransform(0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.drawImage(PAPER_IMG, 0, 0);
   drawS(ctx, horizon, seg(t, .2, 1.6));                                   // horizon brushed across
   const p = seg(t, 1, 4.5), sk = .006 * Math.sin(t * 1.15);                // paint-in progress + sway
-  ctx.setTransform(1, 0, sk, 1, 960, 820);
+  ctx.setTransform(0, sk, 1, 960, 820);
   if (p < 1) drawList(ctx, tree.S, p); else ctx.drawImage(tree.spr.cv, tree.spr.x0, tree.spr.y0);
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  withSeed(7, () => drawS(ctx, mk(qcurve(80, 90, 120, 90, 0, 5), 9, '#b3b07a', { prof: 'even', nb: 3 }), seg(t, 4.5, 5)));
+  ctx.setTransform(0, 0, 1, 0, 0);
+  withSeed(() => drawS(ctx, mk(qcurve(90, 120, 90, 0, 5), 9, '#b3b07a', { prof: 'even', nb: 3 }), seg(t, 4.5, 5)));
   ctx.font = '500 52px "Cormorant Garamond"'; ctx.fillStyle = rgba(INK, ss(seg(t, 4.6, 5.2))); ctx.fillText('Eucalypt woodland', 76, 150);
 }
 window.render = render;
 (async () => {
   PAPER_IMG = new Image(); PAPER_IMG.src = 'paper.jpg'; await PAPER_IMG.decode();
   await document.fonts.load('500 52px "Cormorant Garamond"');
-  tree = withSeed(1, () => gum(1.2)); tree.spr = sprite(tree.S);
-  horizon = withSeed(2, () => mk(qcurve(120, 822, 1800, 822, -4, 40), 5.2, INK2, { prof: 'even', nb: 5, a: .88, rough: .3 }));
+  tree = withSeed(() => gum(1.2)); tree.spr = sprite(tree.S);
+  horizon = withSeed(() => mk(qcurve(822, 1800, 822, -4, 40), 5.2, INK2, { prof: 'even', nb: 5, a: .88, rough: .3 }));
   window.READY = true;
 })();
 ```

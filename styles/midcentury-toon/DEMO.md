@@ -72,13 +72,13 @@ Timeline (built from content): hook 4 bars, each step ≥ 3 bars (from its voice
 
 - **One ground colour per scene**, lighter tint for walls (`tint(col, .45)`), darker shade for floors (`shade(col, .16)`). Never place the product on its own colour or June on coral/pink.
 - **Line:** 3–5 px ink ribbons with ±40 % width breathing and 12–25 % breaks. Characters: 4 px. Props: 3–4.5 px. Walls in plans: 6–7 px, broken. Hands: one 6 px outline around the union of palm and fingers, 2.4 px finger separations.
-- **Shading:** one flat darker plane clipped inside a shape (never a gradient). Drop shadows are a copy of the shape offset (12, 12) in a paper shade at 50 %.
+- **Shading:** one flat darker plane clipped inside a shape (never a gradient). Drop shadows are a copy of the shape offset (12) in a paper shade at 50 %.
 - **Ornaments:** 4-point atomic sparkles, 8–18-point starbursts, sunburst rays (30 wedges, 55 % alpha), boomerang and kidney shapes, polka dots.
 - **Type:** Oleo Script Bold for the kicker ("Meet Pip."); Alfa Slab One for titles, numerals and step headers (ink with a cream or colour plate offset 4–7 px); Jost 500/600 for body, details, labels and captions (letter-spaced caps for small labels).
 - **Grain:** light (mux grain 4) plus the paper overlay; the look is print, not film.
 - **Model sheet:** `?test=sheet` (`build.sh` leaves it in `demo/out/still/`): June's turnaround, five expressions, key poses and hands, and the product in its off / on / plan-view / dock states.
 
-Demo numbers behind the STYLE.md rules: register offset `(6, 4)` px re-rolled at 12 fps ±1.6 px; walls in plans 6–7 px broken; hands one 6 px outline and 2.4 px finger separations; drop shadow offset (12, 12); sunburst 30 wedges at 55 % alpha; mux grain 4; walls `tint(col, .45)`, floors `shade(col, .16)`; pop-ins 0.24–0.3 s with overshoot 1.9; hand anticipation 20–60 px, recoil 6–10 px; kneel drops the hips 150 units (`kneel: true`, `kneelPose()`); caption card Jost 500 42 px, 60 px above the bottom, fade 0.16 s with a 10 px rise, colour cel offset 5 px, coral 8-point stars; step title Alfa Slab 64 px; detail tags Jost 36 px.
+Demo numbers behind the STYLE.md rules: register offset `(4)` px re-rolled at 12 fps ±1.6 px; walls in plans 6–7 px broken; hands one 6 px outline and 2.4 px finger separations; drop shadow offset (12); sunburst 30 wedges at 55 % alpha; mux grain 4; walls `tint(col, .45)`, floors `shade(col, .16)`; pop-ins 0.24–0.3 s with overshoot 1.9; hand anticipation 20–60 px, recoil 6–10 px; kneel drops the hips 150 units (`kneel: true`, `kneelPose()`); caption card Jost 500 42 px, 60 px above the bottom, fade 0.16 s with a 10 px rise, colour cel offset 5 px, coral 8-point stars; step title Alfa Slab 64 px; detail tags Jost 36 px.
 
 **The payoff:** the vacuum's real route (wall-follow, then boustrophedon lanes that flow around furniture, with a small curl at every turn, stars and dots between lanes) draws itself room by room, one room per beat, while the camera pulls back 5.4× → 1.0× with a −6° → 0° counter-rotation. Stepping back, it reads as an atomic-age textile.
 
@@ -178,9 +178,9 @@ Film-level helpers in `film.js` you can lift: `callout()` (round detail view wit
 ```js
 import { setClock, shape, ink, sparkle, starPts, spline, PAL } from './engine/toon.js';
 setClock(t);                                   // register jitter on twos
-ctx.fillStyle = PAL.paper; ctx.fillRect(0, 0, 1920, 1080);
+ctx.fillStyle = PAL.paper; ctx.fillRect(0, 1920, 1080);
 // the tail: a broken ink stroke that draws on
-ink(ctx, spline([[520, 700], [700, 640], [860, 560]], false, 10), 6, { upto: Math.min(1, t / 0.6), breaks: 0.2 });
+ink(ctx, spline([[520, 700], [700, 640], [860, 560]], false, 10), 6, { upto: Math.min(t / 0.6), breaks: 0.2 });
 // the spark: any closed path -> off-register fill + breathing ink line
 const pts = [];
 for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4 - Math.PI / 2, r = i % 2 ? 26 : 110; pts.push([960 + Math.cos(a) * r, 520 + Math.sin(a) * r]); }

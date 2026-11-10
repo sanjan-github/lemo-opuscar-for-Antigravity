@@ -43,7 +43,7 @@ Voice: warm British storyteller, Kokoro `bm_george`, speed ~0.9, 4–6 short lin
 - Set: walnut desk (Poly Haven `american_walnut_veneer`), `photo_studio_loft_hall` HDRI, tea set (teapot mountain, cup), pencil, books (the moon), desk lamp (the sun). Key light `#fff4e8` from upper left; softboxes key front-left, cool rim behind, one over the finale set. GTAO radius ~3.5 studs, scale 2.5. Grade: contrast +0.26, saturation ×1.1, slightly cool.
 - The astronaut: 1×1 columns for legs, a 2×2 brick torso, round-brick arms, a round 2×2 helmet with a curved visor panel.
 - The rocket, fire (translucent orange/yellow round plates jittered every frame), smoke (white round bricks that grow and roll outward), the moon (grey round plates with crater tiles).
-- Subtitles: a dark rounded pill `rgba(18,20,26,.62)` centred 150 px above the bottom, Fredoka 600 46 px white, a small yellow 2×1 brick icon on the left. Radio lines get a red brick icon and a "MISSION CONTROL" tag.
+- Subtitles: a dark rounded pill `rgba(20,26,.62)` centred 150 px above the bottom, Fredoka 600 46 px white, a small yellow 2×1 brick icon on the left. Radio lines get a red brick icon and a "MISSION CONTROL" tag.
 - Title: "Rocket from Spare Parts", Fredoka 700, popping in on 12 fps steps, with the yellow sub-line "A BRICK TOY FILM".
 
 ## End card

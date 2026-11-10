@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *The Last Night Train* 《末班夜车》 (51.0 s, 1920×1080, 30 fps) · `paper-lantern.mp4` · source in [`demo/`](demo/) · engine: three.js 0.170 (WebGL, SSAA 2×, VSM soft shadows, custom DoF + bloom compositor), Canvas2D-drawn paper layers, headless Chrome frame capture.
+Demo: *The Last Night Train*  (51.0 s, 1920×1080, 30 fps) · `paper-lantern.mp4` · source in [`demo/`](demo/) · engine: three.js 0.170 (WebGL, SSAA 2×, VSM soft shadows, custom DoF + bloom compositor), Canvas2D-drawn paper layers, headless Chrome frame capture.
 
 An old night train makes its last run. At a snowy mountain halt its windows light up car by car and it pulls away over a curved viaduct; it runs alongside a pine forest past three small halts; it goes into a long tunnel and the picture blinks to black; it comes out in a river valley where the town lights its windows as it passes; it slows along the sea cliffs; at the seaside terminus its windows go out one by one, the last one last, and the station lamp stays on. No figures: the story is told by the train, its lit windows, the stations and the light. English narration (Kokoro `bm_george`) with Chinese and English subtitles. The line and its stations are fiction ([`demo/FACTS.md`](demo/FACTS.md)).
 
@@ -55,7 +55,7 @@ Film time; dissolves are 0.6 s.
 ## Titles, subtitles & end card
 
 - Subtitles: one Chinese line (Noto Serif SC 500, 40 px) over one English line (Cormorant Garamond 600, 42 px), warm off-white, 64 px from the bottom, on the dark front band, with a faint dark band (`#sub .band`). `demo/tools/subcheck.py` measures the ground under every cue: 98 % or more of the non-text pixels are dark in this film. The last line stays to the end.
-- End card: a paper ticket on a thread drops from above at 47.5 s, overshoots and swings to rest. Main panel: a route line `FROM PINE HALT → TO SEA END`, the title (English largest, then 末班夜车), a rule, the style name 纸雕灯影 / Paper-cut Lightbox, and `LemoLab × Claude Opus 5.5` on its own line, with the licence credit for the Salamander piano samples (CC BY 3.0) in fine print under it; notched corners, a punched hole top left, a perforated stub with a red 车 stamp. The sign-off belongs to the library's own demos: a user's film carries no LemoLab credit and no copy of this card.
+- End card: a paper ticket on a thread drops from above at 47.5 s, overshoots and swings to rest. Main panel: a route line `FROM PINE HALT → TO SEA END`, the title, a rule, the style namePaper-cut Lightbox, and `LemoLab × Claude Opus 5.5` on its own line, with the licence credit for the Salamander piano samples (CC BY 3.0) in fine print under it; notched corners, a punched hole top left, a perforated stub with a red stamp. The sign-off belongs to the library's own demos: a user's film carries no LemoLab credit and no copy of this card.
 
 ## Pitfalls
 

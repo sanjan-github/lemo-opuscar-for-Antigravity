@@ -1,4 +1,4 @@
-# Facts and sources · Knock-Knee Alert (膝盖警报)
+# Facts and sources · Knock-Knee Alert ()
 
 Every claim in the narration and on screen, with its source and the quoted wording. Checked against the final script on 2026-10-20. The newsreel ("THE SPOTLIGHT NEWS", "ENTER MR. FORD", "THAT'S THE NEWS!") is invented packaging; the archive material and the facts are real.
 

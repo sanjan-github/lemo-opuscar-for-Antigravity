@@ -1,4 +1,4 @@
-# Facts and sources · 《410 天》 (410 Days)
+# Facts and sources · (410 Days)
 
 Every claim in the on-screen text and narration, listed with its source and the source's wording. Checked on 2026-10-20 (before the last render, each item was compared against `audio/lines.json` and the on-screen text in `index.html`).
 
@@ -13,21 +13,21 @@ The main sources are two first-hand documents of the time:
 
 | On screen | Narration | Claim | Source |
 |---|---|---|---|
-| Title 「410 天」 (410 days), and 「410 天」 at the end | "Four hundred and ten days." | 1930-03-17 first steel → 1931-05-01 opening = 410 days | F1, F8 (our arithmetic), F9 |
-| 帝国大厦 · 纽约 1930–1931 (Empire State Building · New York 1930–1931) | — | Years of construction and opening | F1, F8 |
-| 第五大道 33–34 街 (Fifth Avenue, 33rd–34th Streets) (lower third on the map) | "Fifth Avenue. The old Waldorf-Astoria site." | Location; the plot is the old Waldorf-Astoria hotel site | F2 |
-| 第一根钢 · 1930.3.17 · 第 0 天 (first steel · 1930.3.17 · day 0) | "March seventeenth, nineteen thirty. First steel." | Date the first steel was set | F1 |
-| 九台吊车 (nine derricks) | "Nine derricks lift the frame." | Nine derricks start raising the steel frame from the basement | F6 |
-| 44 吨 / 44 TONS EACH | "Some columns weigh forty-four tons." | Some of the lower column sections weigh 44 tons each | F7 |
-| 每周 4½ 层 (4½ floors a week) | "Four and a half floors of steel, every week." | Four and a half stories of steel frame erected every week | F3 |
-| 出厂 80 小时，就铆进楼里 (riveted into the building 80 hours after leaving the mill) | "Eighty hours from the mill in Pittsburgh to a rivet in the frame." | Steel members were riveted into the building 80 hours after leaving the mill in Pittsburgh | F3 |
+| Title 「410 」 (410 days), and 「410 」 at the end | "Four hundred and ten days." | 1930-03-17 first steel → 1931-05-01 opening = 410 days | F1, F8 (our arithmetic), F9 |
+| · 1930–1931 (Empire State Building · New York 1930–1931) | — | Years of construction and opening | F1, F8 |
+| 33–34 (Fifth Avenue, 33rd–34th Streets) (lower third on the map) | "Fifth Avenue. The old Waldorf-Astoria site." | Location; the plot is the old Waldorf-Astoria hotel site | F2 |
+| · 1930.3.17 · 0 (first steel · 1930.3.17 · day 0) | "March seventeenth, nineteen thirty. First steel." | Date the first steel was set | F1 |
+| (nine derricks) | "Nine derricks lift the frame." | Nine derricks start raising the steel frame from the basement | F6 |
+| 44 / 44 TONS EACH | "Some columns weigh forty-four tons." | Some of the lower column sections weigh 44 tons each | F7 |
+| 4½ (4½ floors a week) | "Four and a half floors of steel, every week." | Four and a half stories of steel frame erected every week | F3 |
+| 80 ， (riveted into the building 80 hours after leaving the mill) | "Eighty hours from the mill in Pittsburgh to a rivet in the frame." | Steel members were riveted into the building 80 hours after leaving the mill in Pittsburgh | F3 |
 | Brochure heading "THE MEN WHO DID THE JOB" | "The men who did the job?" | The brochure really has a column with this heading (the film shows only the heading, not the list of names below it) | F4 |
-| 每天 2,500 人 / 最多一天约 4,000 人 (2,500 men a day / about 4,000 at most in one day) | "Twenty-five hundred men a day. Up to four thousand." | An average of 2,500 men a day, about 4,000 at most in a single day | F3 |
-| Scale chart: 伍尔沃斯 (Woolworth) 792 / 埃菲尔铁塔 (Eiffel Tower) 984 / 克莱斯勒 (Chrysler) 1,046 / 帝国大厦 (Empire State) 1,250 (feet) | "Twelve hundred and fifty feet." | Heights of the four structures; the line drawings are taken from the brochure's own scale drawing | F5 |
-| 世界最高 / TALLEST IN THE WORLD | "The tallest structure in the world." | In 1931 it was the tallest structure (of any kind) in the world | F5 |
-| 1930.9.15 钢架到 86 层 · 第 182 天 (1930.9.15 steel reaches the 86th floor · day 182) | — | Date the last steel was set on the 86th floor; 1930-03-17 → 09-15 = 182 days (our arithmetic) | F1 |
-| 102 层 (102 floors) (end point of the tower's counter, and the ending) | — | 102 stories above the street | F5 |
-| 1931.5.1 开放 · 比计划提前近一个月 (1931.5.1 opened · nearly a month ahead of schedule) | "May first, nineteen thirty-one. Open, nearly a month early." | Formal opening date; nearly a month ahead of the schedule set at the start of construction | F1 |
+| 2,500 / 4,000 (2,500 men a day / about 4,000 at most in one day) | "Twenty-five hundred men a day. Up to four thousand." | An average of 2,500 men a day, about 4,000 at most in a single day | F3 |
+| Scale chart: (Woolworth) 792 / (Eiffel Tower) 984 / (Chrysler) 1,046 / (Empire State) 1,250 (feet) | "Twelve hundred and fifty feet." | Heights of the four structures; the line drawings are taken from the brochure's own scale drawing | F5 |
+| / TALLEST IN THE WORLD | "The tallest structure in the world." | In 1931 it was the tallest structure (of any kind) in the world | F5 |
+| 1930.9.15 86 · 182 (1930.9.15 steel reaches the 86th floor · day 182) | — | Date the last steel was set on the 86th floor; 1930-03-17 → 09-15 = 182 days (our arithmetic) | F1 |
+| 102 (102 floors) (end point of the tower's counter, and the ending) | — | 102 stories above the street | F5 |
+| 1931.5.1 · (1931.5.1 opened · nearly a month ahead of schedule) | "May first, nineteen thirty-one. Open, nearly a month early." | Formal opening date; nearly a month ahead of the schedule set at the start of construction | F1 |
 
 The floor counter in the tower section (86 → 102) is a graphic animation: the floors in between carry no dates, and only the two points dated in F1 (86th floor on 15 September, opening on 1 May) appear as text. The same holds for the 80-hour counter and the 2,500-men counter: only the end figure is a fact.
 
@@ -89,4 +89,4 @@ The freeze frame is the column-lifting shot that immediately follows this intert
 ## Conflicts noticed during checking (not in the film)
 
 - The film's intertitle says "September 19th—Six months after placing the first billet, the steel erection of the main building is completed—85 stories, involving 58,000 tons of steel"; the brochure says the last steel was set on the 86th floor on 15 September and the steel frame weighs 60,000 tons in total. The two disagree; the film uses only the brochure's 15 September / 86th floor and no tonnage.
-- The film intertitle "First column set April 8, 1930" refers to the first **column**; the brochure's 17 March refers to the first **foundation steel** (billets / grillage). The film's "第一根钢" (first steel) uses 17 March, and the picture is the steel grillage being set (source 114 s), consistent with the brochure.
+- The film intertitle "First column set April 8, 1930" refers to the first **column**; the brochure's 17 March refers to the first **foundation steel** (billets / grillage). The film's "" (first steel) uses 17 March, and the picture is the steel grillage being set (source 114 s), consistent with the brochure.

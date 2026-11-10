@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-**"One Day in New York" (纽约的一天)**, 52 s, 1920×1080 at 30 fps, 1.85:1 matte inside the frame, no voice, original score. An unofficial film made from real footage and records: CC BY time-lapses, street footage and aerials from Wikimedia Commons and Flickr (each with a passed licence review or a source page that still shows the licence), U.S. Marine Corps Fleet Week footage (public domain, DVIDS), a public-domain Edison film of 1899 from the Library of Congress, a NASA photograph from the International Space Station, Carol M. Highsmith's public-domain photographs (Library of Congress) and a scan of Walt Whitman's *Leaves of Grass* (1860, Internet Archive). No person or institution in it endorses the film. Facts: [`demo/FACTS.md`](demo/FACTS.md). Assets: [`demo/CREDITS`](demo/CREDITS), [`demo/SOURCES.md`](demo/SOURCES.md).
+**"One Day in New York" **, 52 s, 1920×1080 at 30 fps, 1.85:1 matte inside the frame, no voice, original score. An unofficial film made from real footage and records: CC BY time-lapses, street footage and aerials from Wikimedia Commons and Flickr (each with a passed licence review or a source page that still shows the licence), U.S. Marine Corps Fleet Week footage (public domain, DVIDS), a public-domain Edison film of 1899 from the Library of Congress, a NASA photograph from the International Space Station, Carol M. Highsmith's public-domain photographs (Library of Congress) and a scan of Walt Whitman's *Leaves of Grass* (Internet Archive). No person or institution in it endorses the film. Facts: [`demo/FACTS.md`](demo/FACTS.md). Assets: [`demo/CREDITS`](demo/CREDITS), [`demo/SOURCES.md`](demo/SOURCES.md).
 
 ## Story & structure
 
@@ -16,7 +16,7 @@ Structure (chosen over a "clock face" structure and a "people vs machines" struc
 
 | Time (s) | Bar.beat | Shot | Speed / treatment | Text |
 |---|---|---|---|---|
-| 0.0–4.0 | 0–1 | ISS047 night photo of New York | falling push 1.0 → 1.3 in 0.35 s, then accelerating to ×2 | 纽约的一天 / ONE DAY IN NEW YORK |
+| 0.0–4.0 | 0–1 | ISS047 night photo of New York | falling push 1.0 → 1.3 in 0.35 s, then accelerating to ×2 |ONE DAY IN NEW YORK |
 | 4.0–6.0 | 2 | Schwab 36th-floor camera, night → dawn | 40×, blend 30 (light river) | day ring appears |
 | 6.0–7.0 | 3 | aerial, Bethesda Terrace in Central Park, early morning | 3× | |
 | 7.0–7.5 | 3.2 | Grand Central clock (video) | 1× | |
@@ -40,7 +40,7 @@ Structure (chosen over a "clock face" structure and a "people vs machines" struc
 | 40.0–42.0 | 20 | the day in reverse: 8 cuts × 4 frames, 14 × 2 frames | | ring spins backwards |
 | 42.0 | 21 | hard stop | dry cut | |
 | 42.3–43.25 | 21.0.6 | *Leaves of Grass* (1860) p. 380, reading light on the line | | |
-| 43.25–47.25 | 21.2.5 | Schwab camera, the next dawn (night → blue → morning) | 8×, blend 8, slow push | 我也曾在人群里。/ …I WAS ONE OF A CROWD, / source |
+| 43.25–47.25 | 21.2.5 | Schwab camera, the next dawn (night → blue → morning) | 8×, blend 8, slow push | 。/ …I WAS ONE OF A CROWD,source |
 | 47.25–52.0 | 23.2.5 | the same shot, darkened to 22 % | | end card |
 
 ## Score structure
@@ -67,7 +67,7 @@ Warm white `#EDE8DF`, secondary `#B0AAA0`, sodium orange `#D9772F` (rules, sourc
 
 ## End card
 
-Held 4.75 s over the last shot (darkened to 22 %, still moving), left-aligned, in this order: 纽约的一天 ONE DAY IN NEW YORK (one line) · a sodium rule · 延时交响 TIME-LAPSE SYMPHONY · LemoLab × Claude Opus 5.5 · footage credits: a header line with both licences (CC BY 3.0 and CC BY 2.0), their links and the changes made, then every CC BY work with author, full title and licence (two to a line), then the public-domain sources. The credit lines are fine print (16 px): they are written in full and legible but are not reported to `readcheck` (title, style name and sign-off are). The "LemoLab × Claude Opus 5.5" line belongs to this library demo only; a user's film carries no LemoLab credit and no watermark.
+Held 4.75 s over the last shot (darkened to 22 %, still moving), left-aligned, in this order: ONE DAY IN NEW YORK (one line) · a sodium rule · TIME-LAPSE SYMPHONY · LemoLab × Claude Opus 5.5 · footage credits: a header line with both licences (CC BY 3.0 and CC BY 2.0), their links and the changes made, then every CC BY work with author, full title and licence (two to a line), then the public-domain sources. The credit lines are fine print (16 px): they are written in full and legible but are not reported to `readcheck` (title, style name and sign-off are). The "LemoLab × Claude Opus 5.5" line belongs to this library demo only; a user's film carries no LemoLab credit and no watermark.
 
 ## Build notes
 

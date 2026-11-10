@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *The Week in AI* (本周 AI 四件事, 53.5 s) · `news-package.mp4` · subtitles `news-package.srt` (external only, Chinese + English) · source in [`demo/`](demo/)
+Demo: *The Week in AI* · `news-package.mp4` · subtitles `news-package.srt` (external only, Chinese + English) · source in [`demo/`](demo/)
 
 LEMO AI NEWS, LemoLab's own channel, reports four stories from the week of 12–18 October 2026, with a Chinese anchor voice:
 
@@ -13,7 +13,7 @@ LEMO AI NEWS, LemoLab's own channel, reports four stories from the week of 12–
 
 Every number and sentence is checked against the sources in [`demo/FACTS.md`](demo/FACTS.md). The Kospi line is drawn from real daily closes.
 
-This is an unofficial film made from public information: company pages, exchange data, news reports and a European Commission speech. None of Google, Meta, OpenAI, Anthropic, Samsung, SK hynix, Apple, Euronews or the European Commission made or endorsed it. Their names are set in type, never as logos. Two background plates (a server aisle, a silicon wafer) are AI-generated illustrations and carry an "ILLUSTRATION / 示意" tag whenever they are on screen.
+This is an unofficial film made from public information: company pages, exchange data, news reports and a European Commission speech. None of Google, Meta, OpenAI, Anthropic, Samsung, SK hynix, Apple, Euronews or the European Commission made or endorsed it. Their names are set in type, never as logos. Two background plates (a server aisle, a silicon wafer) are AI-generated illustrations and carry an "ILLUSTRATION " tag whenever they are on screen.
 
 ## Story & structure
 
@@ -59,13 +59,13 @@ Times in seconds; cuts and wipes on the 120 BPM grid (beat 0 = 1.5 s).
 |---|---|---|---|---|
 | 1 | 0.0–1.5 | sting | slashes 0.04 / 0.10, plate slam 0.16–0.42 with ring and shake, wordmark 0.5, glint 0.85, plate flies to the bug 1.12–1.45 | band wipe 1.2–1.5 |
 | 2 | 1.5–6.0 | rundown | date block already entering under the band (1.3–2.3); four rows flip in 2.3 / 2.7 / 3.1 / 3.5; row 01 outlined 4.4 | v1 1.6 |
-| 3 | 6.0–9.0 | big type over the server plate (ILLUSTRATION) | Gemini slides in under the band 5.8 / 4 6.1 / Argon 6.6, 正式开放 GA stamp 7.1, model ID typed 7.6 | strap, tag and source line arrive with the band; v2 6.1 |
+| 3 | 6.0–9.0 | big type over the server plate (ILLUSTRATION) | Gemini slides in under the band 5.84 6.1Argon 6.6, GA stamp 7.1, model ID typed 7.6 | strap, tag and source line arrive with the band; v2 6.1 |
 | 4 | 9.0–13.0 | split-flap price card | intro $2 / $10 (to 30 Nov) 9.2–9.4; then $4 / $20 (from 1 Dec) 9.9–10.1; ×2 10.3 | held 2.5 s complete |
-| 5 | 13.0–20.0 | line chart, % from the 23 Sep high (real closes 15 Sep – 15 Oct) | axes and the first days drawn under the band from 12.6, 12 days by 13.5, then the streak one day per step 14.15–15.65 with a counter; silence 16.0–16.5; the break 16.5 (shake, ring); readout 16.55; 熊市 BEAR MARKET stamp 17.35 | v3 13.1 |
-| 6 | 20.0–24.0 | two bars over the wafer plate (ILLUSTRATION) | Samsung −9.48 % 20.3, SK hynix −11.06 % 20.8, −9 % line 21.3, 都超过 9% badge 21.5 | v4 20.1; hard cut: strap and source change on the same frame |
+| 5 | 13.0–20.0 | line chart, % from the 23 Sep high (real closes 15 Sep – 15 Oct) | axes and the first days drawn under the band from 12.6, 12 days by 13.5, then the streak one day per step 14.15–15.65 with a counter; silence 16.0–16.5; the break 16.5 (shake, ring); readout 16.55; BEAR MARKET stamp 17.35 | v3 13.1 |
+| 6 | 20.0–24.0 | two bars over the wafer plate (ILLUSTRATION) | Samsung −9.48 % 20.3, SK hynix −11.06 % 20.8, −9 % line 21.3, 9% badge 21.5 | v4 20.1; hard cut: strap and source change on the same frame |
 | 7 | 24.0–30.5 | Europe map, one take: the 27 EU members as shapes, all other land one shape with no borders | EU members light from Brussels 23.75 (under the band); Belgium flashes and the Brussels ring 24.05; push 24.55–25.45; EU AI Office label 24.95; pan 25.35–26.05; requests fly to OpenAI 25.45 and Anthropic 26.2 | v5 24.1; letters held 4 s |
-| 8 | 30.5–35.5 | quote card (Commission speech) | quote mark 30.45, two lines 30.65 / 30.83, slow push, underline on "enforcing" 33.3, 已开始执法 ENFORCING stamp 33.9 | hard cut, profile strap on the same frame; v6 30.6; silence 2 from 33.9 |
-| 9 | 35.5–45.0 | spec card | title pushed up under the band 35.25, 开放权重 OPEN WEIGHTS stamp 36.0; bars 816B 36.9 and 42B 38.2, 约 5% badge 38.65; 1M token chip 39.0; two Mac Studios slide in 40.0 / 40.25 and fill their memory cells; bracket 41.2, ≈ 1 TB 41.4 | v7 35.6; bars held 6 s, Macs 3.5 s |
+| 8 | 30.5–35.5 | quote card (Commission speech) | quote mark 30.45, two lines 30.6530.83, slow push, underline on "enforcing" 33.3, ENFORCING stamp 33.9 | hard cut, profile strap on the same frame; v6 30.6; silence 2 from 33.9 |
+| 9 | 35.5–45.0 | spec card | title pushed up under the band 35.25, OPEN WEIGHTS stamp 36.0; bars 816B 36.9 and 42B 38.2, 5% badge 38.65; 1M token chip 39.0; two Mac Studios slide in 40.040.25 and fill their memory cells; bracket 41.2, ≈ 1 TB 41.4 | v7 35.6; bars held 6 s, Macs 3.5 s |
 | 10 | 45.0–47.5 | rundown, recap | ticks 45.8 / 46.2 / 46.6 / 47.0 | v8 45.1; the strap leaves under the band |
 | 11 | 47.25–53.5 | slanted wipe → end card | the end card is already animating under the wipe; fade 52.7–53.4 | |
 
@@ -80,10 +80,10 @@ Times in seconds; cuts and wipes on the 120 BPM grid (beat 0 = 1.5 s).
 - **Story ③:** pizzicato and horns only, soft air under the map, typewriter ticks as the letters fill. After the ENFORCING stamp (33.9) only cellos, contrabass and a horn hold a low E.
 - **Story ④:** lifts to G major with a brass stab and a glockenspiel figure.
 - **Recap and end card:** a glockenspiel note per tick, then a timpani roll into an E-major tutti on the end card.
-- **Voice:** Doubao TTS 2.0, voice 解说小明 2.0 (`zh_male_jieshuoxiaoming_uranus_bigtts`), eight lines, `speech_rate` 0–15.
-  - Use it rather than 云舟 `m191` or 大壹 `dayi`: of the three male 2.0 voices it is the closest to a brisk broadcast read. It reads briskly, in a steady mid-low register.
+- **Voice:** Doubao TTS 2.0, voice 2.0 (`zh_male_jieshuoxiaoming_uranus_bigtts`), eight lines, `speech_rate` 0–15.
+ - Use it rather than `m191` or `dayi`: of the three male 2.0 voices it is the closest to a brisk broadcast read. It reads briskly, in a steady mid-low register.
   - Spoken text in `vo/lines.json` writes numbers as Chinese words (`say`); the strap and subtitles keep the digits.
-  - Speech-to-text hears 海力士 as 海利市 and 都柏林 as 督伯林 (same sounds); those lines carry the expected transcript in their `asr` field.
+ - Speech-to-text hears as and as same sounds; those lines carry the expected transcript in their `asr` field.
   - Music is ducked ≈ 7 dB and thinned in 1.2–5 kHz under speech.
 - **Master:** −14.0 LUFS, peak −1.1 dBFS. Speech-to-text of the final mix matches the script.
 
@@ -98,9 +98,9 @@ Times in seconds; cuts and wipes on the 120 BPM grid (beat 0 = 1.5 s).
 From 47.5 s, held six seconds:
 
 1. Dateline "LEMO AI NEWS · WEEK 42 · 12–18 OCT 2026".
-2. "本周 AI 四件事" (120 px), then "The Week in AI" (lemon italic).
+2. " AI " (120 px), then "The Week in AI" (lemon italic).
 3. A thin rule.
-4. "LEMO AI NEWS · 电视新闻包装 BROADCAST NEWS PACKAGE".
+4. "LEMO AI NEWS · BROADCAST NEWS PACKAGE".
 5. "LemoLab × Claude Opus 5.5".
 6. The large plate and wordmark on the right.
 7. Six lines: news sources; data and speech sources; CC0 samples and public-domain map data; OFL fonts; the Doubao voice; the two AI-generated plates.
@@ -148,7 +148,7 @@ Where the moves live in `main.js`:
 4. Speech check.
 5. Reading check.
 6. Events.
-7. Render (1,605 frames, 30 fps).
+7. Render (605 frames, 30 fps).
 8. Mix.
 9. Master (−14 LUFS, no grain).
 10. `.srt`.

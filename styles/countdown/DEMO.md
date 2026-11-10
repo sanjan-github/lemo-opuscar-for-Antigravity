@@ -2,13 +2,13 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *Counting Itself Down* (自己倒数, 59.5 s) · `countdown.mp4` · source in [`demo/`](demo/)
+Demo: *Counting Itself Down* (59.5 s) · `countdown.mp4` · source in [`demo/`](demo/)
 
 The last minute of the Artemis II launch (1 April 2026, Launch Complex 39B), in real time from T−32.5 to T+27.0 with no cut in time. Everything on screen is NASA's own launch-day material: the live broadcast and its audio, the Firing Room, a camera on the rocket, a camera on Orion, a drone, two ground cameras, a crew photo and the mission fact sheet. This is an unofficial film; NASA did not make or endorse it.
 
 ## Story & structure
 
-The story is three hand-overs of control, all heard in the native audio. At T−33 the ground launch sequencer gives the count to the rocket ("GLS, go for ALS" — "Great call-out. The rocket is on its own"); the rocket counts itself down; at T+21 "Houston, now controlling the flight of Integrity". A control strip in the clock header (地面 GLS → 火箭 ALS → 休斯敦 HOUSTON) carries the turns.
+The story is three hand-overs of control, all heard in the native audio. At T−33 the ground launch sequencer gives the count to the rocket ("GLS, go for ALS" — "Great call-out. The rocket is on its own"); the rocket counts itself down; at T+21 "Houston, now controlling the flight of Integrity". A control strip in the clock header carries the turns.
 
 Shape: cells rise toward zero, merge, then open again for the consequences. Hook (0–0.5 s): the first spoken call flips the control strip on a single wide shot of the pad while the title package lands. Setup (2.5–13 s): the Firing Room opens beside the pad as a "same window" cell (the people who just handed over can only watch), the crew photo with name tags, then a thrust bar (SLS 15 % over Saturn V) on "the most powerful rocket NASA has ever launched". Development (13–22 s): the planned-vs-heard checklist and the fact sheet; the narrator's only line before zero; a punch-in on the pad on "sound suppression water is flowing"; the rocket's own camera replaces the paper. The count (22.4–32.5 s): a 3×3 grid with the clock in the centre; each spoken number opens one camera out of a "standby" slot; RS-25 start flags the engine camera and ticks "heard −6.0". Zero (32.5 s): nine cells merge into one real-time picture of the pad, the clock inverts. After zero: two hard-cut full screens (drone, Banana Creek), a breath, then three cells: the drone climbing, the camera on the rocket, and a flight-events panel whose second countdown runs to booster separation (T+2:09, expected); the loop's "good roll, pitch" ticks it. "Houston, now controlling…" fills the last control segment and the layout resolves to one cell under the title.
 
@@ -62,9 +62,9 @@ Sync per camera (source second `s`): broadcast `s = M + 46.8`; rocket camera `s 
 
 ## Title card
 
-Opening package (lower left of the first cell, 0.45–6.8 s): 自己倒数 / COUNTING ITSELF DOWN, then 阿尔忒弥斯二号 · 2026 年 4 月 1 日 · 39B 发射台 and the English line.
+Opening package (lower left of the first cell, 0.45–6.8 s):COUNTING ITSELF DOWN, then · 2026 4 1 · 39B and the English line.
 
-End card (54.0–59.5 s, left-aligned over the rocket camera, the clock and transcript still running): 自己倒数 (Noto Sans SC 700, 112 px) / COUNTING ITSELF DOWN; a thin orange rule; 实时倒计时分屏 LIVE COUNTDOWN SPLIT-SCREEN; LemoLab × Claude Opus 5.5; 素材：NASA · 公有领域 · 非官方作品 / FOOTAGE: NASA · PUBLIC DOMAIN · UNOFFICIAL. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+End card (54.0–59.5 s, left-aligned over the rocket camera, the clock and transcript still running): Noto Sans SC 700, 112 pxCOUNTING ITSELF DOWN; a thin orange rule; LIVE COUNTDOWN SPLIT-SCREEN; LemoLab × Claude Opus 5.5; ：NASAFOOTAGE: NASA · PUBLIC DOMAIN · UNOFFICIAL. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build notes
 
@@ -83,6 +83,6 @@ demo/
   raw/ frames/ out/ fonts/ audio/vo/   downloaded or generated, not committed
 ```
 
-`sh demo/build.sh` (library set up with `setup.sh deps voice music`): fetches the NASA excerpts (~400 MB), fonts, voice model and the vsco2ce / vcsl samples if missing → narrator + speech check → frames (`prep.sh`) → subtitles + one-line check → `readcheck` → events → render (1,785 frames, 30 fps) → mix → mux (−14 LUFS, grain 1) → small cut → poster / style frame (t 28.5) → Whisper on the film.
+`sh demo/build.sh` (library set up with `setup.sh deps voice music`): fetches the NASA excerpts (~400 MB), fonts, voice model and the vsco2ce / vcsl samples if missing → narrator + speech check → frames (`prep.sh`) → subtitles + one-line check → `readcheck` → events → render (785 frames, 30 fps) → mix → mux (−14 LUFS, grain 1) → small cut → poster / style frame (t 28.5) → Whisper on the film.
 
-Demo-specific choices and pitfalls: the broadcast excerpt is a stream copy, so its zero (46.8 s) depends on the keyframe it starts on; re-measure after a re-fetch. The rocket camera's burned-in timer gives a frame-exact zero, but the same file's audio runs about 1 s early, so sync it on picture only. The Firing Room reel has no clock: it is labelled "same window" and kept away from the seconds where its content could contradict the clock. "GLS, go for ALS" is heard by Whisper as "go for your left"; it is identified from NASA's countdown list and the commentary that follows (FACTS.md §T). Split the count into two cues: shown as one, its whole Chinese line ("…RS-25 点火") appears four seconds early. Fill the 3×3 grid's empty slots with "standby" frames that each count opens, not black. Put the fact-sheet annotation in a dark band below the paper, not over the page's own type, and keep the paper window a fixed 600 source px wide (scaled to fit, paper white above and below) so every row's text is whole. Don't hold a static pad wide shot for ten seconds; break it with a punch-in on "sound suppression water" (from a 2,880-px extraction, no upscaling).
+Demo-specific choices and pitfalls: the broadcast excerpt is a stream copy, so its zero (46.8 s) depends on the keyframe it starts on; re-measure after a re-fetch. The rocket camera's burned-in timer gives a frame-exact zero, but the same file's audio runs about 1 s early, so sync it on picture only. The Firing Room reel has no clock: it is labelled "same window" and kept away from the seconds where its content could contradict the clock. "GLS, go for ALS" is heard by Whisper as "go for your left"; it is identified from NASA's countdown list and the commentary that follows (FACTS.md §T). Split the count into two cues: shown as one, its whole Chinese line appears four seconds early. Fill the 3×3 grid's empty slots with "standby" frames that each count opens, not black. Put the fact-sheet annotation in a dark band below the paper, not over the page's own type, and keep the paper window a fixed 600 source px wide (scaled to fit, paper white above and below) so every row's text is whole. Don't hold a static pad wide shot for ten seconds; break it with a punch-in on "sound suppression water" (from a 2,880-px extraction, no upscaling).

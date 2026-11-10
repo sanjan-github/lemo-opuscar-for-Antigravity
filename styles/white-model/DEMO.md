@@ -2,7 +2,7 @@
 
 One example among many. Don't reuse its story, arc, shots, props or timings.
 
-Demo: *How a Flattened City Grew Back* 《被炸平的城市怎样长回来》 (40.0 s) · `white-model.mp4` · source in [`demo/`](demo/)
+Demo: *How a Flattened City Grew Back*  (40.0 s) · `white-model.mp4` · source in [`demo/`](demo/)
 
 Rotterdam's centre as a 1:1000 white model (2.3 × 2.6 km: 3,887 buildings, 8,860 roof parts, 108 bridge decks). Chinese on screen, English narration, bilingual subtitles (Chinese line above, English line below). This is an unofficial film made from open data (3DBAG, Kadaster BAG, BGT); 3DGI, TU Delft, Kadaster and the City of Rotterdam did not make or endorse it.
 
@@ -62,7 +62,7 @@ Mix (`demo/mix.py`): music balanced to sit 10 dB under the voice while it speaks
 
 ## End card
 
-Over the white model as the house lights return, a left block: 被炸平的城市怎样长回来 (Noto Sans SC 500, 64 px), *How a Flattened City Grew Back* (Inter Tight 200), an amber rule, `白模投影 · PROJECTION ON WHITE MODEL`, `3DBAG · BAG · BGT · 鹿特丹市档案馆`, the 3DBAG licence credit in fine print (3DGI and the 3D geoinformation research group, TU Delft, CC BY 4.0), `LemoLab × Claude Opus 5.5`. 35.7–40.0 s. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
+Over the white model as the house lights return, a left block: Noto Sans SC 500, 64 px, *How a Flattened City Grew Back* (Inter Tight 200), an amber rule, ` · PROJECTION ON WHITE MODEL`, `3DBAG · BAG · BGT · `, the 3DBAG licence credit in fine print (3DGI and the 3D geoinformation research group, TU Delft, CC BY 4.0), `LemoLab × Claude Opus 5.5`. 35.7–40.0 s. The "LemoLab × Claude Opus 5.5" sign-off belongs to this library's demo only; a user's film carries no LemoLab credit and no copy of this card.
 
 ## Build notes
 
@@ -84,4 +84,4 @@ demo/
 
 - `sh demo/build.sh` takes about 4 minutes on Apple silicon (picture ~60 s with 4 workers; TTS and the Whisper check most of the rest). `FETCH=1` re-downloads the data (~55 MB).
 - Checks it runs: `asr_check.py` with `small.en` (British spellings "centre", "metres" set in the `asr` fields), cue grid, single-line subtitle widths with the real fonts (widest 618 px against 1500 px), `readcheck.mjs`, motion per second (no flat stretch; the jumps at 2.0, 2.6 and 35.6 s are the lights and the lamp), the impact ranking. `tools/finalasr.py` checks every narration line on the final mix.
-- Demo-specific pitfalls: the 3DBAG WFS returns all LOD1.3 parts in one request at `count=20000` for this box (13,345 features); parts are kept only when fully inside the crop, which leaves a clean street margin at the plate edge. The heightfield shadow counts a roof as shaded when its tallest part's centroid cell is under the tower's shadow height (2 m grid); the 16 roofs are listed in `stats.json` with distances 262–734 m. Zalmhaven's 3DBAG roof (203.0 m above ground, 70th percentile of the highest part) matches the published roof height; the 12 m mast is not in the model. GTAO is faded out after the lamp strikes because it bands on the wide grazing views.
+- Demo-specific pitfalls: the 3DBAG WFS returns all LOD1.3 parts in one request at `count=20000` for this box (345 features); parts are kept only when fully inside the crop, which leaves a clean street margin at the plate edge. The heightfield shadow counts a roof as shaded when its tallest part's centroid cell is under the tower's shadow height (2 m grid); the 16 roofs are listed in `stats.json` with distances 262–734 m. Zalmhaven's 3DBAG roof (203.0 m above ground, 70th percentile of the highest part) matches the published roof height; the 12 m mast is not in the model. GTAO is faded out after the lamp strikes because it bands on the wide grazing views.

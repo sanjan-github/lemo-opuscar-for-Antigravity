@@ -72,10 +72,10 @@ Voice: Kokoro `bf_alice`, speed .86–.88, "like a nun telling an old story", 8 
 ## Palette & props
 
 - Transmittance colours: cobalt `#1d3a9c` (dominant) · deep blue `#142a70` · ruby `#a8101c` · gold `#dc9a22` · emerald `#2f7f36` · olive `#6b7a22` · murrey `#632a63` · flesh `#d2a288` · white `#cfdac6` · mail `#a9b7b2` · sky `#7fa2cf` · umber `#7a4e24` · ember amber `#ff9a2a` (the story light).
-- Sun colour × intensity: dawn `(.70,.83,1.0)` × 2.2, low, long patches · noon `(1,.97,.9)` × 2.7, short patches · afternoon `(1,.84,.6)` × 2.35 · dusk `(1,.6,.34)` × 2.6 · night moon `(.55,.66,1.0)` × 0.5 through every pane, plus the ember.
+- Sun colour × intensity: dawn `(.70,.83,1.0)` × 2.2, low, long patches · noon `(.97,.9)` × 2.7, short patches · afternoon `(.84,.6)` × 2.35 · dusk `(.6,.34)` × 2.6 · night moon `(.55,.66,1.0)` × 0.5 through every pane, plus the ember.
 - Lit pane backlight 2.2–2.8, band edge `bandW` ≈ lancet width + 10, soft 24, slight diagonal skew.
 - Lead `#1d1f23`, 6 units (4.2 quarries, 3–4 small details). Aged piece edges: two soft strokes, rgb 206 / 168.
-- Grisaille trace `rgba(44,26,12,.88)`: brows 3.8, eyes 3.0, folds 2.3–2.6 units; matting `wash .35–.45`; scraped highlights use the piece's own colour `g.__col`.
+- Grisaille trace `rgba(26,12,.88)`: brows 3.8, eyes 3.0, folds 2.3–2.6 units; matting `wash .35–.45`; scraped highlights use the piece's own colour `g.__col`.
 - Borders: ruby band with gold pearls + white fillet with a running vine; quarries carry a small vine curl each.
 - Room: ashlar courses 86 units; the title in Cinzel on the string course with a moving strip of light.
 - The knight (`knight.js`): elongated ~7.5-head proportions, big hands, mail as staggered arcs, a sun device on the shield, swappable face pieces (stern / astonished). The dragon (`dragon.js`): a wyvern built as a spine chain cut into banded dorsal and belly pieces, scales as arcs along the spine, transverse belly plates, open and folded wings, the ember at its chest.
